@@ -1,0 +1,20 @@
+# 
+
+# build
+
+```
+	cd ~/gweb-java
+	bash build.sh
+
+```
+
+# run
+
+```
+	cd ~/gweb-java
+	bash run.sh
+
+```
+
+
+

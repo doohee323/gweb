@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title>gweb-js</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- build:css(.) styles/vendor.css -->
+<!-- bower:css -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<!-- endbower -->
+<!-- endbuild -->
+
+<style>
+table.fixed {
+	table-layout: fixed;
+}
+
+table.fixed td {
+	overflow: hidden;
+}
+</style>
+<script>
+  window.___gcfg = {
+    parsetags : 'explicit'
+  };
+</script>
+
+</head>
+<body>
+	<!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<div class="container">
+		<div class="header">
+			<h3 class="text-muted">
+				English sermon service<br> at Korean Baptist Church of San Jose
+			</h3>
+		</div>
+
+		<div class="side-body">
+
+			<legend style="margin-top: 30px">
+				<i data-placement="right"></i> Live URL
+			</legend>
+
+			<div class="row">
+				<div class="col-md-12">
+					<form id="form1" class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="col_4">Link</label>
+							<div class="col-sm-10">
+								<div class="form-inline">
+									<input type="text" id="col_4" name="col_4" value=""
+										style='width: 90%' class="form-control">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form id="form1" class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="debug"></label>
+							<div class="col-sm-4">
+								<div class="form-inline">
+									<button type="button" class="btn btn-primary" id='reload'>Reload</button>
+									<button type="button" class="btn btn-primary" id='open'>Open</button>
+									<div id="debug"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<legend style="margin-top: 30px">
+				<i data-placement="right"></i> Last Sermons
+			</legend>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="table_wrapper">
+						<table id="runningLogs"
+							class="table table-bordered table-hover fixed">
+							<thead>
+								<tr>
+									<th class='text-center'>Date</th>
+									<th class='text-center'>Link</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table id='runningLog_template' style='display: none'>
+							<tr>
+								<td class='text-center'>{date}</td>
+								<td class='text-center'><a href='{link}' target='_blank'>{link}</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer" style='margin-top: 50px;'>
+				<div class="logo">
+					<img src="http://www.kbcsj.com/img/foot_logo.jpg" border="0">
+				</div>
+				<div class="copyright">
+					1056 Pinewood Dr.San Jose, CA 95129 / TEL : 408-257-5444 / FAX :
+					408-257-4967 / E-mail : kbcsj1971@gmail.com<br> Copyright©
+					2015 by Korean Baptist Church of San Jose. All rights reserved. <a
+						href="http://www.hosannaweb.net" target="_blank"> <img
+						src="http://www.kbcsj.com/img/foot_hosanna.jpg" border="0"
+						align="absmiddle"></a>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+
+		<script src="scripts/gweb_c.js"></script>
+		<?!= include('myscript.js'); ?>
+
+		<script>
+      var runningObj;
+      var us;
+      $(document)
+          .ready(
+              function() {
+                runningObj = $('#runningLogs').DataTable({
+                  "paging" : true,
+                  "pageLength" : 5,
+                  "lengthChange" : false,
+                  "searching" : false,
+                  "ordering" : true,
+                  "info" : true,
+                  "autoWidth" : true
+                });
+
+                function onSuccess(rslt) {
+                  if (!rslt) {
+                    rslt = test;
+                  }
+
+                  var debug = $('#debug').val();
+                  //debug.innerHTML = rslt;        
+
+                  rslt = JSON.parse(rslt);
+                  $('$col_4').val(rslt.col_4);
+                }
+
+                function getValue() {
+                  try {
+                    google.script.run.withSuccessHandler(onSuccess).getResult();
+                  } catch (e) {
+                    execute('getLink');
+                  }
+                }
+
+                $("#reload").click(function(e) {
+                  getValue();
+                });
+                $("#open").click(function(e) {
+                  window.open($("#col_4").val());
+                });
+
+                var gconfig = {
+                  'getLink' : {
+                    'gauth' : {
+                      'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+                      'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+                    },
+                    'input' : {
+                      '_sheet' : 'config',
+                      '_event' : 'getValue',
+                      'col_1' : 'A1',
+                      'col_2' : 'A2',
+                      'col_3' : 'B1',
+                      'col_4' : 'B2'
+                    }
+                  },
+                  'runningLogs' : {
+                    'gauth' : {
+                      'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+                      'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+                    },
+                    'input' : {
+                      "_sheet" : "running_logs",
+                      "_event" : "getList",
+                      'output' : "['A','B']"
+                    }
+                  }
+                }
+
+                try {
+                  us = new GWeb(gconfig);
+                } catch (e) {
+                }
+
+                function execute(sheet) {
+                  var option = {
+                    version : $('#_version').val(),
+                    cache : $('#_cache').val(),
+    				nosession: true
+                  }
+
+                  us.execute(sheet, option,
+                      function(rslt) {
+                        if (rslt.output) {
+                          if (rslt.output.rows) {
+                            if ($.fn.DataTable.isDataTable('#runningLogs')) {
+                              $('#runningLogs').DataTable().destroy();
+                            }
+                            $('#runningLogs tbody').empty();
+
+                            for (var i = 1; i < rslt.output.rows.length; i++) {
+                              var tmp = $('#runningLog_template').find('tr')
+                                  .html();
+                              var date = rslt.output.rows[i]['A' + (i + 1)];
+                              date = moment(date).format('LLL');
+                              tmp = tmp.replace('{date}', date);
+                              tmp = tmp.replace(/{link}/g,
+                                  rslt.output.rows[i]['B' + (i + 1)]);
+                              $("#runningLogs").find('tbody').append(
+                                  '<tr>' + tmp + '</tr>');
+                            }
+                          } else {
+                            us.getResults(rslt);
+                          }
+                        }
+                      })
+                }
+
+                getValue();
+                execute('runningLogs');
+
+              });
+    </script>
+
+		<script
+			src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+		<script
+			src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
+</body>
+</html>

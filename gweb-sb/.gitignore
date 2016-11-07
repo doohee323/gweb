@@ -1,0 +1,14 @@
+/bin/
+/gradle/
+/target/
+/build.gradle
+/gradlew
+/gradlew.bat
+.settings
+*.rdb
+.DS_Store
+testedb*
+logs
+bower_components*
+node_modules*
+*.log

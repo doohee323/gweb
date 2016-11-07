@@ -1,0 +1,10 @@
+/bin/
+/target/
+/build.gradle
+.settings
+*.rdb
+.DS_Store
+logs
+bower_components*
+node_modules*
+*.log

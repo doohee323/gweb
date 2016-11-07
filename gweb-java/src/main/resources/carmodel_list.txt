@@ -1,0 +1,1654 @@
+id_carmodel	brand	model	grade
+1464	BMW	1 Series	118d Joy
+70	BMW	1 Series	118d Sport OE
+79	BMW	3 Series	320d
+77	BMW	3 Series	320d ED
+80	BMW	3 Series	320d M Sport
+1207	BMW	3 Series	320d Touring M Sport
+81	BMW	3 Series	320d xDrive
+82	BMW	3 Series	320i Luxury
+1465	BMW	3 Series	320i M Sport
+83	BMW	3 Series	328i M Sport
+108	BMW	3 Series Gran Turismo	320d GT
+109	BMW	3 Series Gran Turismo	320d GT Luxury
+110	BMW	3 Series Gran Turismo	320d GT xDrive
+111	BMW	3 Series Gran Turismo	320d GT xDrive Sport
+92	BMW	4 Series	Convertible 428i OE
+85	BMW	4 Series	Coupe 420d M Sport OE
+86	BMW	4 Series	Coupe 420d xDrive M Sport OE
+87	BMW	4 Series	Coupe 428i M Sport OE
+89	BMW	4 Series	Gran Coupe 420d Luxury
+84	BMW	4 Series	Gran Coupe 420d Luxury OE
+90	BMW	4 Series	Gran Coupe 420d xDrive Sport
+1466	BMW	4 Series	Gran Coupe 420d xDrive Sport OE
+88	BMW	4 Series	Gran Coupe 420i Luxury
+73	BMW	4 Series	Gran Coupe 420i Luxury OE
+91	BMW	4 Series	Gran Coupe 435d xDrive M Sport
+78	BMW	4 Series	Gran Coupe 435d xDrive M Sport OE
+1442	BMW	5 Series	520d Luxury Plus Pro
+1441	BMW	5 Series	520d M Aerodynamic Pro
+1446	BMW	5 Series	520d xDrive Luxury Plus Pro
+1443	BMW	5 Series	520d xDrive M Aerodynamic Pro
+1445	BMW	5 Series	528i Luxury Plus Pro
+1444	BMW	5 Series	528i M Aerodynamic Pro
+1821	BMW	5 Series	528i M Aerodynamic Pro SpecialEdition
+1448	BMW	5 Series	528i xDrive Luxury Plus Pro
+1447	BMW	5 Series	528i xDrive M Aerodynamic Pro
+1822	BMW	5 Series	528i xDrive M Aerodynamic Pro SpecialEdition
+1449	BMW	5 Series	530d xDrive M Aerodynamic Pro
+94	BMW	5 Series	sedan 520d Luxury Plus Edition
+93	BMW	5 Series	sedan 520d M Aerodynamic Edition
+96	BMW	5 Series	sedan 520d xDrive Luxury Plus Edition
+95	BMW	5 Series	sedan 520d xDrive M Aerodynamic Edition
+97	BMW	5 Series	sedan 528i
+98	BMW	5 Series	sedan 528i Luxury Plus
+99	BMW	5 Series	sedan 528i xDrive
+100	BMW	5 Series	sedan 528i xDrive Luxury Plus
+101	BMW	5 Series	sedan 530dxDrive MAerodynamic edition
+104	BMW	5 Series	sedan M550d xDrive Aerodynamic
+106	BMW	5 Series Gran Turismo	GT 30d xDrive Luxury OE
+107	BMW	5 Series Gran Turismo	GT 35i xDrive Luxury OE
+105	BMW	5 Series Gran Turismo	GT ED Luxury OE
+114	BMW	6 Series	Convertible 650i
+112	BMW	6 Series	Gran Coupe 640d xDrive M Sport
+116	BMW	7 Series	730d xDrive
+115	BMW	7 Series	730d xDrive Premium
+118	BMW	7 Series	730Ld xDrive
+117	BMW	7 Series	730Ld xDrive Premium
+1473	BMW	7 Series	740d xDrive M Sport
+1474	BMW	7 Series	740Ld xDrive
+1818	BMW	7 Series	740Li xDrive
+121	BMW	7 Series	750Li xDrive
+119	BMW	7 Series	750Li xDrive  Premium
+120	BMW	7 Series	750Li xDrive Luxury
+122	BMW	7 Series	750Li xDrive Prestige
+74	BMW	Active Tourer	JOY 
+76	BMW	Active Tourer	JOY Launch Pkg
+75	BMW	Active Tourer	Luxury 
+206	BMW	i3	LUX
+207	BMW	i3	SOL
+208	BMW	i3	SOL+
+209	BMW	i8	1.5 PHEV
+123	BMW	M	M3 Silencer
+125	BMW	M	M4 Convertible Cilencer
+124	BMW	M	M4 Coupe Silencer
+126	BMW	M	M5
+202	BMW	M	M6 Coupe
+128	BMW	M	M6 Gran Coupe
+200	BMW	M	X5 M
+201	BMW	M	X6 M
+1461	BMW	X1	xDrive 18d
+1462	BMW	X1	xDrive 20d
+1463	BMW	X1	xDrive 20d M Sport
+1640	BMW	X3	xDrive 20d M Aerodynamic
+211	BMW	X3	xDrive 20d xLine
+212	BMW	X3	xDrive 30d M Sport OE
+1819	BMW	X4	M40i
+213	BMW	X4	xDrive 20d xLine OE
+214	BMW	X4	xDrive 30d M Sport OE
+1469	BMW	X5	xDrive 30d (7-Seater)
+215	BMW	X5	xDrive 30d OE
+216	BMW	X5	xDrive 40d M Sport OE
+218	BMW	X5	xDrive M 50d OE
+221	BMW	X6	M 50d OE
+219	BMW	X6	xDrive 30d OE
+220	BMW	X6	xDrive 40d OE
+204	BMW	Z4	Z4 sDrive 28i
+205	BMW	Z4	Z4 sDrive 35is
+1140	기아	All New Canival	(경유)11인승 노블레스 (A/T)
+1138	기아	All New Canival	(경유)11인승 럭셔리 (A/T)
+1139	기아	All New Canival	(경유)11인승 프레스티지 (A/T)
+1137	기아	All New Canival	(경유)11인승디럭스 (A/T)
+1130	기아	All New Canival	(경유)7인승 리무진  VIP
+1131	기아	All New Canival	(경유)7인승 리무진 프레지던트
+1135	기아	All New Canival	(경유)9인승 노블레스 (A/T)
+1133	기아	All New Canival	(경유)9인승 럭셔리 (A/T)
+1134	기아	All New Canival	(경유)9인승 프레스티지 (A/T)
+1149	기아	All New Canival	(경유)아웃도어 VIP 7인승 (A/T)
+1151	기아	All New Canival	(경유)아웃도어 프레스티지 11인승 (A/T)
+1150	기아	All New Canival	(경유)아웃도어 프레스티지 9인승 (A/T)
+1147	기아	All New Canival	(경유)하이리무진 11인승 럭셔리 (A/T)
+1148	기아	All New Canival	(경유)하이리무진 11인승 프레스티지 (A/T)
+1141	기아	All New Canival	(경유)하이리무진 7인승 VIP (A/T)
+1142	기아	All New Canival	(경유)하이리무진 7인승 프레지던트 (A/T)
+1146	기아	All New Canival	(경유)하이리무진 9인승 노블레스 (A/T)
+1144	기아	All New Canival	(경유)하이리무진 9인승 럭셔리 (A/T)
+1145	기아	All New Canival	(경유)하이리무진 9인승 프레스티지 (A/T)
+1660	기아	All New Canival	(경유)하이리무진 9인승 프레스티지 하이루프
+1551	기아	All New Canival	(경유)하이리무진 9인승 하이루프 (A/T)
+1132	기아	All New Canival	(휘발유)7인승 리무진 프레지던트 (A/T)
+1136	기아	All New Canival	(휘발유)9인승 노블레스 (A/T)
+1143	기아	All New Canival	(휘발유)하이리무진 7인승 프레지던트 (A/T)
+1552	기아	All New Canival	(휘발유)하이리무진 9인승 노블레스 (A/T)
+1395	기아	All New Carens	(LPI) 7인승 럭셔리
+1397	기아	All New Carens	(LPI) 7인승 프레스티지
+1403	기아	All New Carens	(경유) 7인승 트렌디
+1404	기아	All New Carens	(경유) 7인승 프레스티지
+1400	기아	All New Carens	(경유)5인승 트렌디 에코 다이나믹스
+1399	기아	All New Carens	(경유)5인승 프레스티지
+1401	기아	All New Carens	(경유)5인승 프레스티지 에코 다이나믹스
+1402	기아	All New Carens	(경유)5인승 프레스티지에코다이나믹스
+1394	기아	All New Carens	LPI 7인승 럭셔리 (M/T)
+1396	기아	All New Carens	LPI 7인승 트렌디 (A/T)
+1398	기아	All New Carens	LPI 7인승노블레스(A/T)
+1405	기아	All New Carens	렌터카 (5인승)디럭스
+1246	기아	All New K7	(경유)R2.2 프레스티지
+1247	기아	All New K7	(경유)R2.2 프레스티지 (내비게이션 미적용)
+1257	기아	All New K7	(영업용택시) 3.0 LPI 디럭스
+1258	기아	All New K7	(영업용택시) 3.0 LPI 럭셔리
+1251	기아	All New K7	(장애인용)3.0 LPI 프레스티지 양발장애
+1252	기아	All New K7	(장애인용)3.0 LPI 프레스티지 오른발장애
+1253	기아	All New K7	(장애인용)3.0 LPI 프레스티지 오른손오른발장애
+1250	기아	All New K7	(장애인용)3.0 LPI 프레스티지 왼발장애
+1254	기아	All New K7	(장애인용)3.0 LPI 프레스티지 왼손오른발장애
+1255	기아	All New K7	(장애인용)3.0 LPI 프레스티지 왼손왼발장애
+1243	기아	All New K7	(휘발유)2.4 GDI 프레스티지 (내비게이션 미적용)
+1244	기아	All New K7	(휘발유)3.3 GDI 노블레스
+1245	기아	All New K7	(휘발유)3.3 GDI 노블레스 스페셜
+1298	기아	All New K7	2.4 GDI 프레스티지
+1256	기아	All New K7	3.0 LPI 프레스티지 오른손장애
+1587	기아	All New K7	R2.2디젤
+1249	기아	All New K7	렌터카 3.0 LPI  프레스티지
+1248	기아	All New K7	렌터카 3.0 LPI 럭셔리
+792	기아	All New Morning	(휘발유) 스포츠 1.0  RUN (A/T)
+793	기아	All New Morning	(휘발유) 스포츠 1.0  RUN HIGH (A/T)
+795	기아	All New Morning	(휘발유) 스포츠 1.0  터보 RUN HIGH (A/T)
+782	기아	All New Morning	(휘발유)VAN (A/T)
+1198	기아	All New Morning	(휘발유)VAN (M/T)
+784	기아	All New Morning	(휘발유)VAN 고급형 (A/T)
+783	기아	All New Morning	(휘발유)VAN 고급형 (M/T)
+788	기아	All New Morning	(휘발유)디럭스
+787	기아	All New Morning	(휘발유)디럭스 (M/T)
+1546	기아	All New Morning	(휘발유)디럭스 스포츠 (A/T)
+790	기아	All New Morning	(휘발유)럭셔리
+789	기아	All New Morning	(휘발유)럭셔리 (M/T)
+1547	기아	All New Morning	(휘발유)럭셔리 스포츠 (A/T)
+786	기아	All New Morning	(휘발유)스마트
+785	기아	All New Morning	(휘발유)스마트 (M/T)
+791	기아	All New Morning	(휘발유)터보 럭셔리
+1548	기아	All New Morning	(휘발유)터보 럭셔리 스포츠 (A/T)
+1079	기아	All New Morning	바이퓨얼 럭셔리
+1078	기아	All New Morning	바이퓨얼 럭셔리 (M/T)
+1077	기아	All New Morning	바이퓨얼 스마트
+796	기아	All New Morning	바이퓨얼 스마트 (M/T)
+1105	기아	All New Sorento	(경유)  R2.0 2WD 럭셔리 (5인승) (A/T)
+1108	기아	All New Sorento	(경유) R2.0 2WD 노블레스 (5인승) (A/T)
+1109	기아	All New Sorento	(경유) R2.0 2WD 노블레스 (7인승) (A/T)
+1110	기아	All New Sorento	(경유) R2.0 2WD 노블레스 스페셜 (5인승) (A/T)
+1111	기아	All New Sorento	(경유) R2.0 2WD 노블레스 스페셜 (7인승) (A/T)
+1104	기아	All New Sorento	(경유) R2.0 2WD 디럭스 (5인승) (A/T)
+1106	기아	All New Sorento	(경유) R2.0 2WD 프레스티지 (5인승) (A/T)
+1107	기아	All New Sorento	(경유) R2.0 2WD 프레스티지 (7인승) (A/T)
+1114	기아	All New Sorento	(경유) R2.0 4WD 노블레스 (5인승) (A/T)
+1115	기아	All New Sorento	(경유) R2.0 4WD 노블레스 (7인승) (A/T)
+1116	기아	All New Sorento	(경유) R2.0 4WD 노블레스 스페셜 (5인승) (A/T)
+1117	기아	All New Sorento	(경유) R2.0 4WD 노블레스 스페셜 (7인승) (A/T)
+1112	기아	All New Sorento	(경유) R2.0 4WD 프레스티지 (5인승) (A/T)
+1113	기아	All New Sorento	(경유) R2.0 4WD 프레스티지 (7인승) (A/T)
+1120	기아	All New Sorento	(경유) R2.2 2WD 노블레스 (5인승) (A/T)
+1121	기아	All New Sorento	(경유) R2.2 2WD 노블레스 (7인승) (A/T)
+1122	기아	All New Sorento	(경유) R2.2 2WD 노블레스 스페셜 (5인승) (A/T)
+1123	기아	All New Sorento	(경유) R2.2 2WD 노블레스 스페셜 (7인승) (A/T)
+1118	기아	All New Sorento	(경유) R2.2 2WD 프레스티지 (5인승) (A/T)
+1119	기아	All New Sorento	(경유) R2.2 2WD 프레스티지 (7인승) (A/T)
+1126	기아	All New Sorento	(경유) R2.2 4WD 노블레스 (5인승) (A/T)
+1127	기아	All New Sorento	(경유) R2.2 4WD 노블레스 (7인승) (A/T)
+1128	기아	All New Sorento	(경유) R2.2 4WD 노블레스 스페셜 (5인승) (A/T)
+1129	기아	All New Sorento	(경유) R2.2 4WD 노블레스 스페셜 (7인승) (A/T)
+1124	기아	All New Sorento	(경유) R2.2 4WD 프레스티지 (5인승) (A/T)
+1125	기아	All New Sorento	(경유) R2.2 4WD 프레스티지 (7인승) (A/T)
+1088	기아	All New Soul	(휘발유) 1.6 럭셔리 (M/T)
+1332	기아	K3	(경유)4도어 노블레스
+1325	기아	K3	(경유)4도어 디럭스
+1326	기아	K3	(경유)4도어 트렌디
+1327	기아	K3	(경유)4도어 트렌디A
+1328	기아	K3	(경유)4도어 트렌디C
+1329	기아	K3	(경유)4도어 트렌디E
+1330	기아	K3	(경유)4도어 프레스티지
+1331	기아	K3	(경유)4도어 프레스티지 스페셜
+1324	기아	K3	(휘발유)4도어 노블레스
+1316	기아	K3	(휘발유)4도어 디럭스
+1317	기아	K3	(휘발유)4도어 트렌디
+1318	기아	K3	(휘발유)4도어 트렌디A
+1319	기아	K3	(휘발유)4도어 트렌디C
+1321	기아	K3	(휘발유)4도어 트렌디E
+1322	기아	K3	(휘발유)4도어 프레스티지
+1323	기아	K3	(휘발유)4도어 프레스티지 스페셜
+1338	기아	K3 Koup	1.6 GDi Turbo 노블레스 (M/T)
+1337	기아	K3 Koup	1.6 GDi Turbo 프레스티지 (A/T)
+1336	기아	K3 Koup	1.6 GDi Turbo 프레스티지 (M/T)
+1334	기아	K3 Koup	1.6 GDi 럭셔리
+1335	기아	K3 Koup	1.6 GDi 프레스티지
+1339	기아	K3 Koup	1.6 T-GDI 노블레스
+1585	기아	K3 유로	1.6 노블레스
+1352	기아	K5	(경유) 1.7 노블레스
+1353	기아	K5	(경유) 1.7 노블레스스페셜
+1349	기아	K5	(경유) 1.7 디럭스
+1350	기아	K5	(경유) 1.7 럭셔리
+1658	기아	K5	(경유) 1.7 시그니처
+1351	기아	K5	(경유) 1.7 프레스티지
+1357	기아	K5	(렌터카) 노블레스
+1659	기아	K5	(렌터카) 노블레스 스페셜
+1355	기아	K5	(렌터카) 럭셔리
+1354	기아	K5	(렌터카) 럭셔리 (M/T)
+1356	기아	K5	(렌터카) 프레스티지
+1343	기아	K5	(휘발유)2.0 노블레스
+1344	기아	K5	(휘발유)2.0 노블레스 스페셜 (A/T)
+1340	기아	K5	(휘발유)2.0 디럭스 (A/T)
+1341	기아	K5	(휘발유)2.0 럭셔리
+1655	기아	K5	(휘발유)2.0 시그니처
+1342	기아	K5	(휘발유)2.0 프레스티지
+1346	기아	K5	(휘발유)SX전용 1.6 T-GDI  프레스티지
+1656	기아	K5	(휘발유)SX전용 1.6 T-GDI GT LINE
+1347	기아	K5	(휘발유)SX전용 1.6 T-GDI 노블레스
+1345	기아	K5	(휘발유)SX전용 1.6 T-GDI 럭셔리
+1657	기아	K5	(휘발유)SX전용 2.0 T-GDI GT LINE
+1348	기아	K5	(휘발유)SX전용 2.0 T-GDI 노블레스 스페셜
+1369	기아	K5	장애인 2.0 LPI  노블레스 오른발 장애
+1368	기아	K5	장애인 2.0 LPI  노블레스 오른손 오른발 장애
+1370	기아	K5	장애인 2.0 LPI 노블레스 양발 장애
+1371	기아	K5	장애인 2.0 LPI 노블레스 오른손 장애
+1365	기아	K5	장애인 2.0 LPI 노블레스 왼발 장애
+1367	기아	K5	장애인 2.0 LPI 노블레스 왼손 오른발 장애
+1366	기아	K5	장애인 2.0 LPI 노블레스 왼손 왼발 장애
+1363	기아	K5	장애인 2.0 LPI 프레스티지 양발 장애
+1362	기아	K5	장애인 2.0 LPI 프레스티지 오른발 장애
+1361	기아	K5	장애인 2.0 LPI 프레스티지 오른손 오른발 장애
+1364	기아	K5	장애인 2.0 LPI 프레스티지 오른손 장애
+1360	기아	K5	장애인 2.0 LPI 프레스티지 왼손 오른발 장애
+1359	기아	K5	장애인 2.0 LPI 프레스티지 왼손 왼발 장애
+1358	기아	K5	장애인 2.0 LPI프레스티지 왼발 장애
+1373	기아	K5	택시 2.0 LPI 디럭스 (A/T)
+1372	기아	K5	택시 2.0 LPI 디럭스 (M/T)
+1374	기아	K5	택시 2.0 LPI 럭셔리 (A/T)
+1375	기아	K5	택시 2.0 LPI 프레스티지 (A/T)
+1377	기아	K5 HYBRID	노블레스
+1378	기아	K5 HYBRID	노블레스 스페셜
+1376	기아	K5 HYBRID	프레스티지
+1379	기아	K7 HYBRID	700h 럭셔리
+1380	기아	K7 HYBRID	700h 프레스티지
+1439	기아	NIRO	노블레스
+1437	기아	NIRO	럭셔리
+1438	기아	NIRO	프레스티지
+1080	기아	Ray	(휘발유)  MPI VAN (A/T)
+1081	기아	Ray	(휘발유)  MPI VAN 고급형 (A/T)
+1085	기아	Ray	(휘발유)  터보 TCI 럭셔리
+1082	기아	Ray	(휘발유) 디럭스
+1083	기아	Ray	(휘발유) 럭셔리
+1086	기아	Ray	(휘발유) 터보 TCI 프레스티지
+1084	기아	Ray	(휘발유) 프레스티지
+1087	기아	Ray	바이퓨얼 프레스티지
+1095	기아	Soul	(경유) 1.6 노블레스
+1096	기아	Soul	(경유) 1.6 노블레스 스페셜
+1094	기아	Soul	(경유) 1.6 프레스티지
+1092	기아	Soul	(휘발유) 1.6 프레스티지레드존
+1097	기아	Soul EV	EV (A/T)
+1315	기아	The New k3	(휘발유)4도어 디럭스 (M/T)
+1314	기아	The New k3	(휘발유)5도어 노블레스(A/T)
+1099	기아	The New K9	3.3 GDI EXECUTIVE (이그제큐티브)
+1098	기아	The New K9	3.3 GDI PRESTIGE (프레스티지)
+1100	기아	The New K9	3.8 GDI EXECUTIVE (이그제큐티브)
+1101	기아	The New K9	3.8 GDI NOBLESSE (노블레스)
+1102	기아	The New K9	3.8 GDI VIP
+1103	기아	The New K9	V8 5.0 GDI QUANTUM (퀀텀)
+1381	기아	The New Mohave	(경유)2WD 노블레스 5인승
+1393	기아	The New Mohave	(경유)2WD 노블레스 7인승
+1549	기아	The New Mohave	(경유)4WD VIP 5인승 (선택 4WD) (A/T)
+1550	기아	The New Mohave	(경유)4WD 프레지던트 5인승 (상시 4WD) (A/T)
+1311	기아	The New Pride	(경유)5도어 1.4 디럭스(M/T)
+1312	기아	The New Pride	(경유)5도어 1.4 럭셔리(M/T)
+1301	기아	The New Pride	(휘발유)4도어 1.4 MPI 디럭스
+1300	기아	The New Pride	(휘발유)4도어 1.4 MPI 스마트
+1299	기아	The New Pride	(휘발유)4도어 1.4 MPI 스마트(M/T)
+1302	기아	The New Pride	(휘발유)4도어 1.4 MPI 트렌디
+1303	기아	The New Pride	(휘발유)4도어 1.6 GDI 럭셔리
+1304	기아	The New Pride	(휘발유)4도어 1.6 GDI 프레스티지
+1307	기아	The New Pride	(휘발유)5도어 1.4 MPI 디럭스
+1306	기아	The New Pride	(휘발유)5도어 1.4 MPI 스마트
+1305	기아	The New Pride	(휘발유)5도어 1.4 MPI 스마트(M/T)
+1308	기아	The New Pride	(휘발유)5도어 1.4 MPI 트렌디
+1309	기아	The New Pride	(휘발유)5도어 1.6 GDI 럭셔리
+1310	기아	The New Pride	(휘발유)5도어 1.6 GDI 프레스티지
+1333	기아	The New Pride	1.4 MPI 도로연수용 (A/T)
+1313	기아	The New Pride	1.4 MPI 도로연수용 (M/T)
+1225	기아	더 SUV 스포티지	(경유) R2.0 2WD 노블레스
+1226	기아	더 SUV 스포티지	(경유) R2.0 2WD 노블레스 스페셜
+1223	기아	더 SUV 스포티지	(경유) R2.0 2WD 트렌디
+1222	기아	더 SUV 스포티지	(경유) R2.0 2WD 트렌디(M/T)
+1224	기아	더 SUV 스포티지	(경유) R2.0 2WD 프레스티지
+1229	기아	더 SUV 스포티지	(경유) R2.0 4WD 노블레스
+1230	기아	더 SUV 스포티지	(경유) R2.0 4WD 노블레스 스페셜
+1227	기아	더 SUV 스포티지	(경유) R2.0 4WD 트렌디
+1228	기아	더 SUV 스포티지	(경유) R2.0 4WD 프레스티지
+1221	기아	더 SUV 스포티지	(경유) U2 1.7 2WD 노블레스
+1676	기아	더 SUV 스포티지	(경유) U2 1.7 2WD 노블레스 스페셜
+1220	기아	더 SUV 스포티지	(경유) U2 1.7 2WD 트렌디
+1713	기아	쏘렌토	2.0 노블레스
+1714	기아	쏘렌토	2.0 노블레스 스페셜
+1711	기아	쏘렌토	2.0 럭셔리
+1712	기아	쏘렌토	2.0 프레스티지
+1716	기아	쏘렌토	2.2 노블레스
+1717	기아	쏘렌토	2.2 노블레스 스페셜
+1715	기아	쏘렌토	2.2 프레스티지
+1093	기아	쏘울	가솔린 노블레스
+1674	기아	쏘울	가솔린 노블레스
+1771	기아	쏘울	가솔린 노블레스
+1090	기아	쏘울	가솔린 럭셔리
+1089	기아	쏘울	가솔린 트렌디
+1672	기아	쏘울	가솔린 트렌디
+1769	기아	쏘울	가솔린 트렌디
+1091	기아	쏘울	가솔린 프레스티지
+1673	기아	쏘울	가솔린 프레스티지
+1770	기아	쏘울	가솔린 프레스티지
+1675	기아	쏘울	디젤 노블레스 스페셜
+1772	기아	쏘울	디젤 노블레스 스페셜
+595	닛산	370Z	3.7
+580	닛산	GT-R	3.8
+583	닛산	GT-R	3.8 메탈
+596	닛산	JUKE	1.6 S
+597	닛산	JUKE	1.6 SV
+579	닛산	MAXIMA	3.5 PLT
+1586	닛산	Murano	2.5 하이브리드
+576	닛산	New ALTIMA	2.5 SL
+1410	닛산	New ALTIMA	2.5 SL Smart
+577	닛산	New ALTIMA	2.5 SL TECH
+578	닛산	New ALTIMA	3.5 SL TECH
+601	닛산	PATHFINDER	3.5 4WD
+600	닛산	QASHQAI	PLATINUM
+598	닛산	QASHQAI	S
+599	닛산	QASHQAI	SL
+485	람보르기니	aventador	Coupe LP700-4
+486	람보르기니	aventador	LP700-4 Roadster
+487	람보르기니	Huracan	LP610-4
+44	랜드로버	Discovery	3.0 SDV6 HSE
+1582	랜드로버	Discovery	3.0 SDV6 Landmark Edition
+43	랜드로버	Discovery	3.0 SDV6 SE
+721	랜드로버	Discovery Sport	2.0 TD4 HSE Luxury
+42	랜드로버	Discovery Sport	2.0 TD4 HSE LUXURY(17MY)
+720	랜드로버	Discovery Sport	2.0 TD4 SE
+41	랜드로버	Discovery Sport	2.0 TD4 SE(17MY)
+54	랜드로버	Range Rover	3.0 SDV6 Hybrid Vogue SE
+53	랜드로버	Range Rover	3.0 TDV6 Vogue SE
+57	랜드로버	Range Rover	4.4 SDV8 Autobio-graphy
+58	랜드로버	Range Rover	4.4 SDV8 Autobio-graphy LWB
+55	랜드로버	Range Rover	4.4 SDV8 Vogue SE
+56	랜드로버	Range Rover	4.4 SDV8 Vogue SE LWB
+60	랜드로버	Range Rover	5.0 V8 SC Autobio-graphy
+62	랜드로버	Range Rover	5.0 V8 SC Autobio-graphy LWB
+63	랜드로버	Range Rover	5.0 V8 SC SVAutobio-graphy LWB
+59	랜드로버	Range Rover	5.0 V8 SC Vogue SE
+61	랜드로버	Range Rover	5.0 V8 SC Vogue SE LWB
+1783	랜드로버	Range Rover Evoque	2.0 Si4 Dynamic (17MY)
+39	랜드로버	Range Rover Evoque	2.0 Si4 HSE
+1787	랜드로버	Range Rover Evoque	2.0 TD4 AutoBiography(17MY)
+1786	랜드로버	Range Rover Evoque	2.0 TD4 Dynamic(17MY)
+37	랜드로버	Range Rover Evoque	2.0 TD4 HSE
+38	랜드로버	Range Rover Evoque	2.0 TD4 HSE Dynamic
+1785	랜드로버	Range Rover Evoque	2.0 TD4 HSE(17MY)
+36	랜드로버	Range Rover Evoque	2.0 TD4 SE
+1784	랜드로버	Range Rover Evoque	2.0 TD4 SE(17MY)
+1584	랜드로버	Range Rover Evoque	Convertible 2.0 TD4 HSE Dynamaic
+1583	랜드로버	Range Rover Evoque	Convertible 2.0 TD4 SE Dynamic
+40	랜드로버	Range Rover Evoque	Coupe 2.0 Si4 HSE  Dynamic
+735	랜드로버	Range Rover Sports	3.0 SC HSE Dynamic
+731	랜드로버	Range Rover Sports	3.0 SDV6 AB Dynamic
+729	랜드로버	Range Rover Sports	3.0 SDV6 HSE
+730	랜드로버	Range Rover Sports	3.0 SDV6 HSE Dynamic
+732	랜드로버	Range Rover Sports	3.0 SDV6 Hybrid HSE Dynamic
+734	랜드로버	Range Rover Sports	4.4 SDV8 AB Dynamic
+733	랜드로버	Range Rover Sports	4.4 SDV8 HSE Dynamic
+736	랜드로버	Range Rover Sports	5.0 SC SVR
+533	렉서스	CT	200h F-Sport
+532	렉서스	CT	200h Supreme
+540	렉서스	ES	300h Executive
+538	렉서스	ES	300h Premium
+539	렉서스	ES	300h Supreme
+543	렉서스	ES	350 Executive
+541	렉서스	ES	350 Premium
+542	렉서스	ES	350 Supreme
+544	렉서스	GS	200t Supreme
+546	렉서스	GS	350 Executive
+545	렉서스	GS	350 F-Sport
+1568	렉서스	GS	450h F-Sport
+548	렉서스	GS	450h Supreme
+1569	렉서스	GS	F
+1206	렉서스	IS	200t Executive
+537	렉서스	IS	200t F-Sport
+534	렉서스	IS	200t Premium
+535	렉서스	IS	200t Supreme
+550	렉서스	LS	460 AWD
+549	렉서스	LS	460 Standard
+551	렉서스	LS	460L 5Seater
+553	렉서스	LS	600hL AWD 4Seater
+552	렉서스	LS	600hL AWD 5Seater
+558	렉서스	NX	200t Executive
+559	렉서스	NX	200t F-Sport
+557	렉서스	NX	200t Supreme
+566	렉서스	NX	300h Executive
+556	렉서스	NX	300h Supreme
+1205	렉서스	RC	200t
+554	렉서스	RC	350 F-Sport
+555	렉서스	RC	F
+561	렉서스	RX	350 Executive
+1209	렉서스	RX	450h Executive
+1210	렉서스	RX	450h F-Sport
+1208	렉서스	RX	450h Premium
+1434	르노삼성	QM3	LE
+1701	르노삼성	QM3	LE
+1702	르노삼성	QM3	RE
+1499	르노삼성	QM3	RE
+1500	르노삼성	QM3	RE Signature
+1703	르노삼성	QM3	RE 시그니처
+1433	르노삼성	QM3	SE
+1700	르노삼성	QM3	SE
+1496	르노삼성	QM5	LE
+1498	르노삼성	QM5	RE
+1495	르노삼성	QM5	SE
+1688	르노삼성	QM6	2WD LE
+1689	르노삼성	QM6	2WD RE
+1690	르노삼성	QM6	2WD RE Signature
+1687	르노삼성	QM6	2WD SE
+1691	르노삼성	QM6	4WD LE
+1692	르노삼성	QM6	4WD RE
+1693	르노삼성	QM6	4WD RE Signature
+1492	르노삼성	SM3	1.5 dCi LE
+1491	르노삼성	SM3	1.5 dCi SE
+1489	르노삼성	SM3	1.6 가솔린 LE
+1483	르노삼성	SM3	1.6 가솔린 PE
+1490	르노삼성	SM3	1.6 가솔린 RE
+1488	르노삼성	SM3	1.6 가솔린 SE
+1494	르노삼성	SM3 Z.E.	RE
+1493	르노삼성	SM3 Z.E.	SE
+1480	르노삼성	SM5	Classic
+1486	르노삼성	SM5	LPLi 고급형
+1487	르노삼성	SM5	LPLi 최고급형
+1665	르노삼성	SM6	1.5 dCi LE
+1663	르노삼성	SM6	1.5 dCi PE
+1664	르노삼성	SM6	1.5 dCi SE
+1236	르노삼성	SM6	1.6 TCe LE
+1237	르노삼성	SM6	1.6 TCe RE
+1235	르노삼성	SM6	1.6 TCe SE
+1233	르노삼성	SM6	2.0 GDe LE
+1231	르노삼성	SM6	2.0 GDe PE
+1234	르노삼성	SM6	2.0 GDe RE
+1232	르노삼성	SM6	2.0 GDe SE
+1240	르노삼성	SM6	2.0 LPe LE
+1241	르노삼성	SM6	2.0 LPe RE
+1239	르노삼성	SM6	2.0 LPe SE
+1478	르노삼성	SM7	LE
+1481	르노삼성	SM7	LE35
+1484	르노삼성	SM7	LPe 렌터카
+1477	르노삼성	SM7	SE
+1479	르노삼성	SM7	V6
+1482	르노삼성	SM7	V6 35
+1485	르노삼성	xxxxxxxxxxxxxx	SE
+648	링컨	All New MKX	2.7 Reserve
+647	링컨	All New MKX	2.7 Select
+1680	링컨	All New MKZ	(17년식) Reserve 300A AWD
+1679	링컨	All New MKZ	(17년식) Reserve 300A FWD
+1681	링컨	All New MKZ	(17년식) Reserve 600A Hybrid
+1678	링컨	All New MKZ	(17년식) Select 200A FWD
+635	링컨	All New MKZ	2.0 200A Moonroof FWD
+637	링컨	All New MKZ	2.0 200A Panorama roof AWD
+636	링컨	All New MKZ	2.0 200A Panorama roof FWD
+640	링컨	All New MKZ	2.0 300A Panorama roof & Tech PKG AWD
+639	링컨	All New MKZ	2.0 300A Panorama roof & Tech PKG FWD
+638	링컨	All New MKZ	2.0 300A Panorama roof FWD
+641	링컨	All New MKZ	Hybrid 500A Moonroof FWD
+642	링컨	All New MKZ	Hybrid 600A Panorama roof, Tech pkg FWD
+646	링컨	MKC	2.0 Ecoboost Reserve(300A)
+645	링컨	MKC	2.0 Ecoboost Select(200A)
+644	링컨	New MKS	3.5 AWD
+643	링컨	New MKS	3.7L
+1810	마세라티	Ghibli	SQ4(17MY)
+490	마세라티	Ghibli	V6
+719	마세라티	Ghibli	V6 Diesel
+489	마세라티	Ghibli	V6 Diesel  Sport
+1809	마세라티	Ghibli	V6 Diesel Luxury(17MY)
+1806	마세라티	Ghibli	V6 Diesel(17MY)
+491	마세라티	Ghibli	V6 S Q4
+1808	마세라티	Ghibli	V6 Sport(17MY)
+1807	마세라티	Ghibli	V6(17MY)
+504	마세라티	GranCabrio	Sport
+502	마세라티	GranTurismo	MC
+501	마세라티	GranTurismo	Sport (Aoutomatic)
+1653	마세라티	Levante	3.0
+1654	마세라티	Levante	3.0 S
+1652	마세라티	Levante	Diesel
+1814	마세라티	Quattroporte	GTS GranLusso(17MY)
+1805	마세라티	Quattroporte	GTS GranSport(17MY)
+1804	마세라티	Quattroporte	S Q4 GranLusso(17MY)
+1813	마세라티	Quattroporte	S Q4 GranSport
+496	마세라티	Quattroporte	V6
+500	마세라티	Quattroporte	V6 Diesel
+1811	마세라티	Quattroporte	V6 Diesel GranLusso(17MY)
+1802	마세라티	Quattroporte	V6 Diesel(17MY)
+1812	마세라티	Quattroporte	V6 GranLusso(17MY)
+497	마세라티	Quattroporte	V6 S Q4
+1803	마세라티	Quattroporte	V6(17MY)
+499	마세라티	Quattroporte	V8 GTS Luxury
+498	마세라티	Quattroporte	V8 GTS Sport
+327	미니	CLUBMAN	COOPER
+1382	미니	CLUBMAN	COOPER D
+1383	미니	CLUBMAN	COOPER D HIGH TRIM
+709	미니	CLUBMAN	COOPER HIGH TRIM
+1199	미니	CLUBMAN	COOPER MID TRIM
+328	미니	CLUBMAN	COOPER S
+710	미니	CLUBMAN	COOPER S1
+1384	미니	CLUBMAN	COOPER SD
+331	미니	CONVERTIBLE	COOPER
+333	미니	CONVERTIBLE	COOPER S
+332	미니	COUNTRYMAN	COOPER D ALL4
+1391	미니	COUNTRYMAN	COOPER D All4 P/L
+1200	미니	COUNTRYMAN	COOPER SD All4 P/L
+334	미니	COUNTRYMAN	JCW
+309	미니	MINI (3도어)	COOPER
+1418	미니	MINI (3도어)	COOPER D
+314	미니	MINI (3도어)	COOPER D HIGH TRIM
+313	미니	MINI (3도어)	COOPER D MID TRIM
+310	미니	MINI (3도어)	COOPER HIGH TRIM
+311	미니	MINI (3도어)	COOPER S
+716	미니	MINI (3도어)	COOPER SD
+715	미니	MINI (3도어)	JCW
+1392	미니	MINI (5도어)	Black Suit Edition
+711	미니	MINI (5도어)	COOPER
+1419	미니	MINI (5도어)	COOPER D
+323	미니	MINI (5도어)	COOPER D HIGH TRIM
+322	미니	MINI (5도어)	COOPER D MID TRIM
+712	미니	MINI (5도어)	COOPER HIGH TRIM
+320	미니	MINI (5도어)	COOPER S
+324	미니	MINI (5도어)	COOPER SD
+129	벤츠	A-Class	A 200
+695	벤츠	A-Class	AMG A 45 4MATIC
+697	벤츠	A-Class	AMG A 45 4MATIC Korea Edition
+182	벤츠	AMG GT	GT
+1411	벤츠	AMG GT	GT S
+1577	벤츠	AMG GT	GT S Edition 1
+132	벤츠	B-Class	B 200 d
+145	벤츠	C-Class	AMG C 63
+703	벤츠	C-Class	AMG C 63 S
+146	벤츠	C-Class	AMG C 63 S Edition 1
+1800	벤츠	C-class	AMG C63 S Coupe 에디션1
+138	벤츠	C-Class	C 200
+139	벤츠	C-Class	C 200 AV
+140	벤츠	C-Class	C 200 d
+1440	벤츠	C-Class	C 200 쿠페
+143	벤츠	C-Class	C 220 d 4MATIC
+696	벤츠	C-Class	C 220 d 4MATIC (Estate)
+141	벤츠	C-Class	C 220 d AV
+142	벤츠	C-Class	C 220 d EX
+144	벤츠	C-Class	C 250 d 4MATIC
+702	벤츠	C-Class	C 450 AMG 4MATIC
+137	벤츠	CLA-Class	AMG CLA 45 4MATIC
+133	벤츠	CLA-Class	CLA 200 d
+135	벤츠	CLA-Class	CLA 200 d 4MATIC
+134	벤츠	CLA-Class	CLA 200 d NAVI
+136	벤츠	CLA-Class	CLA 250 4MATIC
+1782	벤츠	CLA-Class	CLA250 4Matic
+166	벤츠	CLS-Class	AMG CLS 63 4MATIC
+167	벤츠	CLS-Class	AMG CLS 63 S 4MATIC
+164	벤츠	CLS-Class	CLS 250 d 4MATIC
+705	벤츠	CLS-Class	CLS 350 d 4MATIC
+165	벤츠	CLS-Class	CLS 400
+159	벤츠	E-Class	AMG E 63 4MATIC
+1795	벤츠	E-Class	E 220 d Avantgarde
+148	벤츠	E-Class	E 220 d Avantgarde HUD
+1798	벤츠	E-Class	E 220 d Exclusive
+160	벤츠	E-Class	E 220 d Exclusive HUD
+1797	벤츠	E-Class	E 300 4MATIC Avantgarde
+150	벤츠	E-Class	E 300 4MATIC Avantgarde HUD
+1801	벤츠	E-Class	E 300 4MATIC Exclusive
+704	벤츠	E-Class	E 300 4MATIC Exclusive HUD
+1799	벤츠	E-Class	E 300 Avantgarde
+162	벤츠	E-Class	E 300 Avantgarde HUD
+153	벤츠	E-Class	E 300 ELE (Without 360 camera)
+1796	벤츠	E-Class	E 300 Exclusive
+149	벤츠	E-Class	E 300 Exclusive HUD
+157	벤츠	E-Class	E 350 BT 4MATIC
+158	벤츠	E-Class	E 400 4MATIC
+197	벤츠	G-Class	AMG G 63
+198	벤츠	G-Class	AMG G 63 Crazy Edition
+701	벤츠	G-Class	AMG G 63 Edition 463
+1576	벤츠	G-Class	AMG G 65 Edition 463
+196	벤츠	G-Class	G 350 d Sports Package
+188	벤츠	GLA-Class	AMG GLA 45 4MATIC
+186	벤츠	GLA-Class	GLA 200 d
+187	벤츠	GLA-Class	GLA 200 d 4MATIC
+698	벤츠	GLC-Class	GLC 220 d 4MATIC
+189	벤츠	GLC-Class	GLC 220 d 4MATIC (ILP)
+699	벤츠	GLC-Class	GLC 220 d 4MATIC Premium
+190	벤츠	GLC-Class	GLC 220 d 4MATIC Premium (ILP)
+700	벤츠	GLE-Class	AMG GLE 63 4MATIC
+194	벤츠	GLE-Class	GLE 250 d 4MATIC
+195	벤츠	GLE-Class	GLE 350 d 4MATIC
+177	벤츠	Maybach	S 500
+178	벤츠	Maybach	S 500 4MATIC
+179	벤츠	Maybach	S 600
+1579	벤츠	New E-Class	E 200 Cabriolet
+1580	벤츠	New E-Class	E 200 Coupe
+152	벤츠	New E-Class	E 220 d Avantgarde (ILP)
+155	벤츠	New E-Class	E 300 4MATIC Avantgarde Intelligent
+1581	벤츠	New E-Class	E 300 4MATIC Exclusive (ILP)
+154	벤츠	New E-Class	E 300 Avantgarde (ILP)
+163	벤츠	New E-Class	E 400 Cabriolet
+161	벤츠	New E-Class	E 400 Coupe
+1671	벤츠	S-class	AMG S 63 4matic cabriolet
+706	벤츠	S-Class	AMG S 63 4MATIC Coupe
+176	벤츠	S-Class	AMG S 63 4MATIC L
+168	벤츠	S-Class	S 350 d
+169	벤츠	S-Class	S 350 d 4MATIC
+171	벤츠	S-Class	S 350 d 4MATIC L
+170	벤츠	S-Class	S 350 d L
+173	벤츠	S-Class	S 400 4MATIC L
+172	벤츠	S-Class	S 400 L
+175	벤츠	S-Class	S 500 4MATIC L
+174	벤츠	S-Class	S 500 L
+1645	벤츠	SL-Class	SL 400
+180	벤츠	SL-Class	SL 400
+181	벤츠	SL-Class	SL 63 AMG
+1686	벤츠	SLC	AMG SLC 43
+185	벤츠	SLK-Class	AMG SLK 55
+183	벤츠	SLK-Class	SLK 200
+184	벤츠	SLK-Class	SLK 350
+683	벤틀리	Mulsanne	Mulsanne
+684	벤틀리	New Flying Spur	V8
+685	벤틀리	New Flying Spur	W12
+687	벤틀리	New Flying Spur	W12 Black Edition
+686	벤틀리	New Flying Spur	W12 White Edition
+679	벤틀리	The New Continental	GT V8
+680	벤틀리	The New Continental	GT V8 S
+681	벤틀리	The New Continental	GT W12
+682	벤틀리	The New Continental	GT W12 Speed
+366	볼보	S60	D3 Momentum
+367	볼보	S60	D4 Summum
+1420	볼보	S60	D5 R-Design
+369	볼보	S60	T5 R-Design
+368	볼보	S60	T5 Summum
+1421	볼보	S60	T6 R-Design
+1644	볼보	S60 CC	D4 AWD
+370	볼보	S60 CC	D4 Summum
+378	볼보	S80	D4 Inscription
+376	볼보	S80	D4 Momentum
+377	볼보	S80	D4 Summum
+381	볼보	S80	T5 Inscription
+379	볼보	S80	T5 Momentum
+380	볼보	S80	T5 Summum
+358	볼보	V40	D3 Kinetic
+359	볼보	V40	D3 Momentum
+360	볼보	V40	D4 Inscription
+361	볼보	V40	D4 R-Design
+362	볼보	V40	T5 Inscription
+363	볼보	V40	T5 R-Design
+364	볼보	V40 CC	D3 Momentum
+365	볼보	V40 CC	D4 Summum
+1475	볼보	V40 CC	T5 AWD
+372	볼보	V60	D3 Momentum
+371	볼보	V60	D4 Summum
+1643	볼보	V60	D5 R-Design
+374	볼보	V60 CC	D4 AWD
+373	볼보	V60 CC	D4 Summum
+375	볼보	V60 CC	T5 AWD
+382	볼보	XC60	D3
+383	볼보	XC60	D4 Summum 
+384	볼보	XC60	D5
+385	볼보	XC60	D5 Inscription 
+386	볼보	XC60	D5 R-Design 
+1422	볼보	XC70	D4
+388	볼보	XC70	D5 Inscription
+387	볼보	XC70	D5 Summum
+1291	볼보	XC90	D5 Inscription
+1289	볼보	XC90	D5 Momentum
+1290	볼보	XC90	D5 R-Design
+1293	볼보	XC90	T6 Inscription
+1292	볼보	XC90	T6 R-Design
+1295	볼보	XC90	T8 Excellence
+1294	볼보	XC90	T8 Inscription
+1156	쉐보레	0	0
+1158	쉐보레	0	0
+1513	쉐보레	5도어 해치백	1.4 Turbo LS (M/T)
+1450	쉐보레	All New 말리부	1.5 Turbo LS
+1451	쉐보레	All New 말리부	1.5 Turbo LS 디럭스
+1452	쉐보레	All New 말리부	1.5 Turbo LT
+1454	쉐보레	All New 말리부	1.5 Turbo LT 디럭스
+1455	쉐보레	All New 말리부	1.5 Turbo LTZ
+1456	쉐보레	All New 말리부	1.5 Turbo LTZ 프리미엄 세이프티
+1588	쉐보레	All New 말리부	1.8 하이브리드 LT
+1589	쉐보레	All New 말리부	1.8 하이브리드 LT 디럭스
+1457	쉐보레	All New 말리부	2.0 Turbo LT 프리미엄
+1458	쉐보레	All New 말리부	2.0 Turbo LTZ 프리미엄
+1636	쉐보레	All New 카마로 SS	6.2 V8 가솔린
+1154	쉐보레	THE NEXT SPARK	LS (M/T)
+1662	쉐보레	THE NEXT SPARK	LS Basic C-TECH
+1155	쉐보레	THE NEXT SPARK	LS C-TECH
+1157	쉐보레	THE NEXT SPARK	LT C-TECH
+1159	쉐보레	THE NEXT SPARK	LT Plus C-TECH
+1160	쉐보레	THE NEXT SPARK	LTZ (M/T)
+1161	쉐보레	THE NEXT SPARK	LTZ C-TECH
+1152	쉐보레	THE NEXT SPARK	승용밴 (M/T)
+1590	쉐보레	THE NEXT SPARK	승용밴 Basic C-TECH
+1504	쉐보레	THE NEXT SPARK	승용밴 C-TECH
+1162	쉐보레	THE NEXT SPARK	패션 스페셜 에디션 (M/T)
+1163	쉐보레	THE NEXT SPARK	패션 에디션 C-TECH
+1503	쉐보레	THE NEXT SPARK	퍼펙트 블랙 C-TECH
+1661	쉐보레	THE NEXT SPARK (ECO)	LS Basic C-TECH
+1164	쉐보레	THE NEXT SPARK (ECO)	LS C-TECH
+1165	쉐보레	THE NEXT SPARK (ECO)	LT C-TECH
+1166	쉐보레	THE NEXT SPARK (ECO)	LT Plus C-TECH
+1167	쉐보레	THE NEXT SPARK (ECO)	LTZ C-TECH
+1591	쉐보레	TRAX	1.4 가솔린 Turbo LS
+1592	쉐보레	TRAX	1.4 가솔린 Turbo LS 디럭스 팩
+1593	쉐보레	TRAX	1.4 가솔린 Turbo LT
+1594	쉐보레	TRAX	1.4 가솔린 Turbo LT Leather Package
+1595	쉐보레	TRAX	1.4 가솔린 Turbo LTZ
+1598	쉐보레	TRAX	1.4 가솔린 Turbo 퍼펙트 블랙
+1597	쉐보레	TRAX	1.4 가솔린 Turbo 프리미엄
+1599	쉐보레	TRAX	1.6 디젤 LS
+1600	쉐보레	TRAX	1.6 디젤 LS 디럭스 팩
+1601	쉐보레	TRAX	1.6 디젤 LT
+1602	쉐보레	TRAX	1.6 디젤 LT Leather Package
+1603	쉐보레	TRAX	1.6 디젤 LTZ
+1606	쉐보레	TRAX	1.6 디젤 퍼펙트 블랙
+1605	쉐보레	TRAX	1.6 디젤 프리미엄
+1718	쉐보레	말리부	1.5 터보 LS
+1719	쉐보레	말리부	1.5 터보 LS 디럭스
+1720	쉐보레	말리부	1.5 터보 LT
+1721	쉐보레	말리부	1.5 터보 LT 디럭스
+1722	쉐보레	말리부	1.5 터보 LTZ
+1723	쉐보레	말리부	1.5 터보 LTZ 프리미엄 세이프티
+1727	쉐보레	말리부	1.8 하이브리드 LT
+1728	쉐보레	말리부	1.8 하이브리드 LT 디럭스
+1724	쉐보레	말리부	2.0 터보 LT 프리미엄
+1725	쉐보레	말리부	2.0 터보 LTZ 프리미엄
+1726	쉐보레	말리부	2.0 터보 퍼펙트 블랙
+1153	쉐보레	삭제요청	삭제필요
+1505	쉐보레	아베오 4도어	1.4 Turbo L (M/T)
+1507	쉐보레	아베오 4도어	1.4 Turbo LS (M/T)
+1506	쉐보레	아베오 세단	1.4 Turbo L
+1508	쉐보레	아베오 세단	1.4 Turbo LS
+1509	쉐보레	아베오 세단	1.4 Turbo LT
+1511	쉐보레	아베오 세단	1.4 Turbo 스타일 에디션
+1512	쉐보레	아베오 세단	1.4 Turbo 퍼펙트 블랙
+1514	쉐보레	아베오 해치백	1.4 Turbo LS
+1515	쉐보레	아베오 해치백	1.4 Turbo LT
+1516	쉐보레	아베오 해치백	1.4 Turbo RS
+1628	쉐보레	올란도	(LPGi) LS 고급형
+1631	쉐보레	올란도	(LPGi) LT 세이프티
+1630	쉐보레	올란도	(LPGi) LT 컨비니언스
+1629	쉐보레	올란도	(LPGi) LT 프리미엄
+1633	쉐보레	올란도	(LPGi) LTZ 세이프티
+1632	쉐보레	올란도	(LPGi) LTZ 프리미엄
+1634	쉐보레	올란도	(LPGi) 다이나믹
+1635	쉐보레	올란도	(LPGi) 퍼펙트 블랙
+1620	쉐보레	올란도	1.6 디젤 LS 고급형
+1623	쉐보레	올란도	1.6 디젤 LT 세이프티
+1622	쉐보레	올란도	1.6 디젤 LT 컨비니언스
+1621	쉐보레	올란도	1.6 디젤 LT 프리미엄
+1625	쉐보레	올란도	1.6 디젤 LTZ 세이프티
+1624	쉐보레	올란도	1.6 디젤 LTZ 프리미엄
+1626	쉐보레	올란도	1.6 디젤 다이나믹
+1627	쉐보레	올란도	1.6 디젤 퍼펙트 블랙
+1759	쉐보레	올란도	LPGi LS
+1762	쉐보레	올란도	LPGi LT 세이프티
+1761	쉐보레	올란도	LPGi LT 컨비니언스
+1760	쉐보레	올란도	LPGi LT 프리미엄
+1764	쉐보레	올란도	LPGi LTZ 세이프티
+1763	쉐보레	올란도	LPGi LTZ 프리미엄
+1765	쉐보레	올란도	LPGi 스페셜에디션 다이나믹
+1766	쉐보레	올란도	LPGi 스페셜에디션 퍼펙트블랙
+1751	쉐보레	올란도	디젤 LS
+1754	쉐보레	올란도	디젤 LT 세이프티
+1753	쉐보레	올란도	디젤 LT 컨비니언스
+1752	쉐보레	올란도	디젤 LT 프리미엄
+1756	쉐보레	올란도	디젤 LTZ 세이프티
+1755	쉐보레	올란도	디젤 LTZ 프리미엄
+1757	쉐보레	올란도	디젤 스페셜에디션 다이나믹
+1758	쉐보레	올란도	디젤 스페셜에디션 퍼팩트블랙
+1767	쉐보레	올란도	택시/렌터카 LS
+1768	쉐보레	올란도	택시/렌터카 디럭스팩
+1748	쉐보레	임팔라	2.5 LT
+1749	쉐보레	임팔라	2.5 LTZ
+1168	쉐보레	임팔라	2.5 가솔린 LT
+1169	쉐보레	임팔라	2.5 가솔린 LTZ
+1750	쉐보레	임팔라	3.6 LTZ
+1170	쉐보레	임팔라	3.6 가솔린 LTZ
+1607	쉐보레	캡티바	2.0 디젤 (5인승) LS
+1608	쉐보레	캡티바	2.0 디젤 (5인승) LS 디럭스 팩
+1609	쉐보레	캡티바	2.0 디젤 (5인승) LT
+1610	쉐보레	캡티바	2.0 디젤 (5인승) LT 디럭스 팩
+1611	쉐보레	캡티바	2.0 디젤 (5인승) LTZ (A/T)
+1616	쉐보레	캡티바	2.0 디젤 (5인승) 퍼펙트 블랙
+1522	쉐보레	크루즈	1.4 가솔린 Turbo LT 디럭스팩
+1523	쉐보레	크루즈	1.4 가솔린 Turbo LTZ
+1524	쉐보레	크루즈	1.4 가솔린 Turbo 퍼펙트 블랙
+1525	쉐보레	크루즈	1.6 디젤 LT 디럭스팩
+1526	쉐보레	크루즈	1.6 디젤 LTZ
+1517	쉐보레	크루즈	1.8 가솔린 LS
+1518	쉐보레	크루즈	1.8 가솔린 LT
+1519	쉐보레	크루즈	1.8 가솔린 LT 디럭스팩
+1520	쉐보레	크루즈	1.8 가솔린 LTZ
+1521	쉐보레	크루즈	1.8 가솔린 퍼펙트 블랙
+1618	쉐보레	크루즈5	1.4 가솔린 Turbo LTZ
+1617	쉐보레	크루즈5	1.8 가솔린 LTZ
+1669	시트로엥	C4 CACTUS	Feel
+1668	시트로엥	C4 CACTUS	Live
+1670	시트로엥	C4 CACTUS	Shine
+423	시트로엥	C4 PICASSO	1.6 Intensive
+419	시트로엥	DS3	1.6 e-HDi New Light Signature (So Chic)
+418	시트로엥	DS3	Be Chic
+421	시트로엥	DS3	Cabrio 1.6 e-HDi So Chic Plus
+420	시트로엥	DS3	So Chic
+422	시트로엥	DS4	So Chic
+424	시트로엥	DS5	So Chic
+425	시트로엥	DS5	So Chic+
+426	시트로엥	GRAND C4 PACASSO	1.6 Intensive
+428	시트로엥	GRAND C4 PACASSO	2.0 Exclusive
+427	시트로엥	GRAND C4 PACASSO	2.0 Intensive Plus
+1176	쌍용	New Korando C	2WD  DX
+1171	쌍용	New Korando C	2WD  KX (M/T)
+1172	쌍용	New Korando C	2WD KX
+1173	쌍용	New Korando C	2WD KX Special
+1174	쌍용	New Korando C	2WD RX 고급형
+1175	쌍용	New Korando C	2WD RX 최고급형
+1178	쌍용	New Korando C	2WD 삼바 에디션
+1177	쌍용	New Korando C	2WD 익스트림 에디션
+1183	쌍용	New Korando C	AWD DX (A/T)
+1179	쌍용	New Korando C	AWD KX (A/T)
+1180	쌍용	New Korando C	AWD KX Special (A/T)
+1181	쌍용	New Korando C	AWD RX 고급형 (A/T)
+1182	쌍용	New Korando C	AWD RX 최고급형 (A/T)
+1639	쌍용	New Korando 스포츠 2.2	2WD CX5 Club (A/T)
+1262	쌍용	뉴 체어맨 W	카이저 CW600  Prestige 4-Tronic
+1259	쌍용	뉴 체어맨 W	카이저 CW600 Luxury
+1260	쌍용	뉴 체어맨 W	카이저 CW600 Luxury 4-Tronic
+1261	쌍용	뉴 체어맨 W	카이저 CW600 Prestige
+1263	쌍용	뉴 체어맨 W	카이저 CW700 Executive
+1268	쌍용	뉴 체어맨 W	카이저 CW700 Limousine
+1269	쌍용	뉴 체어맨 W	카이저 CW700 Limousine 4-Tronic
+1265	쌍용	뉴 체어맨 W	카이저 CW700 VIP
+1266	쌍용	뉴 체어맨 W	카이저 CW700 VIP 4-Tronic
+1267	쌍용	뉴 체어맨 W	카이저 CW700 VVIP (4인승 세단)
+1271	쌍용	뉴 체어맨 W	카이저 V8 5000
+1270	쌍용	뉴 체어맨 W	카이저 V8 5000 Special Edition
+1272	쌍용	뉴 체어맨 W	카이저 V8 5000 Summit
+1273	쌍용	렉스턴W	(5인승) 2WD RX7 DELUXE
+1275	쌍용	렉스턴W	(5인승) 2WD RX7 PRESTIGE
+1274	쌍용	렉스턴W	(5인승)2WD RX7 LUXURY
+1286	쌍용	렉스턴W	(5인승)4WD NOBLESSE
+1276	쌍용	렉스턴W	(5인승)4WD RX7 DELUXE
+1277	쌍용	렉스턴W	(5인승)4WD RX7 LUXURY
+1278	쌍용	렉스턴W	(5인승)4WD RX7 PRESTIGE
+1280	쌍용	렉스턴W	(7인승) 2WD RX7 DELUXE
+1282	쌍용	렉스턴W	(7인승) 2WD RX7 PRESTIGE
+1281	쌍용	렉스턴W	(7인승)2WD RX7 LUXURY
+1287	쌍용	렉스턴W	(7인승)4WD NOBLESSE
+1283	쌍용	렉스턴W	(7인승)4WD RX7 DELUXE
+1284	쌍용	렉스턴W	(7인승)4WD RX7 LUXURY
+1285	쌍용	렉스턴W	(7인승)4WD RX7 PRESTIGE
+1777	쌍용	코란도 투리스모	11인승 RX
+1776	쌍용	코란도 투리스모	11인승 TX
+1561	쌍용	코란도 투리스모	11인승 플러스 RX 4WD
+1560	쌍용	코란도 투리스모	11인승 플러스 TX 4WD
+1774	쌍용	코란도 투리스모	9인승 RX
+1781	쌍용	코란도 투리스모	9인승 RX
+1773	쌍용	코란도 투리스모	9인승 TX
+1775	쌍용	코란도 투리스모	9인승 아웃도어 에디션
+1288	쌍용	코란도 투리스모	9인승 플러스  TX 4WD
+1559	쌍용	코란도 투리스모	9인승 플러스 Outdoor Edition 4WD
+1558	쌍용	코란도 투리스모	9인승 플러스 RX 4WD
+1638	쌍용	코란도 투리스모	9인승 플러스 TX 4WD
+1564	쌍용	코란도 투리스모	샤토 High-limousine 9인승
+1562	쌍용	코란도 투리스모	샤토 High-roof 11인승
+1563	쌍용	코란도 투리스모	샤토 High-roof 9인승
+1778	쌍용	코란도 투리스모	샤토 하이루프 11인승
+1779	쌍용	코란도 투리스모	샤토 하이루프 9인승
+1780	쌍용	코란도 투리스모	샤토 하이리무진 9인승
+1637	쌍용	티볼리	(경유) TX Samba Edition
+1189	쌍용	티볼리	(경유)LX
+1190	쌍용	티볼리	(경유)LX 4WD (A/T)
+1185	쌍용	티볼리	(경유)TX
+1186	쌍용	티볼리	(경유)TX 4WD (A/T)
+1187	쌍용	티볼리	(경유)VX (A/T)
+1188	쌍용	티볼리	(경유)VX 4WD (A/T)
+1194	쌍용	티볼리	(휘발유) LX
+1553	쌍용	티볼리	(휘발유) TX Samba Edition
+1195	쌍용	티볼리	(휘발유)LX 고급형 4WD (A/T)
+1196	쌍용	티볼리	(휘발유)LX 최고급형 (A/T)
+1197	쌍용	티볼리	(휘발유)LX 최고급형 4WD (A/T)
+1192	쌍용	티볼리	(휘발유)TX
+1191	쌍용	티볼리	(휘발유)TX (M/T)
+1554	쌍용	티볼리	(휘발유)TX Style
+1193	쌍용	티볼리	(휘발유)VX
+1738	쌍용	티볼리	가솔린 LX
+1736	쌍용	티볼리	가솔린 TX
+1737	쌍용	티볼리	가솔린 VX
+1735	쌍용	티볼리	디젤 LX
+1734	쌍용	티볼리	디젤 TX
+1555	쌍용	티볼리 에어	(경유) AX
+1556	쌍용	티볼리 에어	(경유) IX
+1557	쌍용	티볼리 에어	(경유) RX
+1732	쌍용	티볼리 에어	가솔린 IX
+1733	쌍용	티볼리 에어	가솔린 RX
+1729	쌍용	티볼리 에어	디젤 AX
+1730	쌍용	티볼리 에어	디젤 IX
+1731	쌍용	티볼리 에어	디젤 RX
+277	아우디	A3	35 TDI
+229	아우디	A3	35 TDI Dynamic
+231	아우디	A3	S3
+1641	아우디	A3	SB 35 TDI
+230	아우디	A3	SB 35 TDI Dynamic
+1385	아우디	A3	SB e-tron
+233	아우디	A4	45 TFSI
+232	아우디	A4	45 TFSI Premium
+235	아우디	A4	45 TFSI qu. Premium
+236	아우디	A4	45 TFSI qu. Sport
+234	아우디	A4	45 TFSI Sport
+237	아우디	A4	55 TDI qu. Sport
+239	아우디	A5	Cabrio 40 TFSI qu.
+238	아우디	A5	Coupe 40 TFSI qu.
+240	아우디	A5	SB 35 TDI qu.
+241	아우디	A5	SB 35 TDI qu. Dynamic
+243	아우디	A6	35 TDI Comfort
+244	아우디	A6	35 TDI Premium
+737	아우디	A6	35 TDI qu. Comfort
+738	아우디	A6	35 TDI qu. Premium
+739	아우디	A6	35 TDI qu. Sport
+245	아우디	A6	40 TDI qu. Comfort
+246	아우디	A6	40 TDI qu. Premium
+247	아우디	A6	40 TDI qu. Sport
+248	아우디	A6	40 TFSI qu. Sport Tech
+250	아우디	A6	50 TDI qu. Premium
+251	아우디	A6	50 TDI qu. Premium Tech Design
+253	아우디	A6	50 TFSI qu. Sport
+254	아우디	A6	50 TFSI qu. Sport Tech
+256	아우디	A6	55 TDI qu. Premium Tech
+258	아우디	A6	55 TDI qu. Sport Tech
+727	아우디	A6	Avant 35 TDI qu. Comfort
+1467	아우디	A6	Avant 35 TDI qu. Premium
+1468	아우디	A6	Avant 35 TDI qu. Premuim Tech
+728	아우디	A6	Avant 35 TDI qu. Sport
+1459	아우디	A7	40 TDI
+1460	아우디	A7	40 TDI Premium
+259	아우디	A7	40 TFSI qu. Premium
+260	아우디	A7	40 TFSI qu. Sport
+261	아우디	A7	50 TDI qu. Comfort
+262	아우디	A7	50 TDI qu. Premium
+263	아우디	A7	50 TDI qu. Sport
+266	아우디	A7	50 TFSI qu. Premium
+267	아우디	A7	50 TFSI qu. Sport
+268	아우디	A7	50 TFSI qu. Sport Tech
+269	아우디	A7	55 TDI qu. Comfort
+270	아우디	A7	55 TDI qu. Premium
+272	아우디	A7	55 TDI qu. Premium Tech Design
+273	아우디	A7	55 TDI qu. Sport Tech
+276	아우디	A7	RS7
+1472	아우디	A7	RS7 Plus
+278	아우디	A8	50 TDI qu. NWB 8SP
+279	아우디	A8	50 TDI qu. Xenon
+282	아우디	A8	50L TDI qu. Xenon
+280	아우디	A8	65 TFSI qu. NWB
+281	아우디	A8	L 50 TDI qu. 8SP
+283	아우디	A8	L 50 TDI qu. Design 8SP
+286	아우디	A8	L 65 TFSI qu. (4-seater) Design
+284	아우디	A8	L 65 TFSI qu. (5-seater)
+285	아우디	A8	L 65 TFSI qu. (5-seater) Design
+287	아우디	A8	S8 4.0 TFSI qu.
+288	아우디	A8	S8 4.0 TFSI qu. Design
+740	아우디	A8	S8 4.0 TFSI qu. Plus
+296	아우디	Q3	30 TDI qu. Design
+297	아우디	Q3	30 TDI qu. Sport
+298	아우디	Q3	35 TDI qu. Design
+299	아우디	Q3	35 TDI qu. Sport
+300	아우디	Q5	35 TDI qu.
+301	아우디	Q5	35 TDI qu. Dynamic
+302	아우디	Q5	45 TDI qu.
+303	아우디	Q5	45 TDI qu. Dynamic
+1386	아우디	Q7	35 TDI qu. Comfort
+1387	아우디	Q7	35 TDI qu. Premium
+1388	아우디	Q7	35 TDI qu. Premium Tech
+1390	아우디	Q7	45 TDI qu. Premium
+1389	아우디	Q7	45 TDI qu. Sport (2-zone)
+723	아우디	R8	5.2 FSI qu. V10 plus
+724	아우디	R8	5.2 FSI qu. V10 plus exclusive
+725	아우디	R8	Spyder 5.2 FSI qu.
+726	아우디	R8	Spyder 5.2 FSI qu. exclusive
+242	아우디	RS5	RS5 4.2 FSI Quattro
+1820	아우디	S4	S4 3.0 TFSi Quattro
+707	아우디	S6	S6 Sport
+708	아우디	S6	S6 Sport Design
+274	아우디	S7	S7 Sport
+275	아우디	S7	S7 Sport Design
+304	아우디	SQ5	SQ5
+289	아우디	TT	45 TFSI Coupe
+291	아우디	TT	45 TFSI Roadster
+290	아우디	TT	TTS Coupe
+527	애스턴마틴	DB9	Coupe 6.0S
+528	애스턴마틴	DB9	Volante 6.0S
+529	애스턴마틴	RAPIDE S	6.0S
+530	애스턴마틴	VANQUISH	Coupe 6.0
+531	애스턴마틴	VANQUISH	Volante 6.0
+507	애스턴마틴	VANTAGE	Coupe 4.7
+522	애스턴마틴	VANTAGE	Coupe 4.7S
+523	애스턴마틴	VANTAGE	Coupe 6.0S
+525	애스턴마틴	VANTAGE	Roadster 4.7
+524	애스턴마틴	VANTAGE	Roadster 4.7S
+526	애스턴마틴	VANTAGE	Roadster 6.0S
+1684	인피니티	Q30	2.0t 익스클루시브
+1685	인피니티	Q30	2.0t 익스클루시브 (시티 블랙 패키지 적용)
+1682	인피니티	Q30	2.0t 프리미엄
+1683	인피니티	Q30	2.0t 프리미엄 (시티 블랙 패키지 적용)
+594	인피니티	Q50	2.2d Exclusive
+593	인피니티	Q50	2.2d Premium
+592	인피니티	Q50	2.2d Style
+602	인피니티	Q50	S Hybrid Essence
+603	인피니티	Q50	S Hybrid Hi-Tech
+1297	인피니티	Q60	3.7 Convertible
+1296	인피니티	Q60	3.7 Coupe
+609	인피니티	Q70	AWD
+608	인피니티	Q70	Exclusive
+607	인피니티	Q70	Premium
+606	인피니티	Q70	Style
+1204	인피니티	QX50	3.7 AWD
+614	인피니티	QX60	2.5 Hybrid
+613	인피니티	QX60	3.5
+611	인피니티	QX70	3.7s
+615	인피니티	QX80	5.6
+1648	재규어	F-Pace	2.0d Portfolio
+1646	재규어	F-Pace	2.0d Prestige
+1647	재규어	F-Pace	2.0d R-Sport
+1649	재규어	F-Pace	3.0 R-Sport
+1651	재규어	F-Pace	3.0d First Edition
+1650	재규어	F-Pace	3.0d S
+414	재규어	F-Type	Convertible 3.0SC 
+415	재규어	F-Type	Convertible 3.0SC S  
+416	재규어	F-Type	Convertible 3.0SC S AWD
+417	재규어	F-Type	Convertible 5.0SC R AWD
+689	재규어	F-Type	Coupe 3.0SC
+690	재규어	F-Type	Coupe 3.0SC S
+693	재규어	F-Type	Coupe 3.0SC S (M/T)
+688	재규어	F-Type	Coupe 3.0SC S AWD
+692	재규어	F-Type	Coupe 3.0SC(M/T)
+691	재규어	F-Type	Coupe 5.0SC R AWD
+1794	재규어	XE	20D AWD Portfolio(17MY)
+1792	재규어	XE	20D AWD Prestige(17MY)
+1793	재규어	XE	20D AWD R-Sport(17MY)
+66	재규어	XE	20D Portfolio
+64	재규어	XE	20D Prestige
+65	재규어	XE	20D R-Sport
+67	재규어	XE	20T Prestige
+68	재규어	XE	3.0 V6 S
+1789	재규어	XF	20D AWD Portfolio(17MY)
+1788	재규어	XF	20D AWD Prestige(17MY)
+1424	재규어	XF	20D Portfolio(17MY)
+1423	재규어	XF	20D Prestige(17MY)
+1426	재규어	XF	25T Portfolio(17MY)
+1425	재규어	XF	25T Prestige(17MY)
+1428	재규어	XF	3.0 V6 SC AWD R-Sport
+1429	재규어	XF	3.0 V6 SC S AWD(17MY)
+1427	재규어	XF	3.0d V6 Turbo Portfolio
+1790	재규어	XF	30D Portfolio(17MY)
+1791	재규어	XF	35T AWD R-Sport (17MY)
+1612	재규어	XJ	2.0P Luxury SWB
+1614	재규어	XJ	3.0 SC AWD Portfolio LWB
+1615	재규어	XJ	3.0 SC AWD Premium Luxury LWB
+1613	재규어	XJ	3.0D Premium Luxury LWB
+971	제네시스	EQ900	3.3 T-GDi 럭셔리 2WD (A/T)
+970	제네시스	EQ900	3.3 T-GDi 럭셔리 AWD (A/T)
+973	제네시스	EQ900	3.3 T-GDi 프레스티지 AWD (A/T)
+972	제네시스	EQ900	3.3 T-GDi 프리미엄 럭셔리 AWD (A/T)
+966	제네시스	EQ900	3.8 GDi 럭셔리 2WD (A/T)
+967	제네시스	EQ900	3.8 GDi 럭셔리 AWD (A/T)
+969	제네시스	EQ900	3.8 GDi 프레스티지 AWD (A/T)
+968	제네시스	EQ900	3.8 GDi 프리미엄 럭셔리 AWD (A/T)
+974	제네시스	EQ900	5.0 GDi 프레스티지 AWD (A/T)
+1571	제네시스	EQ900	리무진 5.0GDi 프레스티지
+1570	제네시스	G80	3.3 GDi 럭셔리
+1572	제네시스	G80	3.3 GDi 프리미엄 럭셔리 (A/T)
+1575	제네시스	G80	3.8 GDi 파이니스트 (A/T)
+1574	제네시스	G80	3.8 GDi 프레스티지 (A/T)
+664	지프	Cherokee	2.0 4WD Limited
+663	지프	Cherokee	2.0 Longitude AWD
+1430	지프	Cherokee	2.0 Longitude 블랙 에디션
+1705	지프	Cherokee	2.2 Limited
+1704	지프	Cherokee	2.2 Longitude
+662	지프	Cherokee	2.4 Longitude
+1706	지프	Cherokee	2.4 Longitude High
+657	지프	Compass	2.4 Limited
+665	지프	Grand Cherokee	3.0 Limited
+666	지프	Grand Cherokee	3.0 Overland
+667	지프	Grand Cherokee	3.0 Summit
+668	지프	Grand Cherokee	3.6 Overland
+656	지프	Renegade	2.0 Limited AWD
+655	지프	Renegade	2.0 Longitude AWD
+654	지프	Renegade	2.4 Longitude
+659	지프	Wrangler	2도어  Rubicon
+658	지프	Wrangler	2도어 Sport
+660	지프	Wrangler	4도어 Rubicon
+661	지프	Wrangler	4도어 Sahara
+677	캐딜락	1	1
+678	캐딜락	1	1
+669	캐딜락	ATS	COUPE
+670	캐딜락	ATS	LUXURY
+671	캐딜락	ATS	PREMIUM
+1566	캐딜락	ATS-V	3.6
+1567	캐딜락	ATS-V	3.6 Carbon Package
+675	캐딜락	CT6	PLATINUM
+672	캐딜락	CT6	PREMIUM
+676	캐딜락	CTS	AWD
+1471	캐딜락	CTS	AWD PLUS
+673	캐딜락	CTS	LUXURY
+674	캐딜락	CTS	PREMIUM
+1470	캐딜락	CTS	PREMIUM PLUS
+1696	캐딜락	CTS-V	6.2 V8
+1697	캐딜락	CTS-V	6.2 V8 Carbon Package
+1815	캐딜락	XT5	Premium
+1817	캐딜락	XT5	Premium Carbon
+1816	캐딜락	XT5	Premium(옵션강화)
+649	크라이슬러	200	200 LIMITED
+650	크라이슬러	200	200C
+651	크라이슬러	300C	3.6
+652	크라이슬러	300C	3.6 AWD
+653	크라이슬러	Grand voyager	The Exclusive VIP Lounge
+1432	테스트브랜드	테스트모델	테스트그레이드
+1510	테스트브랜드	테스트모델	테스트그레이드
+1578	토요타	Avalon	Limited
+512	토요타	Camry	2.5 XLE
+513	토요타	Camry	LE Hybrid
+514	토요타	Camry	XLE Hybrid
+1408	토요타	Prius	E
+1409	토요타	Prius	S
+511	토요타	Prius V	Prius V
+518	토요타	RAV4	2WD
+519	토요타	RAV4	4WD
+1406	토요타	RAV4	Hybrid
+521	토요타	Sienna	3.5 LIMITED
+520	토요타	Sienna	3.5 LIMITED AWD
+516	토요타	T86	A/T
+517	토요타	T86	M/T
+482	페라리	458 Italia	4.5 V8 Coupe
+483	페라리	458 spaciale	V8
+481	페라리	458 Spider	4.5 V8 Convertible
+479	페라리	488 GTB	V8
+480	페라리	488 Spider	V8
+484	페라리	California T	Convertible 3.8 V8
+477	페라리	F12 Berlinetta	6.2 V12 쿠페
+478	페라리	FF	6.2 V12 쿠페
+1202	포드	All New Mondeo	Titanium
+620	포드	All New Mondeo	Trend
+628	포드	All New Mustang	Convertible  2.3L EcoBoost Premium
+629	포드	All New Mustang	Convertible 5.0L GT Premium
+626	포드	All New Mustang	coupe  2.3L EcoBoost Premium
+627	포드	All New Mustang	Coupe  5.0L GT Premium
+634	포드	Explorer	2.3 AWD Limited
+1203	포드	Explorer	3.5 AWD Limited
+616	포드	Focus	4도어 Titanium
+617	포드	Focus	4도어 Titanium Plus
+618	포드	Focus	5도어 Titanium
+619	포드	Focus	5도어 Titanium (W/O Auto start/stop)
+633	포드	Kuga	Titanium
+632	포드	Kuga	Trend
+622	포드	Taurus	2.0 Limited
+621	포드	Taurus	2.0 SEL
+624	포드	Taurus	3.5 Limited
+623	포드	Taurus	3.5 SEL
+625	포드	Taurus	3.5 SHO
+445	포르쉐	911	Cabriolet Carrera
+447	포르쉐	911	Cabriolet Carrera 4
+448	포르쉐	911	Cabriolet Carrera 4S
+446	포르쉐	911	Cabriolet Carrera S
+441	포르쉐	911	Coupe Carrera
+443	포르쉐	911	Coupe Carrera 4
+444	포르쉐	911	Coupe Carrera 4S
+442	포르쉐	911	Coupe Carrera S
+449	포르쉐	911	Targa 4
+450	포르쉐	911	Targa 4s
+451	포르쉐	918 Spyder	4.6 Hybrid
+433	포르쉐	Boxter	2.7 Boxster (M/T)
+434	포르쉐	Boxter	2.7 Boxster Black Edition (M/T)
+436	포르쉐	Boxter	3.4 Boxster GTS (M/T)
+435	포르쉐	Boxter	3.4 Boxster S (M/T)
+464	포르쉐	Cayenne	Cayenne
+465	포르쉐	Cayenne	Diesel
+466	포르쉐	Cayenne	GTS
+470	포르쉐	Cayenne	S
+469	포르쉐	Cayenne	S Diesel
+471	포르쉐	Cayenne	S Hybrid
+467	포르쉐	Cayenne	Turbo
+468	포르쉐	Cayenne	Turbo  S
+437	포르쉐	Cayman	Cayman (M/T)
+438	포르쉐	Cayman	Cayman Black Edition (M/T)
+440	포르쉐	Cayman	Cayman GTS (M/T)
+439	포르쉐	Cayman	Cayman S (M/T)
+472	포르쉐	Macan	Macan
+473	포르쉐	Macan	S
+475	포르쉐	Macan	S Diesel
+476	포르쉐	Macan	Turbo
+454	포르쉐	Panamera	Panamera
+456	포르쉐	Panamera	Panamera 4
+457	포르쉐	Panamera	Panamera 4 Edition
+460	포르쉐	Panamera	Panamera 4S
+452	포르쉐	Panamera	Panamera Diessel (300hp)
+453	포르쉐	Panamera	Panamera Diessel Edition
+455	포르쉐	Panamera	Panamera Edition
+461	포르쉐	Panamera	Panamera GTS
+458	포르쉐	Panamera	Panamera S
+459	포르쉐	Panamera	Panamera S Hybrid
+462	포르쉐	Panamera	Panamera Turbo
+463	포르쉐	Panamera	Panamera Turbo S
+24	폭스바겐	CC	2.0 TDI BMT
+25	폭스바겐	CC	2.0 TDI BMT R-Line
+23	폭스바겐	CC	2.0 TSI
+9	폭스바겐	Golf	1.4 TSI
+10	폭스바겐	Golf	1.4 TSI Premium
+1453	폭스바겐	Golf	1.4 TSI Premium navi
+11	폭스바겐	Golf	1.6 TDI BMT
+12	폭스바겐	Golf	2.0 TDI
+13	폭스바겐	Golf	2.0 TDI Premium
+1565	폭스바겐	Golf	2.0 TDI R-Line
+14	폭스바겐	Golf GTD	GTD
+15	폭스바겐	Golf GTD	GTD Extreme Edition
+16	폭스바겐	Golf GTI	GTI
+17	폭스바겐	Golf GTI	GTI Extreme Edition
+18	폭스바겐	Golf R	2.0 TSI R
+19	폭스바겐	Jetta	2.0 TDI BMT
+20	폭스바겐	Jetta	2.0 TDI BMT Premium
+7	폭스바겐	New-Scirocco	2.0 TDi BMT R-Line
+21	폭스바겐	Passat	1.8 TSI
+1417	폭스바겐	Passat	1.8 TSI GP
+22	폭스바겐	Passat	1.8 TSI R-line
+26	폭스바겐	Phaeton	3.0 V6 TDI NWB
+8	폭스바겐	Polo	1.4 TDI BMT R-Line
+1431	폭스바겐	Polo	1.4 TDI BMT R-Line Premium
+5	폭스바겐	The Beetle	2.0 TDI
+6	폭스바겐	The Beetle	2.0 TDI Premium
+27	폭스바겐	Tiguan	2.0 TDI BMT
+28	폭스바겐	Tiguan	2.0 TDI BMT Premium
+29	폭스바겐	Tiguan	2.0 TDI BMT R-Line
+30	폭스바겐	Touareg	3.0 TDI BMT
+33	폭스바겐	Touareg	3.0 TDI BMT exclusive
+34	폭스바겐	Touareg	3.0 TDI BMT exclusive(limitied edition)
+31	폭스바겐	Touareg	3.0 TDI BMT Premium
+35	폭스바겐	Touareg	3.0 TDI BMT R-Line
+492	푸조	2008	1.6 BlueHDi Access (유로6)
+493	푸조	2008	1.6 BlueHDi Active
+494	푸조	2008	1.6 BlueHDi Feline
+352	푸조	2008	Active Urban
+353	푸조	2008	Allure
+355	푸조	2008	Feline L
+354	푸조	2008	Feline S
+338	푸조	208	1.4 e-HDi ECO
+339	푸조	208	1.6 e-HDi ECO
+340	푸조	208	1.6 e-HDi Feline
+1698	푸조	208	1.6 GT라인
+1699	푸조	208	1.6 알뤼르
+356	푸조	3008	1.6 BlueHDi Active
+357	푸조	3008	1.6 BlueHDi Outdoor
+341	푸조	308	1.6 BlueHDi Allure
+342	푸조	308	1.6 BlueHDi Allure
+1667	푸조	308	1.6 BlueHDi GT Line
+347	푸조	308	2.0 BlueHDi GT
+344	푸조	308	2.0 BlueHDi GT Line
+343	푸조	308	Hatch  2.0 BlueHDi Active
+345	푸조	308	SW 1.6 BlueHDi Allure
+1201	푸조	308	SW 2.0 BlueHDi Active
+349	푸조	508	1.6 BlueHDi Allure
+348	푸조	508	1.6 BlueHDi GT-Line
+350	푸조	508	2.0 BlueHDi Feline
+1416	푸조	508	2.0 BlueHDi GT
+1407	푸조	508	RXH 2.0 BlueHDi
+1415	푸조	508	SW 1.6 Feline
+351	푸조	RCZ	RCZ
+429	피아트	500	Color
+430	피아트	500	Color Plus
+431	피아트	500C	1.4 convertible
+1413	피아트	500X	CROSS 2.0 디젤
+1414	피아트	500X	CROSS PLUS 2.0 디젤
+1412	피아트	500X	POP STAR 2.4 가솔린
+779	현대	ACCENT	(경유) 4도어 1.6 VGT Modern (M/T)
+777	현대	ACCENT	(경유) 4도어 1.6 VGT Smart (M/T)
+774	현대	ACCENT	(경유) 4도어 1.6 VGT Style (M/T)
+775	현대	ACCENT	(경유) 4도어 1.6 VGT Style+ (M/T)
+806	현대	ACCENT	(경유) Wit 5도어 1.6 VGT Smart (M/T)
+820	현대	ACCENT	(휘발유)  1.4 VVT 코스 및 도로연수용 (A/T)
+817	현대	ACCENT	(휘발유) 1.4 VVT Modern 양발장애 (A/T)
+816	현대	ACCENT	(휘발유) 1.4 VVT Modern 오른발장애 (A/T)
+818	현대	ACCENT	(휘발유) 1.4 VVT Modern 오른손장애 (A/T)
+813	현대	ACCENT	(휘발유) 1.4 VVT Modern 왼발장애 (A/T)
+815	현대	ACCENT	(휘발유) 1.4 VVT Modern 왼손오른발장애 (A/T)
+814	현대	ACCENT	(휘발유) 1.4 VVT Modern 왼손왼발장애 (A/T)
+819	현대	ACCENT	(휘발유) 1.4 VVT 코스 및 도로연수용 (M/T)
+764	현대	ACCENT	(휘발유) 4도어 1.4 VVT Style (M/T)
+768	현대	ACCENT	4도어 1.4 VVT Modern
+769	현대	ACCENT	4도어 1.4 VVT Premium
+767	현대	ACCENT	4도어 1.4 VVT Smart
+765	현대	ACCENT	4도어 1.4 VVT Style
+773	현대	ACCENT	4도어 1.6 GDi BlueSaver
+771	현대	ACCENT	4도어 1.6 GDi Modern
+772	현대	ACCENT	4도어 1.6 GDi Premium
+781	현대	ACCENT	4도어 1.6 VGT Modern
+794	현대	ACCENT	4도어 1.6 VGT Premium
+778	현대	ACCENT	4도어 1.6 VGT Smart
+776	현대	ACCENT	4도어 1.6 VGT Style+
+798	현대	ACCENT	Wit 5도어 1.4 VVT Modern
+799	현대	ACCENT	Wit 5도어 1.4 VVT Modern Special
+800	현대	ACCENT	Wit 5도어 1.4 VVT Modern Special Tuix Crayon
+801	현대	ACCENT	Wit 5도어 1.4 VVT Premium
+802	현대	ACCENT	Wit 5도어 1.4 VVT Premium Tuix Crayon
+797	현대	ACCENT	Wit 5도어 1.4 VVT Smart
+805	현대	ACCENT	Wit 5도어 1.6 GDi BlueSaver
+803	현대	ACCENT	Wit 5도어 1.6 GDi Premium
+804	현대	ACCENT	Wit 5도어 1.6 GDi Premium Tuix Crayon
+808	현대	ACCENT	Wit 5도어 1.6 VGT Modern
+809	현대	ACCENT	Wit 5도어 1.6 VGT Modern Special
+810	현대	ACCENT	Wit 5도어 1.6 VGT Modern Special Tuix Crayon
+811	현대	ACCENT	Wit 5도어 1.6 VGT Premium
+812	현대	ACCENT	Wit 5도어 1.6 VGT Premium Tuix Crayon
+807	현대	ACCENT	Wit 5도어 1.6 VGT Smart
+1543	현대	ALL NEW TUCSON	1.6T 2WD 모던
+1544	현대	ALL NEW TUCSON	1.6T 2WD 모던 피버
+1541	현대	ALL NEW TUCSON	1.6T 2WD 스타일
+1542	현대	ALL NEW TUCSON	1.6T 2WD 스타일 피버
+994	현대	ALL NEW TUCSON	R2.0 2WD 모던
+1540	현대	ALL NEW TUCSON	R2.0 2WD 모던 스페셜
+993	현대	ALL NEW TUCSON	R2.0 2WD 스타일
+991	현대	ALL NEW TUCSON	R2.0 2WD 스타일 (M/T)
+1539	현대	ALL NEW TUCSON	R2.0 2WD 스타일 스페셜
+995	현대	ALL NEW TUCSON	R2.0 2WD 프리미엄
+998	현대	ALL NEW TUCSON	R2.0 4WD 모던 (A/T)
+997	현대	ALL NEW TUCSON	R2.0 4WD 스타일 (A/T)
+996	현대	ALL NEW TUCSON	R2.0 4WD 스타일 (M/T)
+999	현대	ALL NEW TUCSON	R2.0 4WD 프리미엄 (A/T)
+989	현대	ALL NEW TUCSON	UⅡ 1.7 2WD 모던
+990	현대	ALL NEW TUCSON	UⅡ 1.7 2WD 모던 피버
+987	현대	ALL NEW TUCSON	UⅡ 1.7 2WD 스타일
+988	현대	ALL NEW TUCSON	UⅡ 1.7 2WD 스타일 피버
+1538	현대	ALL NEW TUCSON	UⅡ 1.7 2WD 프리미엄
+926	현대	ASLAN	(휘발유)  G330 Premium (A/T)  15년형
+930	현대	ASLAN	(휘발유) G300 Modern (A/T) 15년형
+924	현대	ASLAN	(휘발유) G300 Modern Basic (A/T) 15년
+925	현대	ASLAN	(휘발유) G300 Modern Special (A/T) 15년형
+927	현대	ASLAN	(휘발유) G330 Exclusive (A/T) 15년형
+931	현대	ASLAN	(휘발유) G330 Premium (A/T) 15년형
+1707	현대	ASLAN	3.0 모던
+1708	현대	ASLAN	3.0 익스클루시브
+1709	현대	ASLAN	3.3 모던
+1710	현대	ASLAN	3.3 익스클루시브
+920	현대	ASLAN	G300 Exclusive
+919	현대	ASLAN	G300 Modern
+932	현대	ASLAN	G330 Exclusive
+921	현대	ASLAN	G330 Modern
+762	현대	AVANTE	(LPG) 모던 양발장애 (A/T)
+761	현대	AVANTE	(LPG) 모던 오른발장애 (A/T)
+760	현대	AVANTE	(LPG) 모던 오른손오른발장애 (A/T)
+763	현대	AVANTE	(LPG) 모던 오른손장애 (A/T)
+757	현대	AVANTE	(LPG) 모던 왼발장애 (A/T)
+759	현대	AVANTE	(LPG) 모던 왼손오른발장애 (A/T)
+758	현대	AVANTE	(LPG) 모던 왼손왼발장애 (A/T)
+750	현대	AVANTE	(경유) 스타일 (M/T)
+741	현대	AVANTE	(휘발유) 1.6 GDi 스타일 (M/T)
+753	현대	AVANTE	1.6 e-VGT 스마트
+752	현대	AVANTE	1.6 e-VGT 스마트 스페셜
+751	현대	AVANTE	1.6 e-VGT 스타일
+754	현대	AVANTE	1.6 e-VGT 프리미엄
+745	현대	AVANTE	1.6 GDi 모던
+746	현대	AVANTE	1.6 GDi 모던 스페셜
+1695	현대	AVANTE	1.6 GDi 밸류 플러스
+743	현대	AVANTE	1.6 GDi 스마트
+744	현대	AVANTE	1.6 GDi 스마트 스페셜
+742	현대	AVANTE	1.6 GDi 스타일
+747	현대	AVANTE	1.6 GDi 프리미엄
+1527	현대	AVANTE	1.6 T-GDi Sport 7DCT
+1528	현대	AVANTE	1.6 T-GDi Sport Extreme Selection
+748	현대	AVANTE	2.0 CVVT 스마트
+749	현대	AVANTE	2.0 CVVT 프리미엄
+756	현대	AVANTE	렌터카 스마트
+755	현대	AVANTE	렌터카 스타일
+964	현대	EQUUS	LIMOUSINE VL380 PRESTIGE (A/T) 13년형
+965	현대	EQUUS	LIMOUSINE VL500 PRESTIGE (A/T) 13년형
+958	현대	EQUUS	LIMOUSINE VL500 PRESTIGE (프레스티지) (A/T)
+961	현대	EQUUS	VS380 EXCLUSIVE (A/T) 13년형
+955	현대	EQUUS	VS380 EXCLUSIVE (익스클루시브) (A/T)
+959	현대	EQUUS	VS380 MODERN (A/T) 13년형
+953	현대	EQUUS	VS380 MODERN (모던) (A/T)
+960	현대	EQUUS	VS380 PREMIUM (A/T) 13년형
+954	현대	EQUUS	VS380 PREMIUM (프리미엄) (A/T)
+962	현대	EQUUS	VS380 PRESTIGE (A/T) 13년형
+956	현대	EQUUS	VS380 PRESTIGE (프레스티지) (A/T)
+963	현대	EQUUS	VS500 PRESTIGE (A/T) 13년형
+957	현대	EQUUS	VS500 PRESTIGE (프레스티지) (A/T)
+976	현대	GENESIS Coupe	200 Turbo D
+982	현대	GENESIS Coupe	200 Turbo D (A/T) 14년형
+975	현대	GENESIS Coupe	200 Turbo D (M/T)
+981	현대	GENESIS Coupe	200 Turbo D (M/T) 14년형
+978	현대	GENESIS Coupe	200 Turbo S
+984	현대	GENESIS Coupe	200 Turbo S (A/T) 14년형
+977	현대	GENESIS Coupe	200 Turbo S (M/T)
+983	현대	GENESIS Coupe	200 Turbo S (M/T) 14년형
+980	현대	GENESIS Coupe	380 GT R
+986	현대	GENESIS Coupe	380 GT R (A/T) 14년형
+979	현대	GENESIS Coupe	380 GT R (M/T)
+985	현대	GENESIS Coupe	380 GT R (M/T) 14년형
+938	현대	GENESIS(DH)	(휘발유) AWD G330 Modern (모던) (A/T)
+948	현대	GENESIS(DH)	(휘발유) AWD G330 Modern (모던) (A/T) 14년형
+939	현대	GENESIS(DH)	(휘발유) AWD G330 Premium (프리미엄) (A/T)
+949	현대	GENESIS(DH)	(휘발유) AWD G330 Premium (프리미엄) (A/T) 14년형
+940	현대	GENESIS(DH)	(휘발유) AWD G380 Exclusive (익스클루시브) (A/T)
+950	현대	GENESIS(DH)	(휘발유) AWD G380 Exclusive (익스클루시브) (A/T) 14년형
+942	현대	GENESIS(DH)	(휘발유) AWD G380 Finest Edition (파이니스트에디션) (A/T)
+952	현대	GENESIS(DH)	(휘발유) AWD G380 Finest Edition (파이니스트에디션) (A/T) 14년형
+941	현대	GENESIS(DH)	(휘발유) AWD G380 Prestige (프레스티지) (A/T)
+951	현대	GENESIS(DH)	(휘발유) AWD G380 Prestige (프레스티지) (A/T) 14년형
+933	현대	GENESIS(DH)	(휘발유) G330 Modern (모던) (A/T)
+943	현대	GENESIS(DH)	(휘발유) G330 Modern (모던) (A/T) 14년형
+934	현대	GENESIS(DH)	(휘발유) G330 Premium (프리미엄) (A/T)
+944	현대	GENESIS(DH)	(휘발유) G330 Premium (프리미엄) (A/T) 14년형
+935	현대	GENESIS(DH)	(휘발유) G380 Exclusive (익스클루시브) (A/T)
+945	현대	GENESIS(DH)	(휘발유) G380 Exclusive (익스클루시브) (A/T) 14년형
+937	현대	GENESIS(DH)	(휘발유) G380 Finest Edition (파이니스트에디션) (A/T)
+947	현대	GENESIS(DH)	(휘발유) G380 Finest Edition (파이니스트에디션) (A/T) 14년형
+936	현대	GENESIS(DH)	(휘발유)G380 Prestige (프레스티지) (A/T)
+946	현대	GENESIS(DH)	(휘발유)G380 Prestige (프레스티지) (A/T) 14년형
+1075	현대	GRAND STAREX	(경유) 밴 (2WD) 3인승 Smart (스마트) (A/T)
+1074	현대	GRAND STAREX	(경유) 밴 (2WD) 3인승 Smart (스마트) (M/T)
+1076	현대	GRAND STAREX	(경유) 밴 (2WD) 3인승 Smart Special (스마트 스페셜) (M/T)
+1073	현대	GRAND STAREX	(경유) 밴 (2WD) 3인승 기본형 (A/T)
+1072	현대	GRAND STAREX	(경유) 밴 (2WD) 3인승 기본형 (M/T)
+1064	현대	GRAND STAREX	(경유) 왜건 (2WD) 11인승 Modern (모던) (A/T)
+1065	현대	GRAND STAREX	(경유) 왜건 (2WD) 11인승 Modern Special (모던 스페셜) (A/T)
+1063	현대	GRAND STAREX	(경유) 왜건 (2WD) 11인승 Smart (스마트) (A/T)
+1062	현대	GRAND STAREX	(경유) 왜건 (2WD) 11인승 Smart (스마트) (M/T)
+1061	현대	GRAND STAREX	(경유) 왜건 (2WD) 11인승 기본형 (A/T)
+1060	현대	GRAND STAREX	(경유) 왜건 (2WD) 11인승 기본형 (M/T)
+1056	현대	GRAND STAREX	(경유) 왜건 (2WD) 12인승 Smart (스마트) (M/T)
+1054	현대	GRAND STAREX	(경유) 왜건 (2WD) 12인승 기본형 (M/T)
+1070	현대	GRAND STAREX	(경유) 왜건 (4WD) 11인승 Modern (모던) (A/T)
+1071	현대	GRAND STAREX	(경유) 왜건 (4WD) 11인승 Modern Special (모던 스페셜) (A/T)
+1069	현대	GRAND STAREX	(경유) 왜건 (4WD) 11인승 Smart (스마트) (A/T)
+1067	현대	GRAND STAREX	(경유) 왜건 (4WD) 12인승 Modern (모던) (A/T)
+1068	현대	GRAND STAREX	(경유) 왜건 (4WD) 12인승 Modern Special (모던 스페셜) (A/T)
+1066	현대	GRAND STAREX	(경유) 왜건 (4WD) 12인승 Smart (스마트) (A/T)
+1545	현대	GRAND STAREX	LPi 왜건 12인승 Smart
+1058	현대	GRAND STAREX	왜건 (2WD) 12인승 Modern
+1059	현대	GRAND STAREX	왜건 (2WD) 12인승 Modern Special
+1057	현대	GRAND STAREX	왜건 (2WD) 12인승 Smart
+1055	현대	GRAND STAREX	왜건 (2WD) 12인승 기본형
+915	현대	GRANDEUR HG	(LPG)  택시 3.0LPi 개인형 (A/T)
+913	현대	GRANDEUR HG	(LPG) HG300 Premium Special 양발장애 (A/T)
+912	현대	GRANDEUR HG	(LPG) HG300 Premium Special 오른발장애 (A/T)
+911	현대	GRANDEUR HG	(LPG) HG300 Premium Special 오른손오른발장애 (A/T)
+914	현대	GRANDEUR HG	(LPG) HG300 Premium Special 오른손장애 (A/T)
+908	현대	GRANDEUR HG	(LPG) HG300 Premium Special 왼발장애 (A/T)
+910	현대	GRANDEUR HG	(LPG) HG300 Premium Special 왼손오른발장애 (A/T)
+909	현대	GRANDEUR HG	(LPG) HG300 Premium Special 왼손왼발장애 (A/T)
+916	현대	GRANDEUR HG	(LPG) 택시 3.0LPi 모범형 (A/T)
+917	현대	GRANDEUR HG	(LPG) 택시 3.0LPi 모범형 VIP 패키지 (A/T)
+904	현대	GRANDEUR HG	HG220 Modern
+1534	현대	GRANDEUR HG	HG220 Modern Collection
+905	현대	GRANDEUR HG	HG220 Premium
+1535	현대	GRANDEUR HG	HG220 Premium Collection
+900	현대	GRANDEUR HG	HG240 Modern
+1531	현대	GRANDEUR HG	HG240 Modern Collection
+902	현대	GRANDEUR HG	HG300 Exclusive
+1533	현대	GRANDEUR HG	HG300 Exclusive Collection
+901	현대	GRANDEUR HG	HG300 Premium
+1532	현대	GRANDEUR HG	HG300 Premium Collection
+903	현대	GRANDEUR HG	The Timeless (30주년 기념 한정모델)
+907	현대	GRANDEUR HG	랜터카 HG300 Exclusive
+906	현대	GRANDEUR HG	랜터카 HG300 Modern
+1666	현대	GRANDEUR HG 15MY	LPG 3.0 MODERN
+918	현대	GRANDEUR hybrid	PREMIUM
+1536	현대	GRANDEUR hybrid	Premium Collection
+1537	현대	GRANDEUR hybrid	Premium 내비게이션 미적용
+1741	현대	i30	가솔린 1.4 터보 모던
+1740	현대	i30	가솔린 1.4 터보 스마트
+1739	현대	i30	가솔린 1.4 터보 튜너패키지
+1742	현대	i30	가솔린 1.4 터보 프리미엄
+1746	현대	i30	가솔린 1.6 터보 스포츠
+1747	현대	i30	가솔린 1.6 터보 스포츠 프리미엄
+1744	현대	i30	디젤 1.6 모던
+1743	현대	i30	디젤 1.6 스마트
+1745	현대	i30	디젤 1.6 프리미엄
+827	현대	IONIQ hybrid	I
+1694	현대	IONIQ hybrid	I Value Plus
+828	현대	IONIQ hybrid	I+
+829	현대	IONIQ hybrid	N
+831	현대	IONIQ hybrid	N+
+832	현대	IONIQ hybrid	Q
+887	현대	LF SONATA	(LPG) Modern 양발장애 (A/T)
+886	현대	LF SONATA	(LPG) Modern 오른발장애 (A/T)
+885	현대	LF SONATA	(LPG) Modern 오른손오른발 장애 (A/T)
+888	현대	LF SONATA	(LPG) Modern 오른손장애 (A/T)
+882	현대	LF SONATA	(LPG) Modern 왼발장애 (A/T)
+884	현대	LF SONATA	(LPG) Modern 왼손오른발 장애 (A/T)
+883	현대	LF SONATA	(LPG) Modern 왼손왼발장애 (A/T)
+880	현대	LF SONATA	(LPG) Smart 양발장애 (A/T)
+879	현대	LF SONATA	(LPG) Smart 오른발장애 (A/T)
+878	현대	LF SONATA	(LPG) Smart 오른손오른발 장애 (A/T)
+881	현대	LF SONATA	(LPG) Smart 오른손장애 (A/T)
+874	현대	LF SONATA	(LPG) Smart 왼발장애 (A/T)
+877	현대	LF SONATA	(LPG) Smart 왼손오른발 장애 (A/T)
+876	현대	LF SONATA	(LPG) Smart 왼손왼발장애 (A/T)
+870	현대	LF SONATA	(LPG) 렌터카 Modern (A/T)
+868	현대	LF SONATA	(LPG) 렌터카 Smart (M/T)
+891	현대	LF SONATA	(LPG) 택시 Modern (A/T)
+892	현대	LF SONATA	(LPG) 택시 Premium (A/T)
+890	현대	LF SONATA	(LPG) 택시 Style (A/T)
+889	현대	LF SONATA	(LPG) 택시 Style (M/T)
+922	현대	LF SONATA	(휘발유) G330 Exclusive (A/T)
+923	현대	LF SONATA	(휘발유) G330 Exclusive (A/T)
+860	현대	LF SONATA	1.6 Turbo GDi Smart
+861	현대	LF SONATA	1.6 Turbo GDi Smart Special
+859	현대	LF SONATA	1.6 Turbo GDi Style
+1573	현대	LF SONATA	1.6 Turbo GDi Summer Special
+866	현대	LF SONATA	1.7 e-VGT Care+
+865	현대	LF SONATA	1.7 e-VGT Smart
+867	현대	LF SONATA	1.7 e-VGT Smart Special
+864	현대	LF SONATA	1.7 e-VGT Style
+853	현대	LF SONATA	2.0 CVVL Care+
+857	현대	LF SONATA	2.0 CVVL Premium
+858	현대	LF SONATA	2.0 CVVL Premium Special
+854	현대	LF SONATA	2.0 CVVL Smart
+855	현대	LF SONATA	2.0 CVVL Smart Special
+851	현대	LF SONATA	2.0 CVVL Style
+852	현대	LF SONATA	2.0 CVVL Style Special
+871	현대	LF SONATA	2.0 LPi 렌터카 Premium
+872	현대	LF SONATA	2.0 LPi 렌터카 Premium Special
+869	현대	LF SONATA	2.0 LPi 렌터카 Smart
+863	현대	LF SONATA	2.0 Turbo GDi Exclusive
+862	현대	LF SONATA	2.0 Turbo GDi Smart
+1044	현대	MAXCRUZ	(휘발유) 3.3 V6 2WD Prestige (프레스티지) 7인승 (A/T)
+1045	현대	MAXCRUZ	(휘발유) 3.3 V6 4WD Prestige (프레스티지) 6인승 (A/T)
+1046	현대	MAXCRUZ	(휘발유) 3.3 V6 4WD Prestige (프레스티지) 7인승 (A/T)
+1043	현대	MAXCRUZ	3.3 V6 2WD Prestige 6인승
+1028	현대	MAXCRUZ	R2.2 2WD Exclusive (익스클루시브) 7인승 (A/T)
+1027	현대	MAXCRUZ	R2.2 2WD Exclusive 6인승
+1030	현대	MAXCRUZ	R2.2 2WD Exclusive Special (익스클루시브 스페셜) 7인승 (A/T)
+1029	현대	MAXCRUZ	R2.2 2WD Exclusive Special 6인승
+1034	현대	MAXCRUZ	R2.2 2WD Finest Edition (파이니스트 에디션) 7인승 (A/T)
+1033	현대	MAXCRUZ	R2.2 2WD Finest Edition 6인승
+1032	현대	MAXCRUZ	R2.2 2WD Prestige (프레스티지) 7인승 (A/T)
+1031	현대	MAXCRUZ	R2.2 2WD Prestige 6인승
+1039	현대	MAXCRUZ	R2.2 4WD  Prestige (프레스티지) 6인승 (A/T)
+1035	현대	MAXCRUZ	R2.2 4WD Exclusive (익스클루시브) 6인승 (A/T)
+1036	현대	MAXCRUZ	R2.2 4WD Exclusive (익스클루시브) 7인승 (A/T)
+1037	현대	MAXCRUZ	R2.2 4WD Exclusive Special (익스클루시브 스페셜) 6인승 (A/T)
+1038	현대	MAXCRUZ	R2.2 4WD Exclusive Special (익스클루시브 스페셜) 7인승 (A/T)
+1041	현대	MAXCRUZ	R2.2 4WD Finest Edition (파이니스트 에디션) 6인승 (A/T)
+1042	현대	MAXCRUZ	R2.2 4WD Finest Edition (파이니스트 에디션) 7인승 (A/T)
+1040	현대	MAXCRUZ	R2.2 4WD Prestige (프레스티지) 7인승 (A/T)
+1007	현대	SANTAFE The Prime	R2.0 2WD  1 Million
+1006	현대	SANTAFE The Prime	R2.0 2WD  Exclusive Special (5인승)
+1004	현대	SANTAFE The Prime	R2.0 2WD Exclusive (5인승)
+1005	현대	SANTAFE The Prime	R2.0 2WD Exclusive (7인승) (A/T)
+1001	현대	SANTAFE The Prime	R2.0 2WD Modern (5인승) (A/T)
+1002	현대	SANTAFE The Prime	R2.0 2WD Premium (5인승)
+1003	현대	SANTAFE The Prime	R2.0 2WD Premium (7인승) (A/T)
+1000	현대	SANTAFE The Prime	R2.0 2WD Smart (5인승)
+1014	현대	SANTAFE The Prime	R2.0 4WD  Exclusive Special (7인승) (A/T)
+1010	현대	SANTAFE The Prime	R2.0 4WD Exclusive (5인승) (A/T)
+1011	현대	SANTAFE The Prime	R2.0 4WD Exclusive (7인승) (A/T)
+1013	현대	SANTAFE The Prime	R2.0 4WD Exclusive Special (5인승) (A/T)
+1008	현대	SANTAFE The Prime	R2.0 4WD Premium (5인승) (A/T)
+1009	현대	SANTAFE The Prime	R2.0 4WD Premium (7인승) (A/T)
+1017	현대	SANTAFE The Prime	R2.2 2WD  Exclusive (5인승)
+1018	현대	SANTAFE The Prime	R2.2 2WD Exclusive (7인승) (A/T)
+1019	현대	SANTAFE The Prime	R2.2 2WD Exclusive Special (5인승)
+1020	현대	SANTAFE The Prime	R2.2 2WD Exclusive Special (7인승) (A/T)
+1015	현대	SANTAFE The Prime	R2.2 2WD Premium (5인승) (A/T)
+1016	현대	SANTAFE The Prime	R2.2 2WD Premium (7인승) (A/T)
+1023	현대	SANTAFE The Prime	R2.2 4WD Exclusive (5인승) (A/T)
+1024	현대	SANTAFE The Prime	R2.2 4WD Exclusive (7인승) (A/T)
+1025	현대	SANTAFE The Prime	R2.2 4WD Exclusive Special (5인승) (A/T)
+1026	현대	SANTAFE The Prime	R2.2 4WD Exclusive Special (7인승) (A/T)
+1021	현대	SANTAFE The Prime	R2.2 4WD Premium (5인승) (A/T)
+1022	현대	SANTAFE The Prime	R2.2 4WD Premium (7인승) (A/T)
+1049	현대	SOLATI	디럭스 전중문 14인승 (M/T)
+1050	현대	SOLATI	디럭스 전중문 15인승 (M/T)
+1051	현대	SOLATI	디럭스 전중문 16인승 (M/T)
+1052	현대	SOLATI	럭셔리 전중문 14인승 (M/T)
+1053	현대	SOLATI	럭셔리 전중문 15인승 (M/T)
+1047	현대	SOLATI	스탠다드 전중문 14인승 (M/T)
+1048	현대	SOLATI	스탠다드 전중문 15인승 (M/T)
+894	현대	SONATA hybrid	Modern
+1529	현대	SONATA hybrid	Modern Special
+895	현대	SONATA hybrid	Premium
+1530	현대	SONATA hybrid	Premium Special
+893	현대	SONATA hybrid	Smart
+899	현대	SONATA PHEV	Exclusive (익스클루시브) (A/T)
+896	현대	SONATA PHEV	Premium (프리미엄) (A/T)
+1476	현대	TEST	9.9 VGT
+833	현대	The New i30	1.6 VGT PYL
+834	현대	The New i30	1.6 VGT TUIX Black Light
+837	현대	The New i30	2.0 GDi Dspec
+835	현대	The New i30	2.0 GDi PYL
+836	현대	The New i30	2.0 GDi TUIX Black Light
+850	현대	The New i40	살룬 1.7 e-VGT DSPEC
+849	현대	The New i40	살룬 1.7 e-VGT PYL
+847	현대	The New i40	살룬 1.7 e-VGT Younique
+846	현대	The New i40	살룬 2.0 GDi DSPEC
+845	현대	The New i40	살룬 2.0 GDi PYL
+848	현대	The New i40	살룬 2.0 GDi Younique
+843	현대	The New i40	왜건 1.7 e-VGT DSPEC
+842	현대	The New i40	왜건 1.7 e-VGT PYL
+841	현대	The New i40	왜건 1.7 e-VGT Younique
+840	현대	The New i40	왜건 2.0 GDi DSPEC
+839	현대	The New i40	왜건 2.0 GDi PYL
+838	현대	The New i40	왜건 2.0 GDi Younique
+821	현대	The New Veloster	(휘발유)  Younique (유니크) (M/T)
+825	현대	The New Veloster	(휘발유) 터보  D-Spec (디스펙) (M/T)
+823	현대	The New Veloster	PYL
+824	현대	The New Veloster	PYL DCT
+822	현대	The New Veloster	Younique
+826	현대	The New Veloster	터보  D-Spec  DCT
+770	현대	xxjyhhxuixxxxx	(휘발유) 4도어 1.4 VVT Premium (A/T)
+856	현대	xxxxxxxxxxxxxx	(휘발유) 2.0 CVVL Smart Special (A/T)
+844	현대	xxxxxxxxxxxxxx	(휘발유) 살룬 2.0 GDi Younique (유니크) (A/T)
+830	현대	zzzzzzzzzzzzzzzzzzz	N (A/T)
+1435	현대	아이오닉 일렉트릭(전기차)	N
+1436	현대	아이오닉 일렉트릭(전기차)	Q
+568	혼다	Accord	2.4 EX-L
+569	혼다	Accord	3.5 EX-L
+571	혼다	CR-V	4WD EX-L
+572	혼다	CR-V	4WD TOURING
+1642	혼다	HR-V	1.8
+722	혼다	odessey	3.5
+573	혼다	PILOT	3.5
