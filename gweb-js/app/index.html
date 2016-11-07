@@ -10,19 +10,24 @@
 
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
-<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <!-- endbower -->
 <!-- endbuild -->
 
-<link rel="canonical" href="http://sheet.topzone.biz">
 <style>
-	table.fixed { table-layout:fixed; }
-	table.fixed td { overflow: hidden; }
+table.fixed {
+	table-layout: fixed;
+}
+
+table.fixed td {
+	overflow: hidden;
+}
 </style>
 <script>
-  window.___gcfg = {
-    parsetags : 'explicit'
-  };
+	window.___gcfg = {
+		parsetags : 'explicit'
+	};
 </script>
 
 </head>
@@ -33,249 +38,192 @@
 
 	<div class="container">
 		<div class="header">
-			<h3 class="text-muted">렌터카견적</h3>
+			<h1>[ GWeb ]</h1>
+			<br>
 		</div>
 
-		<div class="side-body">
-		
-			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 입력 조건
-			</legend>
-			
-			<div class="row">
-				<div class="col-md-12">
-					<form id="form1" class="form-horizontal">
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="_docid">Doc ID</label>
-		            <div class="col-sm-10">
-		              <div class="form-inline">
-										<input type="text" id="_docid" name="_docid" value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE" class="form-control" style='width:500px'>
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="_version">버전</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="_version" name="_version" value="1" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="_cache">캐시</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="_cache" name="_cache" value="false" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="C4">견적차종</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="C4" name="C4" value="5G 그랜저 HG300" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="V5">인수옵션</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="V5" name="V5" value="true" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="T5">약정거리</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="T5" name="T5" value="4" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="W5">계약기간</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="W5" name="W5" value="4" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="P26">대물/자손</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="P26" name="P26" value="2" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="G9">보증금</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="G9" name="G9" value="0" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="K9">수수료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="K9" name="K9" value="0.01" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="U5">정비상태</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="U5" name="U5" value="true" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="G2">1차탁송</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="G2" name="G2" value="과천" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="G3">2차탁송</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="G3" name="G3" value="전라도" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="Q27">보험연령</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="Q27" name="Q27" value="21" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-					</form>			
+		<section class="content-chunk section-tools">
+			<h1>What's GWeb?</h1>
+			<br>
+			<p>Libraries and samples which can make web apps using
+				Spreadsheet(Excel) as database and business logic server.</p>
+			<h2>- Library</h2>
+			<div style='margin-left: 20px;'>
+				<div class="tool-content">
+					<strong>1. Server-side Library for Google Script Api
+						(gweb-js_s.js)</strong>
+					<div style='margin-left: 20px;'>Google API Server-side
+						library communicating gweb client library to support Google Script
+						APIs.</div>
+				</div>
+				<div class="tool-content">
+					<strong>2. Client-side Library </strong>
+					<div style='margin-left: 20px;'>Javascript library
+						communicating gweb server library through Google OAuth2. Handling
+						GWeb's parameters and result set.</div>
+				</div>
+				<div class="tool-content">
+					<strong>3. Client-side Java Library </strong>
+					<div style='margin-left: 20px;'>Java library communicating
+						gweb server library through Google OAuth2. Handling GWeb's
+						parameters and result set.</div>
 				</div>
 			</div>
-			
-			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 
-			</legend>
-			
-			<div class="row">
-				<div class="col-md-12" style='text-align: right;'>
-					<form class="form-horizontal">
-	          <div class="form-group">
-	            <label class="control-label col-sm-2" for="_count">처리 횟수</label>
-	            <div class="col-sm-2">
-	              <div class="form-inline">
-									<input type="text" id="_count" name="_count" value="1" class="form-control">
-	              </div>
-	            </div>
-	            <div class="col-sm-7">
-								<button type='button' id="sheet_1" onclick="executes('sheet_3');">조회</button>
-								<button type='button' id="sheet_1" onclick="execute('test');">테스트</button>
-	            </div>
-	           </div>
-					</form>				
+			<h2>- Usage</h2>
+			<div style='margin-left: 20px;'>
+				<div class="tool-content">
+					<strong>1. Reuse excel file</strong>
+					<div style='margin-left: 20px;'>Can use MS Excel and it's
+						functions as a database and business logic engine.</div>
 				</div>
-			</div>
-			
-			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 결과
-			</legend>
-			
-			<div class="row">
-				<div class="col-md-12">
-				<form id="form2" class="form-horizontal">
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_1">월납부금</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_1" name="col_1" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_2">금리</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_2" name="col_2" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_3">잔존가치</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_3" name="col_3" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_4">1차탁송료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_4" name="col_4" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_5">2차탁송료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_5" name="col_5" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_6">부대비용</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_6" name="col_6" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>	
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_7">보험료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_7" name="col_7" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_8">자차보험료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_8" name="col_8" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>	
-					</form>
+				<div class="tool-content">
+					<strong>2. Make a web app without application server</strong>
+					<div style='margin-left: 20px;'>Can make a web app without
+						application server or other server-side programming language,
+						using Spreadsheet's function and UI javascripts.</div>
 				</div>
+				<br>
 			</div>
-			
-			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 로그
-			</legend>
-			
-			<div class="row">
-				<div class="col-md-12">
-					<div id="table_wrapper">
-						<table id="debuglist" class="table table-bordered table-hover fixed">
-							<thead>
-								<tr>
-									<th class='text-center'>version</th>
-									<th class='text-center'>elapse</th>
-									<th class='text-center'>input</th>
-									<th class='text-center'>output</th>
-									<th class='text-center'>meta</th>
-									<th class='text-center'>log</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-						<table id='template' style='display: none'>
-							<tr>
-								<td class='text-center'>{version}</td>
-								<td class='text-center'>{elapse}</td>
-								<td class='text-left'>{input}</td>
-								<td class='text-left'>{output}</td>
-								<td class='text-left'>{meta}</td>
-								<td class='text-left'>{log}</td>
-							</tr>
-						</table>
+		</section>
+
+		<h1>[ GWeb examples ]</h1>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>Kid checklist</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12">
+								<h4>Web app with google spread sheet from scratch sheets</h4>
+								<h4>
+									<a href="checklist.html" class='alink' target="_blank">http://localhost:8000/checklist.html</a>
+								</h4>
+							</label>
+						</div>
 					</div>
 				</div>
-			</div>
-			
+			</form>
 		</div>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>Estimate sheet</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12">
+								<h4>Reuse MS excel with complicated funtions in multiple
+									sheets</h4>
+								<h4>
+									<a href="estimate.html" class='alink' target="_blank">http://localhost:8000/estimate.html</a>
+								</h4>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>English sermon service link</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12">
+								<h4>
+									Direct html from google script service without external
+									webserver.<br>(Not required authentictaion)
+								</h4>
+								<h4>
+									<a href="public.html" class='alink' target="_blank">http://localhost:8000/public.html</a>
+								</h4>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>English sermon service admin page</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12">
+								<h4>Register service & view logging and stats.</h4>
+								<h4>
+									<a href="admin.html" class='alink' target="_blank">http://localhost:8000/admin.html</a>
+								</h4>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>Upload sheet</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12">
+								<h4>Upload MS sheet</h4>
+								<h4>
+									<a href="upload.html" class='alink' target="_blank">http://localhost:8000/upload.html</a>
+								</h4>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<br> <br>
+		<h1>[ Using ]</h1>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>Usage 1. Resue excel file</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12"> <h7> 1. Upload your excel
+								file to google docs. <br>
+								(or 1. make your spreadsheet file in your google docs.) <br>
+								2. Attache <a href='scripts/gweb_s.js' target='_blank'>gweb-js_s.js</a>
+								to a google script on your spreadsheet.<br>
+								3. Make the authenicated endpoint in
+								https://console.developers.google.com.<br>
+								4. Make your web page (in the own google script file or in your
+								own web server)<br>
+								5. Use the authenicated endpoint in your web page. using <a
+									href='scripts/gweb_c.js' target='_blank'>gweb-js_c.js</a> <br>
+								</h7>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
 		<div class="footer"></div>
+
 	</div>
 
 	<!-- build:js(.) scripts/vendor.js -->
@@ -286,126 +234,42 @@
 	<!-- endbuild -->
 
 	<!-- build:js(.) scripts/plugins.js -->
-	<script src="/bower_components/bootstrap/js/affix.js"></script>
-	<script src="/bower_components/bootstrap/js/alert.js"></script>
-	<script src="/bower_components/bootstrap/js/dropdown.js"></script>
-	<script src="/bower_components/bootstrap/js/tooltip.js"></script>
-	<script src="/bower_components/bootstrap/js/modal.js"></script>
-	<script src="/bower_components/bootstrap/js/transition.js"></script>
-	<script src="/bower_components/bootstrap/js/button.js"></script>
-	<script src="/bower_components/bootstrap/js/popover.js"></script>
-	<script src="/bower_components/bootstrap/js/carousel.js"></script>
-	<script src="/bower_components/bootstrap/js/scrollspy.js"></script>
-	<script src="/bower_components/bootstrap/js/collapse.js"></script>
-	<script src="/bower_components/bootstrap/js/tab.js"></script>
 	<!-- endbuild -->
 
 	<!-- build:js scripts/sheet -->
-	<script src="scripts/gweb_c.js"></script>
-	<script src="scripts/gweb_s.js"></script>
 	<!-- endbuild -->
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>(function(b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] = function() {
-        (b[l].q = b[l].q || []).push(arguments)
-      });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = 'https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-  </script>
+	<script src="https://apis.google.com/js/client.js">
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>(function(b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l;
+			b[l] || (b[l] = function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+			b[l].l = +new Date;
+			e = o.createElement(i);
+			r = o.getElementsByTagName(i)[0];
+			e.src = 'https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
 
 	<script>
-    var tbObj;
-    $(document).ready(function() {
-      tbObj = $('#debuglist').DataTable({
-        "paging" : false,
-        "lengthChange" : false,
-        "searching" : false,
-        "ordering" : true,
-        "info" : true,
-        "autoWidth" : true
-      });        
-    });
-
-    var us = new GWeb(gconfig);
-    
-    function execute(sheet) {
-      if(us.config[sheet].params) {
-        for(var i=0;i<us.config[sheet].params.length;i++) {
-          if(i == 3) {
-            for(var key in us.config[sheet].params[3]) {
-              if(key.indexOf('_') == -1) {
-                us.config[sheet].params[3][key] = $('#' + key).val();
-              }
-            }
-          }
-          if(us.config[sheet].params[i]._event === 'getLineFromRowNum') {
-            us.config[sheet].params[i]._cache = $('#_cache').val();
-            us.config[sheet].params[i].input = $('#C4').val();
-          } else if(us.config[sheet].params[i]._event === 'getValueFromUpdate') {
-            if(us.config[sheet].params[i]._input) {
-              if (typeof us.config[sheet].params[i]._input === 'string') {
-                us.config[sheet].params[i]._input = JSON.parse(us.config[sheet].params[i]._input);
-              }
-              for(var key in us.config[sheet].params[i]._input) {
-                if(key.indexOf('_') == -1) {
-                  us.config[sheet].params[i]._input[key] = $('#' + key).val();
-                }
-              }
-            }
-          }
-        }
-      }
-      var option = {
-      	version: $('#_version').val(),
-      	cache: $('#_cache').val()
-      }
-      
-      us.execute(sheet, option, function(rslt) {
-        if(rslt.output) {
-          for(var key in rslt.output) {
-            $('#' + key).val(rslt.output[key]);
-          }
-        }
-        
-        if(rslt.meta) {
-          var tmp = $('#template').find('tr').html();
-          tmp = tmp.replace('{version}', rslt.meta.version);
-          tmp = tmp.replace('{elapse}', rslt.meta.total);
-          tmp = tmp.replace('{input}', JSON.stringify(rslt.input));
-          tmp = tmp.replace('{output}', JSON.stringify(rslt.output));
-          tmp = tmp.replace('{meta}', JSON.stringify(rslt.meta));
-          tmp = tmp.replace('{log}', rslt.meta.logstr);
-          
-          $("#debuglist").find('tbody').append('<tr>' + tmp + '</tr>');
-        }
-      })      
-    }
-    
-    function executes(sheet) {
-			if ( $.fn.DataTable.isDataTable('#debuglist') ) {
-			  $('#debuglist').DataTable().destroy();
-			}
-			$('#debuglist tbody').empty();
-      var _count = $('#_count').val();
-      _count = parseInt(_count);
-      
-      for(var i=0;i<_count;i++) {
-        execute(sheet);
-      }
-    }
-    
-  </script>
-
-<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
+		$(document).ready(
+				function() {
+					var domain = location.protocol + '//' + location.hostname
+							+ ':' + location.port;
+					$.each($('.alink'), function(i, obj) {
+						var link = $(obj).text();
+						link = link.substring(link.lastIndexOf('/'),
+								link.length);
+						link = domain + link;
+						$(obj).text(link);
+					});
+				})
+	</script>
 
 </body>
 </html>
