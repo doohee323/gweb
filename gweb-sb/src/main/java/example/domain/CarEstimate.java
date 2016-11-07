@@ -21,26 +21,26 @@ public class CarEstimate implements Serializable {
 	public String version; // version
 
 	@Column(name = "monthlyPay", nullable = false)
-	public Long monthlyPay; // 월납부금
+	public Long monthlyPay; // monthly_payment
 
 	@Column(name = "rate", nullable = false)
-	public Double rate; // 금리
+	public Double rate; // rate
 
 	@Column(name = "restValue", nullable = false)
-	public Double restValue; // 잔존가치
+	public Double restValue; // residual_value
 
 	@Column(name = "deliveryCostFirst", nullable = false)
-	public Integer deliveryCostFirst; // 1차탁송료
+	public Integer deliveryCostFirst; // 1consignment
 
 	@Column(name = "deliveryCostSecond", nullable = false)
-	public Integer deliveryCostSecond; // 2차탁송료
+	public Integer deliveryCostSecond; // 2consignment
 
 	@Column(name = "additionalCost", nullable = false)
-	public Integer additionalCost; // 부대비용
+	public Integer additionalCost; // incidental_expenses
 
 	@Column(name = "insuranceCost", nullable = false)
-	public Integer insuranceCost; // 보험료
+	public Integer insuranceCost; // insurance_bill
 
 	@Column(name = "insuranceCostMyCar", nullable = false)
-	public Integer insuranceCostMyCar; // 자차보험료
+	public Integer insuranceCostMyCar; // self_insurance_bill
 }

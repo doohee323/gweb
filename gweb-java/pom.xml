@@ -47,12 +47,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.github.mpkorstanje</groupId>
-			<artifactId>simmetrics-core</artifactId>
-			<version>4.1.1</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.21</version>
@@ -86,7 +80,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>kr.getcha.estimatecalculator.RentCalculatorImpl</mainClass>
+							<mainClass>example.estimate.RentCalculatorImpl</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

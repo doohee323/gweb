@@ -36,7 +36,7 @@
 
 	<logger name="com.tz" level="DEBUG" />
 
-	<logger name="kr.getcha.estimatecalculator.RentCalculatorImpl"
+	<logger name="example.estimate.RentCalculatorImpl"
 		level="DEBUG" additivity="false">
 		<appender-ref ref="Stats" />
 	</logger>

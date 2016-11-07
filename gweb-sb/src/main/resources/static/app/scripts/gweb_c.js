@@ -221,7 +221,7 @@ var gconfig = {
   'sheet_2' : {
     'url' : 'https://script.google.com/macros/s/AKfycbxUhjiuZtX_OV9z5meTBX7vjyLsmUQujFi01Y_AkjIAwJy7gZcY/exec',
     'input' : {
-      "_sheet" : "렌터카견적",
+      "_sheet" : "rent_estimate",
       "_event" : "update",
       'C4' : '5G 그랜저 HG300', // 견적차종
       'V5' : true, // 인수옵션
@@ -234,16 +234,16 @@ var gconfig = {
     // 정비상태
     },
     'output' : {
-      "_sheet" : "렌터카견적",
+      "_sheet" : "rent_estimate",
       "_event" : "getValue",
-      'col_1' : 'I13', // 월납부금
-      'col_2' : 'N4', // 금리
-      'col_3' : 'U19', // 잔존가치
-      'col_4' : 'B10', // 1차탁송료
-      'col_5' : 'C10', // 2차탁송료
-      'col_6' : 'D10', // 부대비용
-      'col_7' : 'O27', // 보험료
-      'col_8' : 'O28' // 자차보험료
+      'col_1' : 'I13', // monthly_payment
+      'col_2' : 'N4', // rate
+      'col_3' : 'U19', // residual_value
+      'col_4' : 'B10', // 1consignment
+      'col_5' : 'C10', // 2consignment
+      'col_6' : 'D10', // incidental_expenses
+      'col_7' : 'O27', // insurance_bill
+      'col_8' : 'O28' // self_insurance_bill
     }
   },
   'sheet_3' : {
@@ -252,23 +252,23 @@ var gconfig = {
       'client_id' : '345733617807-orplpsm5oq6nddrtle8n0oq3log1d4b0.apps.googleusercontent.com'
     },
     '_docid' : '11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE',
-    // 'params' : [{"_sheet":"차명DB","_event":"getRowNum","input":"5G 그랜저
+    // 'params' : [{"_sheet":"car_DB","_event":"getRowNum","input":"5G 그랜저
     // HG300","col":9}]
-    // 'params' : [{"_sheet":"차명DB","_event":"getRowNum","input":"5G 그랜저
-    // HG300","col":9},{"_sheet":"차명DB","_event":"getALine","output":"['I','O','J','P','N','X','Q','Z','L','M','W']"}]
+    // 'params' : [{"_sheet":"car_DB","_event":"getRowNum","input":"5G 그랜저
+    // HG300","col":9},{"_sheet":"car_DB","_event":"getALine","output":"['I','O','J','P','N','X','Q','Z','L','M','W']"}]
 
     'params' : [ {
       '_doc' : 'test3',
       '_event' : 'initDoc',
       '_docCount' : 1
     }, {
-      '_sheet' : '차명DB',
+      '_sheet' : 'car_DB',
       '_event' : 'getLineFromRowNum',
       'input' : '5G 그랜저 HG300',
       'col' : 9,
       'output' : "['I','O','J','P','N','X','Q','Z','L','M','W']"
     }, {
-      '_sheet' : '렌터카견적',
+      '_sheet' : 'rent_estimate',
       '_event' : 'updateFromShared',
       'N7' : 'O',
       'O7' : 'J',
@@ -280,16 +280,16 @@ var gconfig = {
       'W7' : 'L',
       'X7' : 'M'
     }, {
-      '_sheet' : '렌터카견적',
+      '_sheet' : 'rent_estimate',
       '_event' : 'script',
       '_script' : s
     }, {
-      '_sheet' : '2차탁송료',
+      '_sheet' : '2consignment',
       '_event' : 'update',
-      'G2' : '과천', // 1차탁송료
-      'G3' : '전라도', // 2차탁송료
+      'G2' : '과천', // 1consignment
+      'G3' : '전라도', // 2consignment
     }, {
-      '_sheet' : '렌터카견적',
+      '_sheet' : 'rent_estimate',
       '_event' : 'getValueFromUpdate',
       '_main' : 'true',
       '_result' : 'true',

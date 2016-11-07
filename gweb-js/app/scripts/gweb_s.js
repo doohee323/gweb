@@ -306,11 +306,11 @@ var GWeb = function() {
 	this.getParams = function(input) {
 		// var input = {
 		// 'params[0][_event]' : "getRowNum",
-		// 'params[0][_sheet]' : "차명DB",
+		// 'params[0][_sheet]' : "car_DB",
 		// 'params[0][col]' : "9",
 		// 'params[0][input]' : "5G 그랜저 HG300",
 		// 'params[1][_event]' : "getALine",
-		// 'params[1][_sheet]' : "차명DB",
+		// 'params[1][_sheet]' : "car_DB",
 		// 'params[1][output]' : "aaa"
 		// }
 
@@ -740,7 +740,7 @@ var GWeb = function() {
 	var initSheet = function(e) {
 		var input = JSON.parse(e);
 		// input = {
-		// 'sheet' : '렌터카견적',
+		// 'sheet' : 'rent_estimate',
 		// 'count' : 3
 		// }
 		mainSheetCount = input.count;
@@ -795,7 +795,7 @@ GWeb.prototype.setup = function(e) {
 
 function test() {
 	var initDoc_p = {
-		'_folderPath' : '외부견적기',
+		'_folderPath' : 'estimate',
 		'_doc' : 's_gweb',
 		'_event' : 'initDoc',
 		'_docCount' : 2
@@ -818,7 +818,7 @@ function test() {
 
 	var update_p = {
 		'_version' : 1,
-		'_sheet' : '렌터카견적',
+		'_sheet' : 'rent_estimate',
 		'_event' : 'update',
 		"_main" : 'true',
 		'_cache' : 'false',
@@ -834,36 +834,30 @@ function test() {
 
 	var update2_p = {
 		'_version' : 1,
-		'_sheet' : '2차탁송료',
+		'_sheet' : '2consignment',
 		'_event' : 'update',
 		'_cache' : 'false',
-		'G2' : '과천', // 1차탁송료
-		'G3' : '전라도', // 2차탁송료
+		'G2' : '과천', // 1consignment
+		'G3' : '전라도', // 2consignment
 	}
 
 	var getValue_p = {
-		'_sheet' : '렌터카견적',
+		'_sheet' : 'rent_estimate',
 		'_event' : 'getValue',
 		'_cache' : 'false',
 		"_result" : 'true',
-		'col_1' : 'I13', // 월납부금
-		'col_2' : 'N4', // 금리
-		'col_3' : 'U19', // 잔존가치
-		'col_4' : 'B10', // 1차탁송료
-		'col_5' : 'C10', // 2차탁송료
-		'col_6' : 'D10', // 부대비용
-		'col_7' : 'O27', // 보험료
-		'col_8' : 'O28', // 자차보험료
-	}
-
-	var getList_p = {
-		"_sheet" : "_차명매핑",
-		"_event" : "getList",
-		'input' : "[1,1,'_end',4]"
+		'col_1' : 'I13', // monthly_payment
+		'col_2' : 'N4', // rate
+		'col_3' : 'U19', // residual_value
+		'col_4' : 'B10', // 1consignment
+		'col_5' : 'C10', // 2consignment
+		'col_6' : 'D10', // incidental_expenses
+		'col_7' : 'O27', // insurance_bill
+		'col_8' : 'O28', // self_insurance_bill
 	}
 
 	var getValueFromUpdate_p = {
-		'_sheet' : '렌터카견적',
+		'_sheet' : 'rent_estimate',
 		'_event' : 'getValueFromUpdate',
 		'_main' : 'true',
 		'_result' : 'true',
@@ -894,7 +888,7 @@ function test() {
 
 	var getRowNum_p = {
 		'_version' : 1,
-		'_sheet' : '차명DB',
+		'_sheet' : 'car_DB',
 		'_event' : 'getRowNum',
 		'input' : "5G 그랜저 HG300", // 견적차종
 		'col' : 9
@@ -902,13 +896,13 @@ function test() {
 	}
 
 	var getALine_p = {
-		'_sheet' : '차명DB',
+		'_sheet' : 'car_DB',
 		'_event' : 'getALine',
 		'output' : "['I','O','J','P','N','X','Q','Z','L','M','W']"
 	}
 
 	var getLineFromRowNum_p = {
-		'_sheet' : '차명DB',
+		'_sheet' : 'car_DB',
 		'_event' : 'getLineFromRowNum',
 		'input' : '올뉴카니발 11인승 디젤',
 		'col' : 9,
@@ -916,7 +910,7 @@ function test() {
 	}
 
 	var updateFromShared_p = {
-		'_sheet' : '렌터카견적',
+		'_sheet' : 'rent_estimate',
 		'_event' : 'updateFromShared',
 		'N7' : 'O', // 견적차종
 		'O7' : 'J', // 배기량
@@ -939,7 +933,7 @@ function test() {
 	s += "}";
 
 	var script_p = {
-		'_sheet' : '렌터카견적',
+		'_sheet' : 'rent_estimate',
 		'_event' : 'script',
 		'_script' : s
 	}
