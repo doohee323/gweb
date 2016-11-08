@@ -18,8 +18,8 @@ import com.google.gson.JsonParser;
 
 import example.domain.CarEstimate;
 import example.domain.Rentcar;
+import example.estimate.RentCalculatorImpl;
 import example.repository.CarEstimateRepository;
-import kr.getcha.estimatecalculator.RentCalculatorImpl;
 
 @RestController
 @RequestMapping(value = "/rest")
@@ -44,9 +44,7 @@ public class RentcarController {
 			JsonObject obj = (JsonObject) new JsonParser().parse(params);
 			Rentcar rentcar = new Rentcar();
 			rentcar.version = obj.get("version").getAsString();
-			rentcar.brand = obj.get("brand").getAsString();
 			rentcar.model = obj.get("model").getAsString();
-			rentcar.grade = obj.get("grade").getAsString();
 			rentcar.returnCar = obj.get("returnCar").getAsBoolean();
 			rentcar.duration = obj.get("duration").getAsInt();
 			rentcar.age = obj.get("age").getAsBoolean();
@@ -55,9 +53,8 @@ public class RentcarController {
 			rentcar.includeRepair = obj.get("includeRepair").getAsBoolean();
 			rentcar.ownerType = obj.get("ownerType").getAsInt();
 
-			String key = rentcar.version + rentcar.brand + rentcar.model + rentcar.grade + rentcar.returnCar
-					+ rentcar.duration + rentcar.age + rentcar.deposit + rentcar.commission + rentcar.includeRepair
-					+ rentcar.ownerType;
+			String key = rentcar.version + rentcar.model + rentcar.returnCar + rentcar.duration + rentcar.age
+					+ rentcar.deposit + rentcar.commission + rentcar.includeRepair + rentcar.ownerType;
 			MessageDigest m;
 			m = MessageDigest.getInstance("MD5");
 			m.update(key.getBytes(), 0, key.length());
@@ -68,9 +65,8 @@ public class RentcarController {
 			if (carEstimate == null) {
 				RentCalculatorImpl impl = new RentCalculatorImpl();
 
-				CarEstimate caret = impl.getResult(rentcar.version, rentcar.brand, rentcar.model, rentcar.grade,
-						rentcar.returnCar, rentcar.duration, rentcar.age, rentcar.deposit, rentcar.commission,
-						rentcar.includeRepair, rentcar.ownerType);
+				CarEstimate caret = impl.getResult(rentcar.version, rentcar.model, rentcar.returnCar, rentcar.duration,
+						rentcar.age, rentcar.deposit, rentcar.commission, rentcar.includeRepair, rentcar.ownerType);
 
 				if (caret.id != null) {
 					carEstimateRepository.save(caret);

@@ -39,7 +39,7 @@ table.fixed td {
 
 	<div class="container">
 		<div class="header">
-			<h3 class="text-muted">rent_estimate</h3>
+			<h3 class="text-muted">Rent car estimate</h3>
 		</div>
 
 		<div class="side-body">
@@ -51,16 +51,16 @@ table.fixed td {
 			<div class="row">
 				<div class="col-md-12">
 					<form id="form1" class="form-horizontal">
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="_docid">Doc ID</label>
-							<div class="col-sm-10">
-								<div class="form-inline">
-									<input type="text" id="_docid" name="_docid"
-										value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE"
-										class="form-control" style='width: 500px'>
-								</div>
-							</div>
-						</div>
+<!-- 						<div class="form-group"> -->
+<!-- 							<label class="control-label col-sm-2" for="_docid">Doc ID</label> -->
+<!-- 							<div class="col-sm-10"> -->
+<!-- 								<div class="form-inline"> -->
+<!-- 									<input type="text" id="_docid" name="_docid" -->
+<!-- 										value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE" -->
+<!-- 										class="form-control" style='width: 500px'> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
 						<div class="form-group">
 							<label class="control-label col-sm-2" for="_version">version</label>
 							<div class="col-sm-3">
@@ -79,27 +79,11 @@ table.fixed td {
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2" for="brand">brand</label>
-							<div class="col-sm-3">
-								<div class="form-inline">
-									<input type="text" id="brand" name="brand" value="기아"
-										class="form-control">
-								</div>
-							</div>
 							<label class="control-label col-sm-2" for="model">model</label>
 							<div class="col-sm-3">
 								<div class="form-inline">
 									<input type="text" id="model" name="model"
-										value="All New Canival" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="grade">grade</label>
-							<div class="col-sm-3">
-								<div class="form-inline">
-									<input type="text" id="grade" name="grade"
-										value="(경유)11인승 노블레스 (A/T)" class="form-control">
+										value="Coupe 428i M Sport OE" class="form-control">
 								</div>
 							</div>
 							<label class="control-label col-sm-2" for="returnCar">returnCar</label>
@@ -189,7 +173,7 @@ table.fixed td {
 			</div>
 
 			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> result
+				<i data-placement="right"></i> Result
 			</legend>
 
 			<div class="row">
@@ -376,13 +360,9 @@ table.fixed td {
 			$('#insuranceCostMyCar').val('');
 			$('#msg').text('');
 			
-			var grade = $('#grade').val();
-			grade = grade.replace('/', '|');
 			var params = {
 				'version' : $('#_version').val(),
-				'brand' : $('#brand').val(),
 				'model' : $('#model').val(),
-				'grade' : grade,
 				'returnCar' : $('#returnCar').val(),
 				'duration' : $('#duration').val(),
 				'age' : $('#age').val(),

@@ -167,7 +167,7 @@ var GWeb = function(config) {
 				'params' : _super.config[sheet].params
 			}
 		}
-		if (owner) {
+		if (option.owner) {
 			if (params.input) {
 				if (params.input._sheet.indexOf('$') > -1) {
 					params.input._sheet = params.input._sheet.substring(

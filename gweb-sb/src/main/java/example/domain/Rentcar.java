@@ -22,14 +22,8 @@ public class Rentcar implements Serializable {
 	@Column(name = "version", nullable = false)
 	public String version;
 
-	@Column(name = "brand", nullable = false)
-	public String brand;
-
 	@Column(name = "model", nullable = false)
 	public String model;
-
-	@Column(name = "grade", nullable = false)
-	public String grade;
 
 	@Column(name = "returnCar", nullable = false)
 	public Boolean returnCar;

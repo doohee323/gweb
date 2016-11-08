@@ -41,8 +41,7 @@ java -jar target/gweb-sb-1.0-SNAPSHOT.jar --spring.profiles.active=local
 
 cf. --spring.config.location=classpath:file:/vagrant/gweb-sb/src/main/resources/application-local.properties
 
-
-http://localhost:8088/app/index.html
-
+http://localhost:8080/app/estimate.html
+http://localhost:8080/app/public.html
    
 
