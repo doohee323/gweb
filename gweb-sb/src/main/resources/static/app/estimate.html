@@ -10,8 +10,7 @@
 
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
-<link rel="stylesheet"
-	href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -51,16 +50,16 @@ table.fixed td {
 			<div class="row">
 				<div class="col-md-12">
 					<form id="form1" class="form-horizontal">
-<!-- 						<div class="form-group"> -->
-<!-- 							<label class="control-label col-sm-2" for="_docid">Doc ID</label> -->
-<!-- 							<div class="col-sm-10"> -->
-<!-- 								<div class="form-inline"> -->
-<!-- 									<input type="text" id="_docid" name="_docid" -->
-<!-- 										value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE" -->
-<!-- 										class="form-control" style='width: 500px'> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
+						<!-- 						<div class="form-group"> -->
+						<!-- 							<label class="control-label col-sm-2" for="_docid">Doc ID</label> -->
+						<!-- 							<div class="col-sm-10"> -->
+						<!-- 								<div class="form-inline"> -->
+						<!-- 									<input type="text" id="_docid" name="_docid" -->
+						<!-- 										value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE" -->
+						<!-- 										class="form-control" style='width: 500px'> -->
+						<!-- 								</div> -->
+						<!-- 							</div> -->
+						<!-- 						</div> -->
 						<div class="form-group">
 							<label class="control-label col-sm-2" for="_version">version</label>
 							<div class="col-sm-3">
@@ -155,7 +154,7 @@ table.fixed td {
 				<div class="col-md-12" style='text-align: right;'>
 					<form class="form-horizontal">
 						<div class="form-group">
-							<!-- 							<label class="control-label col-sm-2" for="_count">처리 횟수</label> -->
+							<!-- 							<label class="control-label col-sm-2" for="_count">run count</label> -->
 							<div class="col-sm-2">
 								<!-- 								<div class="form-inline"> -->
 								<!-- 									<input type="text" id="_count" name="_count" value="1" -->
@@ -251,7 +250,7 @@ table.fixed td {
 			</div>
 
 			<!-- 			<legend style="margin-top: 30px"> -->
-			<!-- 				<i data-placement="right"></i> 로그 -->
+			<!-- 				<i data-placement="right"></i> Log -->
 			<!-- 			</legend> -->
 
 			<!-- 			<div class="row"> -->
@@ -288,8 +287,8 @@ table.fixed td {
 
 		</div>
 		<div class="footer">
-			<p id='msg'>
-			</p><br> <br> <br> <br>
+			<p id='msg'></p>
+			<br> <br> <br> <br>
 		</div>
 	</div>
 
@@ -359,7 +358,7 @@ table.fixed td {
 			$('#insuranceCost').val('');
 			$('#insuranceCostMyCar').val('');
 			$('#msg').text('');
-			
+
 			var params = {
 				'version' : $('#_version').val(),
 				'model' : $('#model').val(),
@@ -371,14 +370,13 @@ table.fixed td {
 				'includeRepair' : $('#includeRepair').val(),
 				'ownerType' : $('#ownerType').val()
 			}
-			var url = '/rest/rentcar/'
-					+ JSON.stringify(params);
+			var url = '/rest/rentcar/' + JSON.stringify(params);
 			$.ajax({
 				method : 'POST',
 				url : url,
 				dataType : 'json'
 			}).done(function(data) {
-				if(data.monthlyPay) {
+				if (data.monthlyPay) {
 					console.timeEnd("ajax response time");
 					// console.log(JSON.stringify(data));
 					$('#monthlyPay').val(data.monthlyPay);

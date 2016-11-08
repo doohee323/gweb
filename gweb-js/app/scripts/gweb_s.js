@@ -837,8 +837,8 @@ function test() {
 		'_sheet' : '2consignment',
 		'_event' : 'update',
 		'_cache' : 'false',
-		'G2' : '과천', // 1consignment
-		'G3' : '전라도', // 2consignment
+		'G2' : 'SF', // 1consignment
+		'G3' : 'LA', // 2consignment
 	}
 
 	var getValue_p = {

@@ -28,10 +28,9 @@ public class RentcarController {
 	@Autowired
 	private CarEstimateRepository carEstimateRepository;
 
-	// http://localhost:8088/rest/rentcar/{"version":"1","brand":"기아","model":"All
-	// New
-	// Canival","grade":"(경유)11인승 노블레스
-	// (A|T)","returnCar":false,"duration":4,"age":true,"deposit":0,"commission":"0.01","includeRepair":false,"ownerType":1}
+	// http://localhost:8088/rest/rentcar/{"version":"1","model":"Coupe 428i M
+	// Sport
+	// OE","returnCar":false,"duration":4,"age":true,"deposit":0,"commission":"0.01","includeRepair":false,"ownerType":1}
 	@RequestMapping(method = RequestMethod.POST, value = "/rentcar/{params}")
 	public String getRentcar(HttpServletRequest request, HttpServletResponse response, @PathVariable String params) {
 		JsonObject output3 = null;

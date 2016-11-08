@@ -1,0 +1,63 @@
+{
+  "sheet_3": [
+    {
+      "_sheet": "car_DB",
+      "_event": "getLineFromRowNum",
+      "input": "{{model}}",
+      "col": 9,
+      "output": "['I','O','J','P','N','X','Q','Z','L','M','W']"
+    },
+    {
+      "_sheet": "rent_estimate",
+      "_event": "updateFromShared",
+      "N7": "O",
+      "O7": "J",
+      "P8": "P",
+      "S7": "N",
+      "T7": "X",
+      "U7": "Q",
+      "V7": "Z",
+      "W7": "L",
+      "X7": "M"
+    },
+    {
+      "_sheet": "rent_estimate",
+      "_event": "script",
+      "_script": "{{_func}}"
+    },
+    {
+      "_sheet": "2consignment",
+      "_event": "update",
+      "G2": "{{1consignment}}",
+      "G3": "{{2consignment}}"
+    },
+    {
+      "_sheet": "rent_estimate",
+      "_event": "getValueFromUpdate",
+      "_main": "true",
+      "_result": "true",
+      "_cache": "false",
+      "_input": {
+        "C4": "{{model}}",
+        "V5": "{{returnCar}}",
+        "T5": 4,
+        "W5": "{{duration}}",
+        "P26": 2,
+        "G9": "{{deposit}}",
+        "K9": "{{commission}}",
+        "Q27": "{{age}}",
+        "U5": "{{includeRepair}}"
+      },
+      "_output": {
+        "col_1": "I13",
+        "col_2": "N4",
+        "col_3": "U19",
+        "col_4": "B10",
+        "col_5": "C10",
+        "col_6": "D10",
+        "col_7": "O27",
+        "col_8": "O28"
+      }
+    }
+  ]
+}

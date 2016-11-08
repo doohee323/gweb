@@ -230,13 +230,6 @@ var GWeb = function(config) {
 // //////////////////////////////////////////////////////////////////////////////
 // / [configuration]
 // ////////////////////////////////////////////////////////////////////////////////
-var s = "function _func(){ ";
-s += "if (sheet.getRange('W7').getValue() == 0) { ";
-s += "  sheet.getRange('W7').setValue(1.1);";
-s += "} else { ";
-s += "  sheet.getRange('W7').setValue(1.17150); ";
-s += "} ";
-s += "}";
 
 var gconfig = {
 	'gauth' : {
@@ -249,105 +242,5 @@ var gconfig = {
 		},
 		'input' : {},
 		'output' : {}
-	},
-	'sheet_2' : {
-		'url' : 'https://script.google.com/macros/s/AKfycbxUhjiuZtX_OV9z5meTBX7vjyLsmUQujFi01Y_AkjIAwJy7gZcY/exec',
-		'input' : {
-			"_sheet" : "rent_estimate",
-			"_event" : "update",
-			'C4' : '5G 그랜저 HG300', // 견적차종
-			'V5' : true, // 인수옵션
-			'T5' : 4, // 약정거리
-			'W5' : 4, // 계약기간
-			'P26' : 2, // 대물/자손
-			'G9' : 0, // 보증금
-			'K9' : 0.01, // 수수료
-			'U5' : false
-		// 정비상태
-		},
-		'output' : {
-			"_sheet" : "rent_estimate",
-			"_event" : "getValue",
-			'col_1' : 'I13', // monthly_payment
-			'col_2' : 'N4', // rate
-			'col_3' : 'U19', // residual_value
-			'col_4' : 'B10', // 1consignment
-			'col_5' : 'C10', // 2consignment
-			'col_6' : 'D10', // incidental_expenses
-			'col_7' : 'O27', // insurance_bill
-			'col_8' : 'O28' // self_insurance_bill
-		}
-	},
-	'sheet_3' : {
-		'url' : 'https://script.google.com/macros/s/AKfycbz4UBcRrvJUrrUQ3pecdYBRrdF90mmsk04X6JSvm0WF1HZNKow/exec',
-		'gauth' : {
-			'client_id' : '345733617807-orplpsm5oq6nddrtle8n0oq3log1d4b0.apps.googleusercontent.com'
-		},
-		'_docid' : '11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE',
-		// 'params' : [{"_sheet":"car_DB","_event":"getRowNum","input":"5G 그랜저
-		// HG300","col":9}]
-		// 'params' : [{"_sheet":"car_DB","_event":"getRowNum","input":"5G 그랜저
-		// HG300","col":9},{"_sheet":"car_DB","_event":"getALine","output":"['I','O','J','P','N','X','Q','Z','L','M','W']"}]
-
-		'params' : [ {
-			'_doc' : 'test3',
-			'_event' : 'initDoc',
-			'_docCount' : 1
-		}, {
-			'_sheet' : 'car_DB',
-			'_event' : 'getLineFromRowNum',
-			'input' : '5G 그랜저 HG300',
-			'col' : 9,
-			'output' : "['I','O','J','P','N','X','Q','Z','L','M','W']"
-		}, {
-			'_sheet' : 'rent_estimate',
-			'_event' : 'updateFromShared',
-			'N7' : 'O',
-			'O7' : 'J',
-			'P8' : 'P',
-			'S7' : 'N',
-			'T7' : 'X',
-			'U7' : 'Q',
-			'V7' : 'Z',
-			'W7' : 'L',
-			'X7' : 'M'
-		}, {
-			'_sheet' : 'rent_estimate',
-			'_event' : 'script',
-			'_script' : s
-		}, {
-			'_sheet' : '2consignment',
-			'_event' : 'update',
-			'G2' : '과천', // 1consignment
-			'G3' : '전라도', // 2consignment
-		}, {
-			'_sheet' : 'rent_estimate',
-			'_event' : 'getValueFromUpdate',
-			'_main' : 'true',
-			'_result' : 'true',
-			'_cache' : 'false',
-			'_input' : {
-				'C4' : '5G 그랜저 HG300',
-				'V5' : true,
-				'T5' : 4,
-				'W5' : 2,
-				'P26' : 2,
-				'G9' : 0,
-				'K9' : 0.01,
-				'Q27' : 21,
-				'U5' : true
-			},
-			'_output' : {
-				'col_1' : 'I13',
-				'col_2' : 'N4',
-				'col_3' : 'U19',
-				'col_4' : 'B10',
-				'col_5' : 'C10',
-				'col_6' : 'D10',
-				'col_7' : 'O27',
-				'col_8' : 'O28'
-			}
-		} ]
 	}
-
 }

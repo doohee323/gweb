@@ -2,7 +2,7 @@
 <html lang="">
 <head>
 <meta charset="utf-8">
-<title>gweb</title>
+<title>gweb-js</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,19 +10,25 @@
 
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
-<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 <!-- endbower -->
 <!-- endbuild -->
 
 <link rel="canonical" href="http://sheet.topzone.biz">
 <style>
-	table.fixed { table-layout:fixed; }
-	table.fixed td { overflow: hidden; }
+table.fixed {
+	table-layout: fixed;
+}
+
+table.fixed td {
+	overflow: hidden;
+}
 </style>
 <script>
-  window.___gcfg = {
-    parsetags : 'explicit'
-  };
+	window.___gcfg = {
+		parsetags : 'explicit'
+	};
 </script>
 
 </head>
@@ -33,220 +39,246 @@
 
 	<div class="container">
 		<div class="header">
-			<h3 class="text-muted">렌터카견적</h3>
+			<h3 class="text-muted">Rent car estimate</h3>
 		</div>
 
 		<div class="side-body">
-		
+
 			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 입력 조건
+				<i data-placement="right"></i> Input
 			</legend>
-			
+
 			<div class="row">
 				<div class="col-md-12">
 					<form id="form1" class="form-horizontal">
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="_docid">Doc ID</label>
-		            <div class="col-sm-10">
-		              <div class="form-inline">
-										<input type="text" id="_docid" name="_docid" value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE" class="form-control" style='width:500px'>
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="_version">버전</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="_version" name="_version" value="1" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="_cache">캐시</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="_cache" name="_cache" value="false" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="C4">견적차종</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="C4" name="C4" value="5G 그랜저 HG300" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="V5">인수옵션</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="V5" name="V5" value="true" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="T5">약정거리</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="T5" name="T5" value="4" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="W5">계약기간</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="W5" name="W5" value="4" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="P26">대물/자손</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="P26" name="P26" value="2" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="G9">보증금</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="G9" name="G9" value="0" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="K9">수수료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="K9" name="K9" value="0.01" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="U5">정비상태</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="U5" name="U5" value="true" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="G2">1차탁송</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="G2" name="G2" value="과천" class="form-control">
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="G3">2차탁송</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="G3" name="G3" value="전라도" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="Q27">보험연령</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="Q27" name="Q27" value="21" class="form-control">
-		              </div>
-		            </div>
-		          </div>				
-					</form>			
-				</div>
-			</div>
-			
-			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 
-			</legend>
-			
-			<div class="row">
-				<div class="col-md-12" style='text-align: right;'>
-					<form class="form-horizontal">
-	          <div class="form-group">
-	            <label class="control-label col-sm-2" for="_count">처리 횟수</label>
-	            <div class="col-sm-2">
-	              <div class="form-inline">
-									<input type="text" id="_count" name="_count" value="1" class="form-control">
-	              </div>
-	            </div>
-	            <div class="col-sm-7">
-								<button type='button' id="sheet_1" onclick="executes('sheet_3');">조회</button>
-								<button type='button' id="sheet_1" onclick="execute('test');">테스트</button>
-	            </div>
-	           </div>
-					</form>				
-				</div>
-			</div>
-			
-			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 결과
-			</legend>
-			
-			<div class="row">
-				<div class="col-md-12">
-				<form id="form2" class="form-horizontal">
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_1">월납부금</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_1" name="col_1" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_2">금리</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_2" name="col_2" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_3">잔존가치</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_3" name="col_3" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_4">1차탁송료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_4" name="col_4" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>				
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_5">2차탁송료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_5" name="col_5" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_6">부대비용</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_6" name="col_6" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>	
-		          <div class="form-group">
-		            <label class="control-label col-sm-2" for="col_7">보험료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_7" name="col_7" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		            <label class="control-label col-sm-2" for="col_8">자차보험료</label>
-		            <div class="col-sm-3">
-		              <div class="form-inline">
-										<input type="text" id="col_8" name="col_8" value="" class="form-control" disabled>
-		              </div>
-		            </div>
-		          </div>	
+						<!-- 						<div class="form-group"> -->
+						<!-- 							<label class="control-label col-sm-2" for="_docid">Doc ID</label> -->
+						<!-- 							<div class="col-sm-10"> -->
+						<!-- 								<div class="form-inline"> -->
+						<!-- 									<input type="text" id="_docid" name="_docid" -->
+						<!-- 										value="11Zwm14ohuICi_7u8QCQVbRwUDKfcPewpTRfJHi6QyhE" -->
+						<!-- 										class="form-control" style='width: 500px'> -->
+						<!-- 								</div> -->
+						<!-- 							</div> -->
+						<!-- 						</div> -->
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="_version">version</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="_version" name="_version" value="1"
+										class="form-control">
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="_cache">cache</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="_cache" name="_cache" value="false"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="C4">model</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="C4" name="C4"
+										value="Coupe 428i M Sport OE" class="form-control">
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="V5">returnCar</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="V5" name="V5" value="true"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="T5">contractDistance</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="T5" name="T5" value="4"
+										class="form-control">
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="W5">duration</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="W5" name="W5" value="4"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="P26">includeRepair</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="P26" name="P26" value="2"
+										class="form-control">
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="G9">deposit</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="G9" name="G9" value="0"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="K9">commission</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="K9" name="K9" value="0.01"
+										class="form-control">
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="U5">RepairStatus</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="U5" name="U5" value="true"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="G2">1consignment</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="G2" name="G2" value="SF"
+										class="form-control">
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="G3">2consignment</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="G3" name="G3" value="LA"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Q27">age</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="Q27" name="Q27" value="21"
+										class="form-control">
+								</div>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
-			
+
 			<legend style="margin-top: 30px">
-				<i data-placement="right"></i> 로그
+				<i data-placement="right"></i>
 			</legend>
-			
+
+			<div class="row">
+				<div class="col-md-12" style='text-align: right;'>
+					<form class="form-horizontal">
+						<div class="form-group">
+<!-- 							<label class="control-label col-sm-2" for="_count">Run count</label> -->
+<!-- 							<div class="col-sm-2"> -->
+<!-- 								<div class="form-inline"> -->
+<!-- 									<input type="text" id="_count" name="_count" value="1" -->
+<!-- 										class="form-control"> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+							<div class="col-sm-10">
+<!-- 								<button type='button' id="sheet_1" -->
+<!-- 									onclick="executes('sheet_3');">Query</button> -->
+								<button type='button' id="sheet_1" onclick="execute('sheet_3');">Test</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<legend style="margin-top: 30px">
+				<i data-placement="right"></i> Result
+			</legend>
+
+			<div class="row">
+				<div class="col-md-12">
+					<form id="form2" class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="col_1">monthly_payment</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_1" name="col_1" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="col_2">Rate</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_2" name="col_2" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="col_3">residual_value</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_3" name="col_3" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="col_4">1consignment</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_4" name="col_4" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="col_5">2consignment</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_5" name="col_5" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="col_6">incidental_expenses</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_6" name="col_6" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="col_7">insurance_bill</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_7" name="col_7" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="col_8">self_insurance_bill</label>
+							<div class="col-sm-3">
+								<div class="form-inline">
+									<input type="text" id="col_8" name="col_8" value=""
+										class="form-control" disabled>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<legend style="margin-top: 30px">
+				<i data-placement="right"></i> Log
+			</legend>
+
 			<div class="row">
 				<div class="col-md-12">
 					<div id="table_wrapper">
-						<table id="debuglist" class="table table-bordered table-hover fixed">
+						<table id="debuglist"
+							class="table table-bordered table-hover fixed">
 							<thead>
 								<tr>
 									<th class='text-center'>version</th>
@@ -273,7 +305,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 		<div class="footer"></div>
 	</div>
@@ -302,110 +334,193 @@
 
 	<!-- build:js scripts/sheet -->
 	<script src="scripts/gweb_c.js"></script>
-	<script src="scripts/gweb_s.js"></script>
 	<!-- endbuild -->
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>(function(b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] = function() {
-        (b[l].q = b[l].q || []).push(arguments)
-      });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = 'https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-  </script>
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function(b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l;
+			b[l] || (b[l] = function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+			b[l].l = +new Date;
+			e = o.createElement(i);
+			r = o.getElementsByTagName(i)[0];
+			e.src = 'https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
 
 	<script>
-    var tbObj;
-    $(document).ready(function() {
-      tbObj = $('#debuglist').DataTable({
-        "paging" : false,
-        "lengthChange" : false,
-        "searching" : false,
-        "ordering" : true,
-        "info" : true,
-        "autoWidth" : true
-      });        
-    });
+		var tbObj;
+		var us;
+		$(document).ready(function() {
+			tbObj = $('#debuglist').DataTable({
+				"paging" : false,
+				"lengthChange" : false,
+				"searching" : false,
+				"ordering" : true,
+				"info" : true,
+				"autoWidth" : true
+			});
+			
+			us = new GWeb(gconfig);
+		});
 
-    var us = new GWeb(gconfig);
-    
-    function execute(sheet) {
-      if(us.config[sheet].params) {
-        for(var i=0;i<us.config[sheet].params.length;i++) {
-          if(i == 3) {
-            for(var key in us.config[sheet].params[3]) {
-              if(key.indexOf('_') == -1) {
-                us.config[sheet].params[3][key] = $('#' + key).val();
-              }
-            }
-          }
-          if(us.config[sheet].params[i]._event === 'getLineFromRowNum') {
-            us.config[sheet].params[i]._cache = $('#_cache').val();
-            us.config[sheet].params[i].input = $('#C4').val();
-          } else if(us.config[sheet].params[i]._event === 'getValueFromUpdate') {
-            if(us.config[sheet].params[i]._input) {
-              if (typeof us.config[sheet].params[i]._input === 'string') {
-                us.config[sheet].params[i]._input = JSON.parse(us.config[sheet].params[i]._input);
-              }
-              for(var key in us.config[sheet].params[i]._input) {
-                if(key.indexOf('_') == -1) {
-                  us.config[sheet].params[i]._input[key] = $('#' + key).val();
-                }
-              }
-            }
-          }
-        }
-      }
-      var option = {
-      	version: $('#_version').val(),
-      	cache: $('#_cache').val()
-      }
-      
-      us.execute(sheet, option, function(rslt) {
-        if(rslt.output) {
-          for(var key in rslt.output) {
-            $('#' + key).val(rslt.output[key]);
-          }
-        }
-        
-        if(rslt.meta) {
-          var tmp = $('#template').find('tr').html();
-          tmp = tmp.replace('{version}', rslt.meta.version);
-          tmp = tmp.replace('{elapse}', rslt.meta.total);
-          tmp = tmp.replace('{input}', JSON.stringify(rslt.input));
-          tmp = tmp.replace('{output}', JSON.stringify(rslt.output));
-          tmp = tmp.replace('{meta}', JSON.stringify(rslt.meta));
-          tmp = tmp.replace('{log}', rslt.meta.logstr);
-          
-          $("#debuglist").find('tbody').append('<tr>' + tmp + '</tr>');
-        }
-      })      
-    }
-    
-    function executes(sheet) {
-			if ( $.fn.DataTable.isDataTable('#debuglist') ) {
-			  $('#debuglist').DataTable().destroy();
+		function execute(sheet) {
+			if (us.config[sheet].params) {
+				for (var i = 0; i < us.config[sheet].params.length; i++) {
+					if (i == 3) {
+						for ( var key in us.config[sheet].params[3]) {
+							if (key.indexOf('_') == -1) {
+								us.config[sheet].params[3][key] = $('#' + key)
+										.val();
+							}
+						}
+					}
+					if (us.config[sheet].params[i]._event === 'getLineFromRowNum') {
+						us.config[sheet].params[i]._cache = $('#_cache').val();
+						us.config[sheet].params[i].input = $('#C4').val();
+					} else if (us.config[sheet].params[i]._event === 'getValueFromUpdate') {
+						if (us.config[sheet].params[i]._input) {
+							if (typeof us.config[sheet].params[i]._input === 'string') {
+								us.config[sheet].params[i]._input = JSON
+										.parse(us.config[sheet].params[i]._input);
+							}
+							for ( var key in us.config[sheet].params[i]._input) {
+								if (key.indexOf('_') == -1) {
+									us.config[sheet].params[i]._input[key] = $(
+											'#' + key).val();
+								}
+							}
+						}
+					}
+				}
+			}
+			var option = {
+				version : $('#_version').val(),
+				cache : $('#_cache').val(),
+				nosession: true
+			}
+
+			us.execute(sheet, option, function(rslt) {
+				if (rslt.output) {
+					for ( var key in rslt.output) {
+						$('#' + key).val(rslt.output[key]);
+					}
+				}
+
+				if (rslt.meta) {
+					var tmp = $('#template').find('tr').html();
+					tmp = tmp.replace('{version}', rslt.meta.version);
+					tmp = tmp.replace('{elapse}', rslt.meta.total);
+					tmp = tmp.replace('{input}', JSON.stringify(rslt.input));
+					tmp = tmp.replace('{output}', JSON.stringify(rslt.output));
+					tmp = tmp.replace('{meta}', JSON.stringify(rslt.meta));
+					tmp = tmp.replace('{log}', rslt.meta.logstr);
+
+					$("#debuglist").find('tbody')
+							.append('<tr>' + tmp + '</tr>');
+				}
+			})
+		}
+
+		function executes(sheet) {
+			if ($.fn.DataTable.isDataTable('#debuglist')) {
+				$('#debuglist').DataTable().destroy();
 			}
 			$('#debuglist tbody').empty();
-      var _count = $('#_count').val();
-      _count = parseInt(_count);
-      
-      for(var i=0;i<_count;i++) {
-        execute(sheet);
-      }
-    }
-    
-  </script>
+			var _count = $('#_count').val();
+			_count = parseInt(_count);
 
-<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
+			for (var i = 0; i < _count; i++) {
+				execute(sheet);
+			}
+		}
+
+		var s = "function _func(){ ";
+		s += "if (sheet.getRange('W7').getValue() == 0) { ";
+		s += "  sheet.getRange('W7').setValue(1.1);";
+		s += "} else { ";
+		s += "  sheet.getRange('W7').setValue(1.17150); ";
+		s += "} ";
+		s += "}";
+
+		var gconfig = {
+			'sheet_3' : {
+				'url' : 'https://script.google.com/macros/s/AKfycbwIdDA6Hv8z4LGfdtiK9SdhR8WFkuAqVUG_rTBylA_tkxM9cKY/exec',
+				'gauth' : {
+					'client_id' : '436420772730-dkp74600ijm0ghhsvi0raq2sf3h8q5oq.apps.googleusercontent.com'
+				},
+				'_docid' : '1_IAoB8njLIrHlZpWB4YUDkEB7c16VosJH3HAyjk8c4c',
+				'params' : [ {
+					'_doc' : 'test3',
+					'_event' : 'initDoc',
+					'_docCount' : 1
+				}, {
+					'_sheet' : 'car_DB',
+					'_event' : 'getLineFromRowNum',
+					'input' : 'Coupe 428i M Sport OE',
+					'col' : 9,
+					'output' : "['I','O','J','P','N','X','Q','Z','L','M','W']"
+				}, {
+					'_sheet' : 'rent_estimate',
+					'_event' : 'updateFromShared',
+					'N7' : 'O',
+					'O7' : 'J',
+					'P8' : 'P',
+					'S7' : 'N',
+					'T7' : 'X',
+					'U7' : 'Q',
+					'V7' : 'Z',
+					'W7' : 'L',
+					'X7' : 'M'
+				}, {
+					'_sheet' : 'rent_estimate',
+					'_event' : 'script',
+					'_script' : s
+				}, {
+					'_sheet' : '2consignment',
+					'_event' : 'update',
+					'G2' : 'SF', // 1consignment
+					'G3' : 'LA', // 2consignment
+				}, {
+					'_sheet' : 'rent_estimate',
+					'_event' : 'getValueFromUpdate',
+					'_main' : 'true',
+					'_result' : 'true',
+					'_cache' : 'false',
+					'_input' : {
+						'C4' : 'Coupe 428i M Sport OE',
+						'V5' : true,
+						'T5' : 4,
+						'W5' : 2,
+						'P26' : 2,
+						'G9' : 0,
+						'K9' : 0.01,
+						'Q27' : 21,
+						'U5' : true
+					},
+					'_output' : {
+						'col_1' : 'I13',
+						'col_2' : 'N4',
+						'col_3' : 'U19',
+						'col_4' : 'B10',
+						'col_5' : 'C10',
+						'col_6' : 'D10',
+						'col_7' : 'O27',
+						'col_8' : 'O28'
+					}
+				} ]
+			}
+
+		}
+	</script>
+
+	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
 
 </body>
 </html>

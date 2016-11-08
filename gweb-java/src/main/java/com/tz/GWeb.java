@@ -33,6 +33,7 @@ import com.google.api.services.script.Script;
 import com.google.api.services.script.model.ExecutionRequest;
 import com.google.api.services.script.model.Operation;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -232,7 +233,7 @@ public class GWeb {
 		try {
 			Object result = null;
 			String hashedKey = null;
-			if (key.indexOf("\"_cache\":\"true\"") > -1) {
+			if (key.indexOf("_cache\\\":\\\"true") > -1) {
 				MessageDigest m;
 				m = MessageDigest.getInstance("MD5");
 				m.update(key.getBytes(), 0, key.length());
@@ -261,7 +262,7 @@ public class GWeb {
 				log.error(getScriptError(op));
 			} else {
 				log.debug(op.getResponse().toString());
-				if (key.indexOf("\"_cache\":\"true\"") > -1) {
+				if (key.indexOf("_cache\\\":\\\"true") > -1) {
 					CacheManager.getInstance().put(hashedKey, op.getResponse());
 				}
 			}
@@ -280,6 +281,71 @@ public class GWeb {
 			log.error(t.getMessage());
 		}
 		return null;
+	}
+
+	public static String parseParam(String configFile, String endpoint, Map<String, Object> param) {
+		String str = "";
+		final Reader reader = ConfigUtil.getFileReader(configFile);
+		try {
+			int intValueOfChar;
+			while ((intValueOfChar = reader.read()) != -1) {
+				str += (char) intValueOfChar;
+			}
+			reader.close();
+		} catch (final Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		JsonObject conf = (JsonObject) new JsonParser().parse(str);
+		str = conf.get(endpoint).toString();
+
+		for (Map.Entry<String, Object> entry : param.entrySet()) {
+			String key = entry.getKey();
+			Object value = entry.getValue();
+			if (value instanceof String) {
+				str = str.replace("{{" + key + "}}", value.toString());
+			} else {
+				str = str.replace("\"{{" + key + "}}\"", value.toString());
+			}
+		}
+
+		JsonArray jarry = (JsonArray) new JsonParser().parse(str);
+		for (int i = 0; i < jarry.size(); i++) {
+			JsonObject aa = (JsonObject) jarry.get(i);
+			if (aa.has("_input")) {
+				String _input = aa.get("_input").toString();
+				_input = _input.replaceAll("\"", "\\\"");
+				aa.addProperty("_input", _input);
+			}
+			if (aa.has("_output")) {
+				String _output = aa.get("_output").toString();
+				_output = _output.replaceAll("\"", "\\\"");
+				aa.addProperty("_output", _output);
+			}
+		}
+		str = jarry.toString();
+		return str;
+	}
+
+	public static int parseInt(String input) {
+		if (input.indexOf(".") > -1) {
+			input = input.substring(0, input.indexOf("."));
+		}
+		return Integer.parseInt(input);
+	}
+
+	public static long parseLong(String input) {
+		if (input.indexOf(".") > -1) {
+			input = input.substring(0, input.indexOf("."));
+		}
+		return Long.parseLong(input);
 	}
 
 }
