@@ -276,11 +276,11 @@ table.fixed td {
 				link = link.substring(link.lastIndexOf('/'), link.length);
 				if (domain_sb) {
 					link = domain_sb + link;
-					$(obj).attr('href', link);
 				} else {
 					link = domain + link;
-					$(obj).text(link);
 				}
+				$(obj).attr('href', link);
+				$(obj).text(link);
 			});
 		})
 	</script>
