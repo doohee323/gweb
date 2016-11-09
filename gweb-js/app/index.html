@@ -120,8 +120,8 @@ table.fixed td {
 								<h4>Reuse MS excel with complicated funtions in multiple
 									sheets</h4>
 								<h4>
-									<a href="http://localhost:8080/app/estimate.html" class='alink'
-										target="_blank">http://localhost:8080/app/estimate.html</a>
+									<a href="http://localhost:8880/app/estimate.html" class='alink'
+										target="_blank">http://localhost:8880/app/estimate.html</a>
 								</h4>
 							</label>
 						</div>
@@ -146,8 +146,8 @@ table.fixed td {
 								<h4>
 									<a href="public.html" class='alink' target="_blank">http://localhost:8000/public.html
 									</a>(required authentication) <a
-										href="http://localhost:8080/app/public.html" class='alink'
-										target="_blank">http://localhost:8080/app/public.html</a> (Not
+										href="http://localhost:8880/app/public.html" class='alink'
+										target="_blank">http://localhost:8880/app/public.html</a> (Not
 									required authentication, need gweb-sb running)
 								</h4>
 							</label>
@@ -270,6 +270,9 @@ table.fixed td {
 			$.each($('.alink'), function(i, obj) {
 				var link = $(obj).text();
 				link = link.substring(link.lastIndexOf('/'), link.length);
+				if(link.indexOf('8880') > -1) {
+					domain = 'http://gweb-sb.topzone.biz';
+				}
 				link = domain + link;
 				$(obj).text(link);
 			});
