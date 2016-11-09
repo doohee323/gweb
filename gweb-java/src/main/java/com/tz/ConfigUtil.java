@@ -28,7 +28,7 @@ public final class ConfigUtil {
 
     static final Logger log = LoggerFactory.getLogger(ConfigUtil.class);
 
-    public static String defaultConfDir = "./";
+    public static String defaultConfDir = "./classes/";
 
     public static Reader getFileReader(String fileNm) {
         Reader reader = null;

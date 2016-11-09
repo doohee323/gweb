@@ -5,12 +5,17 @@ set -x
 ## on mac
 #brew install maven
 #export M2_HOME=/usr/local/Cellar/maven/3.3.9
-#export M2=$M2_HOME/bin
-#export PATH=$M2:$PATH
+
+# on ubuntu
+# wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+export M2_HOME=/home/ubuntu/apache-maven-3.3.9
+
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
 
 # cd ~/gweb-java
 
-mvn clean package
+mvn clean compile package
 
 rm -Rf target/client_secrets
 rm -Rf target/stored_oauth2
