@@ -34,7 +34,7 @@
 					</profiles>
 					<jvmArguments>
 					-Xdebug
-					-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8880
+					-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8888
 					</jvmArguments>
 				</configuration>
 			</plugin>

@@ -27,7 +27,7 @@ pom.xml
 # in eclipse
 mvn spring-boot:run
 
-mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8880"
+mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8888"
 
 # in console
 
@@ -41,7 +41,7 @@ java -jar target/gweb-sb-1.0-SNAPSHOT.jar --spring.profiles.active=local
 
 cf. --spring.config.location=classpath:file:/vagrant/gweb-sb/src/main/resources/application-local.properties
 
-http://localhost:8080/app/estimate.html
-http://localhost:8080/app/public.html
+http://localhost:8880/app/estimate.html
+http://localhost:8880/app/public.html
    
 
