@@ -264,21 +264,22 @@ table.fixed td {
 	<script>
 		$(document).ready(function() {
 			var domain = location.protocol + '//' + location.hostname;
+			var domain_sb;
 			if (location.port) {
 				domain += ':' + location.port;
 			}
 			$.each($('.alink'), function(i, obj) {
 				var link = $(obj).text();
-				var sb = false;
-				if(link.indexOf('8880') > -1) {
-					sb = true;
-					domain = 'http://gweb-sb.topzone.biz';
+				if (link.indexOf('8880') > -1) {
+					domain_sb = 'http://gweb-sb.topzone.biz';
 				}
 				link = link.substring(link.lastIndexOf('/'), link.length);
-				link = domain + link;
-				$(obj).text(link);
-				if(sb) {
+				if (domain_sb) {
+					link = domain_sb + link;
 					$(obj).attr('href', link);
+				} else {
+					link = domain + link;
+					$(obj).text(link);
 				}
 			});
 		})
