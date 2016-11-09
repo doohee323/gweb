@@ -274,17 +274,19 @@ table.fixed td {
 			$.each($('.alink'), function(i, obj) {
 				var domain_sb;
 				var link = $(obj).text();
-				if (link.indexOf('8880') > -1) {
-					domain_sb = 'http://gweb-sb.topzone.biz/app';
+				if (link.indexOf('github.com') == -1) {
+					if (link.indexOf('8880') > -1) {
+						domain_sb = 'http://gweb-sb.topzone.biz/app';
+					}
+					link = link.substring(link.lastIndexOf('/'), link.length);
+					if (domain_sb) {
+						link = domain_sb + link;
+					} else {
+						link = domain + link;
+					}
+					$(obj).attr('href', link);
+					$(obj).text(link);
 				}
-				link = link.substring(link.lastIndexOf('/'), link.length);
-				if (domain_sb) {
-					link = domain_sb + link;
-				} else {
-					link = domain + link;
-				}
-				$(obj).attr('href', link);
-				$(obj).text(link);
 			});
 		})
 	</script>
