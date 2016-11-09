@@ -269,12 +269,17 @@ table.fixed td {
 			}
 			$.each($('.alink'), function(i, obj) {
 				var link = $(obj).text();
+				var sb = false;
 				if(link.indexOf('8880') > -1) {
+					sb = true;
 					domain = 'http://gweb-sb.topzone.biz';
 				}
 				link = link.substring(link.lastIndexOf('/'), link.length);
 				link = domain + link;
 				$(obj).text(link);
+				if(sb) {
+					$(obj).attr('href', link);
+				}
 			});
 		})
 	</script>
