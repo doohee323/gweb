@@ -32,10 +32,10 @@
 					<profiles>
 						<profile>local</profile>
 					</profiles>
-					<jvmArguments>
-					-Xdebug
-					-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8888
-					</jvmArguments>
+<!-- 					<jvmArguments> -->
+<!-- 					-Xdebug -->
+<!-- 					-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8888 -->
+<!-- 					</jvmArguments> -->
 				</configuration>
 			</plugin>
 			<plugin>
