@@ -54,17 +54,45 @@ var GWeb = function(config) {
 		if (_super.config[sheet].params) {
 			for (var i = 0; i < _super.config[sheet].params.length; i++) {
 				if (index == i) {
-					var col;
-					if (postfix) {
-						col = key + postfix;
-					} else {
-						col = key;
-					}
 					for ( var key in _super.config[sheet].params[i]) {
-						if (key.indexOf('_') != 0) {
-							if ($('#' + col).val()) {
-								_super.config[sheet].params[i][key] = $(
-										'#' + col).val();
+						if (key == '_input') {
+							var _input = _super.config[sheet].params[i]._input;
+							if (typeof _input === 'string') {
+								_super.config[sheet].params[i]._input = JSON
+										.parse(_input);
+							}
+							for ( var key in _input) {
+								if (key.indexOf('_') == -1) {
+									if (typeof _input[key] == 'number') {
+										var val = $('#' + key).val();
+										if (val.indexOf('.') > -1) {
+											_super.config[sheet].params[i]._input[key] = parseFloat($(
+													'#' + key).val());
+										} else {
+											_super.config[sheet].params[i]._input[key] = parseInt($(
+													'#' + key).val());
+										}
+									} else if (typeof _input[key] == 'boolean') {
+										_super.config[sheet].params[i]._input[key] = Boolean($(
+												'#' + key).val());
+									} else {
+										_super.config[sheet].params[i]._input[key] = $(
+												'#' + key).val();
+									}
+								}
+							}
+						} else {
+							var col;
+							if (postfix) {
+								col = key + postfix;
+							} else {
+								col = key;
+							}
+							if (key.indexOf('_') != 0) {
+								if ($('#' + col).val()) {
+									_super.config[sheet].params[i][key] = $(
+											'#' + col).val();
+								}
 							}
 						}
 					}

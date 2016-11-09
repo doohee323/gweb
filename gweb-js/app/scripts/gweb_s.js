@@ -308,7 +308,7 @@ var GWeb = function() {
 		// 'params[0][_event]' : "getRowNum",
 		// 'params[0][_sheet]' : "car_DB",
 		// 'params[0][col]' : "9",
-		// 'params[0][input]' : "5G 그랜저 HG300",
+		// 'params[0][input]' : "Coupe 428i M Sport OE",
 		// 'params[1][_event]' : "getALine",
 		// 'params[1][_sheet]' : "car_DB",
 		// 'params[1][output]' : "aaa"
@@ -316,7 +316,7 @@ var GWeb = function() {
 
 		// var input2 = {
 		// 'input[B10]' : "85000",
-		// 'input[C4]' : "5G 그랜저 HG300",
+		// 'input[C4]' : "Coupe 428i M Sport OE",
 		// 'input[C10]' : "198000",
 		// 'input[G9]' : "0"
 		// }
@@ -527,6 +527,7 @@ var GWeb = function() {
 				result[key] = val;
 			}
 		}
+		result.input = input;
 		return result;
 	}
 
@@ -822,14 +823,14 @@ function test() {
 		'_event' : 'update',
 		"_main" : 'true',
 		'_cache' : 'false',
-		'C4' : "5G 그랜저 HG300", // 견적차종
-		'V5' : true, // 인수옵션
-		'T5' : 4, // 약정거리
-		'W5' : 4, // 계약기간
-		'P26' : 2, // 대물/자손
-		'G9' : 0, // 보증금
-		'K9' : 0.01, // 수수료
-		'U5' : true, // 정비상태
+		'C4' : "Coupe 428i M Sport OE", // model
+		'V5' : true, // returnCar
+		'T5' : 4, // contract distance
+		'W5' : 4, // duration
+		'P26' : 2, // includeRepair
+		'G9' : 0, // deposit
+		'K9' : 0.01, // commission
+		'U5' : true, // includeRepair
 	}
 
 	var update2_p = {
@@ -863,7 +864,7 @@ function test() {
 		'_result' : 'true',
 		'_cache' : 'false',
 		'_input' : {
-			'C4' : '5G 그랜저 HG300',
+			'C4' : 'Coupe 428i M Sport OE',
 			'V5' : true,
 			'T5' : 4,
 			'W5' : 4,
@@ -890,9 +891,9 @@ function test() {
 		'_version' : 1,
 		'_sheet' : 'car_DB',
 		'_event' : 'getRowNum',
-		'input' : "5G 그랜저 HG300", // 견적차종
+		'input' : "Coupe 428i M Sport OE", // model
 		'col' : 9
-	// I(9) 컬럼에서 검색
+	// get values from I(9)
 	}
 
 	var getALine_p = {
@@ -904,7 +905,7 @@ function test() {
 	var getLineFromRowNum_p = {
 		'_sheet' : 'car_DB',
 		'_event' : 'getLineFromRowNum',
-		'input' : '올뉴카니발 11인승 디젤',
+		'input' : 'Coupe 428i M Sport OE',
 		'col' : 9,
 		'output' : "['I','O','J','P','N','X','Q','Z','L','M','W']"
 	}
@@ -912,16 +913,16 @@ function test() {
 	var updateFromShared_p = {
 		'_sheet' : 'rent_estimate',
 		'_event' : 'updateFromShared',
-		'N7' : 'O', // 견적차종
-		'O7' : 'J', // 배기량
-		'P8' : 'P', // 잔가
-		// 'P7' : 38, // 잔가율
-		'S7' : 'N', // 인승/적재량
-		'T7' : 'X', // 특수구분
-		'U7' : 'Q', // 정비차종
-		'V7' : 'Z', // 특판할인율
-		'W7' : 'L', // 면세지수
-		'X7' : 'M', // 납세율
+		'N7' : 'O', // model
+		'O7' : 'J', // displacement
+		'P8' : 'P', // scrap value
+		// 'P7' : 38, // scrap value rate
+		'S7' : 'N', // loadage
+		'T7' : 'X', // peculiar
+		'U7' : 'Q', // type of a car
+		'V7' : 'Z', // discount rate
+		'W7' : 'L', // duty-free rate
+		'X7' : 'M', // tax rate
 	}
 
 	var s = "function _func(){ ";
@@ -938,7 +939,7 @@ function test() {
 		'_script' : s
 	}
 
-	// attachedScript, 잔가율, 면세지수
+	// attachedScript, scrap value rate, duty-free rate
 	var multi_p = [ deleteRow_p ];
 	// var multi_p = [ getLineFromRowNum_p, updateFromShared_p, script_p ]; //
 	// var multi_p = [ getRowNum_p, getALine_p, updateFromShared_p,

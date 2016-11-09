@@ -178,17 +178,18 @@ table.fixed td {
 				<div class="col-md-12" style='text-align: right;'>
 					<form class="form-horizontal">
 						<div class="form-group">
-<!-- 							<label class="control-label col-sm-2" for="_count">Run count</label> -->
-<!-- 							<div class="col-sm-2"> -->
-<!-- 								<div class="form-inline"> -->
-<!-- 									<input type="text" id="_count" name="_count" value="1" -->
-<!-- 										class="form-control"> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
+							<!-- 							<label class="control-label col-sm-2" for="_count">Run count</label> -->
+							<!-- 							<div class="col-sm-2"> -->
+							<!-- 								<div class="form-inline"> -->
+							<!-- 									<input type="text" id="_count" name="_count" value="1" -->
+							<!-- 										class="form-control"> -->
+							<!-- 								</div> -->
+							<!-- 							</div> -->
 							<div class="col-sm-10">
-<!-- 								<button type='button' id="sheet_1" -->
-<!-- 									onclick="executes('sheet_3');">Query</button> -->
-								<button type='button' id="sheet_1" onclick="execute('sheet_3');">Test</button>
+								<!-- 								<button type='button' id="sheet_1" -->
+								<!-- 									onclick="executes('sheet_3');">Query</button> -->
+								<button type='button' id="sheet_1" class="btn btn-primary"
+									onclick="execute('sheet_3');">Estimate</button>
 							</div>
 						</div>
 					</form>
@@ -365,44 +366,27 @@ table.fixed td {
 				"info" : true,
 				"autoWidth" : true
 			});
-			
+
 			us = new GWeb(gconfig);
 		});
 
 		function execute(sheet) {
 			if (us.config[sheet].params) {
 				for (var i = 0; i < us.config[sheet].params.length; i++) {
-					if (i == 3) {
-						for ( var key in us.config[sheet].params[3]) {
-							if (key.indexOf('_') == -1) {
-								us.config[sheet].params[3][key] = $('#' + key)
-										.val();
-							}
-						}
-					}
-					if (us.config[sheet].params[i]._event === 'getLineFromRowNum') {
+					if (us.config[sheet].params[i]._event === 'update') {
+						us.setInputParams(sheet, i);
+					} else if (us.config[sheet].params[i]._event === 'getLineFromRowNum') {
 						us.config[sheet].params[i]._cache = $('#_cache').val();
 						us.config[sheet].params[i].input = $('#C4').val();
 					} else if (us.config[sheet].params[i]._event === 'getValueFromUpdate') {
-						if (us.config[sheet].params[i]._input) {
-							if (typeof us.config[sheet].params[i]._input === 'string') {
-								us.config[sheet].params[i]._input = JSON
-										.parse(us.config[sheet].params[i]._input);
-							}
-							for ( var key in us.config[sheet].params[i]._input) {
-								if (key.indexOf('_') == -1) {
-									us.config[sheet].params[i]._input[key] = $(
-											'#' + key).val();
-								}
-							}
-						}
+						us.setInputParams(sheet, i);
 					}
 				}
 			}
 			var option = {
 				version : $('#_version').val(),
 				cache : $('#_cache').val(),
-				nosession: true
+				sessionCache : true
 			}
 
 			us.execute(sheet, option, function(rslt) {
@@ -456,10 +440,6 @@ table.fixed td {
 				},
 				'_docid' : '1_IAoB8njLIrHlZpWB4YUDkEB7c16VosJH3HAyjk8c4c',
 				'params' : [ {
-					'_doc' : 'test3',
-					'_event' : 'initDoc',
-					'_docCount' : 1
-				}, {
 					'_sheet' : 'car_DB',
 					'_event' : 'getLineFromRowNum',
 					'input' : 'Coupe 428i M Sport OE',
