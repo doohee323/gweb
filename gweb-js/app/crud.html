@@ -155,49 +155,48 @@ $(document).ready(function(){
     }
   });
   
-	var gconfig = {
-			'gauth' : {
-				'url' : 'https://script.google.com/macros/s/AKfycbyh2sdXwa8URnhBt3fJfyKXvfflxVWUKE4ir9lL8Ujlva8SnWU/exec',
-				'client_id' : '414052581199-rfhl6sup7r1etrunrfmo2ckf12uv4obo.apps.googleusercontent.com'
-			},
-			'rankList' : {
-				'input' : {
-					"_sheet" : "rank",
-					"_event" : "getList",
-					'input' : "[2,1,'_end',9]"
+	function execute(sheet, cb) {
+		var option = {
+			cache : false,
+			sessionCache : true
+		}
+		us.cb = cb;
+    show_loading_message();
+		us.execute(sheet, option, function(rslt) {
+      hide_loading_message();
+				if (us.cb) {
+					us.cb.call(null, rslt);
+				}
+			})		
+	}
+
+	function queryList() {
+	  execute('rankList', function(rslt) {
+		  if ($.fn.DataTable
+					.isDataTable('#table_companies')) {
+				$('#table_companies').DataTable()
+						.destroy();
+			}
+			$('#table_companies tbody').empty();
+			table_companies.clear();
+			for (var i = 1; i < rslt.output.rows.length; i++) {
+				var row = rslt.output.rows[i];
+        var html  = '<div class="function_buttons"><ul>';
+        html += '<li class="function_edit"><a data-id="' +row[0]+'" data-name="' +row[2]+'"><span>Edit</span></a></li>';
+        html += '<li class="function_delete"><a data-id="' +row[0]+'" data-name="' +row[2]+'"><span>Delete</span></a></li>';
+        html += '</ul></div>';
+        row.push(html);
+				if (row[0]) {
+				  table_companies.row
+							.add(row)
+							.draw(false);
 				}
 			}
-		}
-
-		var us = new GWeb(gconfig);
-
-			var option = {
-				cache : false,
-				sessionCache : true
-			}
-
-			us.execute(
-					    'rankList',
-							option,
-							function(rslt) {
-							  if ($.fn.DataTable
-										.isDataTable('#table_companies')) {
-									$('#table_companies').DataTable()
-											.destroy();
-								}
-								$('#table_companies tbody').empty();
-								table_companies.clear();
-								for (var i = 1; i < rslt.output.rows.length; i++) {
-									var row = rslt.output.rows[i];
-									if (row[0]) {
-									  table_companies.row
-												.add(row)
-												.draw(false);
-									}
-								}
-							})
-  
-  
+		})
+	}
+	
+	queryList();
+	
   // On page load: form validation
   jQuery.validator.setDefaults({
     success: 'valid',
@@ -298,123 +297,96 @@ $(document).ready(function(){
     show_lightbox();
   });
 
-  // Add company submit form
   $(document).on('submit', '#form_company.add', function(e){
     e.preventDefault();
-    // Validate form
     if (form_company.valid() == true){
-      // Send company information to database
       hide_ipad_keyboard();
       hide_lightbox();
-      show_loading_message();
-      var form_data = $('#form_company').serialize();
-      var request   = $.ajax({
-        url:          'data.php?job=add_company',
-        cache:        false,
-        data:         form_data,
-        dataType:     'json',
-        contentType:  'application/json; charset=utf-8',
-        type:         'get'
-      });
-      request.done(function(output){
-        if (output.result == 'success'){
-          // Reload datable
-          table_companies.api().ajax.reload(function(){
-            hide_loading_message();
-            var company_name = $('#company_name').val();
-            show_message("Company '" + company_name + "' added successfully.", 'success');
-          }, true);
+			us.config['appendRank'].input.A = us.getNextSn(table_companies.data(), 0);
+			us.config['appendRank'].input.B = $('#rank').val();
+			us.config['appendRank'].input.C = $('#company_name').val();
+			us.config['appendRank'].input.D = $('#industries').val();
+			us.config['appendRank'].input.E = $('#revenue').val();
+			us.config['appendRank'].input.F = $('#fiscal_year').val();
+			us.config['appendRank'].input.G = $('#employees').val();
+			us.config['appendRank'].input.H = $('#market_cap').val();
+			us.config['appendRank'].input.I = $('#headquarters').val();
+    	execute('appendRank', function(rslt) {
+        if (rslt.output.msg == 'success'){
+          queryList();
+          return;
+          // something wrong in row.add function
+          var input = [];
+          Object.keys(us.config['appendRank'].input).forEach(function (key) {
+      		  if(key.indexOf('_') != 0) {
+      		    input.push(us.config['appendRank'].input[key]);
+      		  }
+      		})
+      		var id = us.config['appendRank'].input.A;
+      		var company_name = $('#company_name').val();
+	        var html  = '<div class="function_buttons"><ul>';
+	        html += '<li class="function_edit"><a data-id="' +id+'" data-name="' +company_name+'"><span>Edit</span></a></li>';
+	        html += '<li class="function_delete"><a data-id="' +id+'" data-name="' +company_name+'"><span>Delete</span></a></li>';
+	        html += '</ul></div>';
+	        input.push(html);
+				  table_companies.row
+					.add(input)
+					.draw(false);
+          var company_name = $('#company_name').val();
+          show_message("Company '" + company_name + "' added successfully.", 'success');
         } else {
-          hide_loading_message();
-          show_message('Add request failed', 'error');
+          show_message('Add request failed: ' + textStatus, 'error');
         }
-      });
-      request.fail(function(jqXHR, textStatus){
-        hide_loading_message();
-        show_message('Add request failed: ' + textStatus, 'error');
-      });
+  		})      
     }
   });
 
   // Edit company button
   $(document).on('click', '.function_edit a', function(e){
     e.preventDefault();
-    // Get company information from database
-    show_loading_message();
     var id      = $(this).data('id');
-    var request = $.ajax({
-      url:          'data.php?job=get_company',
-      cache:        false,
-      data:         'id=' + id,
-      dataType:     'json',
-      contentType:  'application/json; charset=utf-8',
-      type:         'get'
-    });
-    request.done(function(output){
-      if (output.result == 'success'){
-        $('.lightbox_content h2').text('Edit company');
-        $('#form_company button').text('Edit company');
-        $('#form_company').attr('class', 'form edit');
-        $('#form_company').attr('data-id', id);
-        $('#form_company .field_container label.error').hide();
-        $('#form_company .field_container').removeClass('valid').removeClass('error');
-        $('#form_company #rank').val(output.data[0].rank);
-        $('#form_company #company_name').val(output.data[0].company_name);
-        $('#form_company #industries').val(output.data[0].industries);
-        $('#form_company #revenue').val(output.data[0].revenue);
-        $('#form_company #fiscal_year').val(output.data[0].fiscal_year);
-        $('#form_company #employees').val(output.data[0].employees);
-        $('#form_company #market_cap').val(output.data[0].market_cap);
-        $('#form_company #headquarters').val(output.data[0].headquarters);
-        hide_loading_message();
-        show_lightbox();
-      } else {
-        hide_loading_message();
-        show_message('Information request failed', 'error');
-      }
-    });
-    request.fail(function(jqXHR, textStatus){
-      hide_loading_message();
-      show_message('Information request failed: ' + textStatus, 'error');
-    });
+    var data = table_companies.data();
+    var rowIdx = us.getRowIndex(table_companies.data(), 0, id);
+    $('.lightbox_content h2').text('Edit company');
+    $('#form_company button').text('Edit company');
+    $('#form_company').attr('class', 'form edit');
+    $('#form_company').attr('data-id', id);
+    $('#form_company .field_container label.error').hide();
+    $('#form_company .field_container').removeClass('valid').removeClass('error');
+    $('#form_company #rank').val(data[rowIdx][1]);
+    $('#form_company #company_name').val(data[rowIdx][2]);
+    $('#form_company #industries').val(data[rowIdx][3]);
+    $('#form_company #revenue').val(data[rowIdx][4]);
+    $('#form_company #fiscal_year').val(data[rowIdx][5]);
+    $('#form_company #employees').val(data[rowIdx][6]);
+    $('#form_company #market_cap').val(data[rowIdx][7]);
+    $('#form_company #headquarters').val(data[rowIdx][8]);        
+    show_lightbox();
   });
   
-  // Edit company submit form
   $(document).on('submit', '#form_company.edit', function(e){
     e.preventDefault();
-    // Validate form
     if (form_company.valid() == true){
-      // Send company information to database
       hide_ipad_keyboard();
       hide_lightbox();
-      show_loading_message();
-      var id        = $('#form_company').attr('data-id');
-      var form_data = $('#form_company').serialize();
-      var request   = $.ajax({
-        url:          'data.php?job=edit_company&id=' + id,
-        cache:        false,
-        data:         form_data,
-        dataType:     'json',
-        contentType:  'application/json; charset=utf-8',
-        type:         'get'
-      });
-      request.done(function(output){
-        if (output.result == 'success'){
-          // Reload datable
-          table_companies.api().ajax.reload(function(){
-            hide_loading_message();
-            var company_name = $('#company_name').val();
-            show_message("Company '" + company_name + "' edited successfully.", 'success');
-          }, true);
-        } else {
-          hide_loading_message();
-          show_message('Edit request failed', 'error');
-        }
-      });
-      request.fail(function(jqXHR, textStatus){
-        hide_loading_message();
-        show_message('Edit request failed: ' + textStatus, 'error');
-      });
+
+      var id      = $(this).data('id');
+      var rowIdx = us.getRowIndex(table_companies.data(), 0, id) + 2;
+			us.config['updateRank'].params[0]['B' + rowIdx] = $('#rank').val();
+			us.config['updateRank'].params[0]['C' + rowIdx] = $('#company_name').val();
+			us.config['updateRank'].params[0]['D' + rowIdx] = $('#industries').val();
+			us.config['updateRank'].params[0]['E' + rowIdx] = $('#revenue').val();
+			us.config['updateRank'].params[0]['F' + rowIdx] = $('#fiscal_year').val();
+			us.config['updateRank'].params[0]['G' + rowIdx] = $('#employees').val();
+			us.config['updateRank'].params[0]['H' + rowIdx] = $('#market_cap').val();
+			us.config['updateRank'].params[0]['I' + rowIdx] = $('#headquarters').val();
+			
+			var option = {
+			    sessionCache :  true
+			}
+			us.execute('updateRank', option, function(rslt) {
+			  queryList();
+			})			
     }
   });
   
@@ -423,35 +395,59 @@ $(document).ready(function(){
     e.preventDefault();
     var company_name = $(this).data('name');
     if (confirm("Are you sure you want to delete '" + company_name + "'?")){
-      show_loading_message();
+	    var row = $(this).parent().parent().parent().parent().parent();
       var id      = $(this).data('id');
-      var request = $.ajax({
-        url:          'data.php?job=delete_company&id=' + id,
-        cache:        false,
-        dataType:     'json',
-        contentType:  'application/json; charset=utf-8',
-        type:         'get'
-      });
-      request.done(function(output){
-        if (output.result == 'success'){
-          // Reload datable
-          table_companies.api().ajax.reload(function(){
-            hide_loading_message();
-            show_message("Company '" + company_name + "' deleted successfully.", 'success');
-          }, true);
+      var rowIdx = us.getRowIndex(table_companies.data(), 0, id);
+			us.config['deleteRank'].input.row = rowIdx + 2;
+    	execute('deleteRank', function(rslt) {
+        if (rslt.output.msg == 'success'){
+          $(row).remove();
+          show_message("Company '" + company_name + "' deleted successfully.", 'success');
         } else {
-          hide_loading_message();
           show_message('Delete request failed', 'error');
         }
-      });
-      request.fail(function(jqXHR, textStatus){
-        hide_loading_message();
-        show_message('Delete request failed: ' + textStatus, 'error');
-      });
+  		})      
     }
   });
-
+  
 });
+
+	var gconfig = {
+		'gauth' : {
+			'url' : 'https://script.google.com/macros/s/AKfycbyh2sdXwa8URnhBt3fJfyKXvfflxVWUKE4ir9lL8Ujlva8SnWU/exec',
+			'client_id' : '414052581199-rfhl6sup7r1etrunrfmo2ckf12uv4obo.apps.googleusercontent.com'
+		},
+		'rankList' : {
+			'input' : {
+				"_sheet" : "rank",
+				"_event" : "getList",
+				'input' : "[1,1,'_end',9]"
+			}
+		},
+		'deleteRank' : {
+			'input' : {
+				"_sheet" : "rank",
+				"_event" : "deleteRow",
+				'row' : 1,
+				'count' : 1
+			}
+		},
+		'appendRank' : {
+			'input' : {
+				"_sheet" : "rank",
+				"_event" : "appendRow"
+			}
+		},
+		'updateRank' : {
+			'params' : [ {
+				"_sheet" : "rank",
+				"_event" : "update"
+			} ]
+		}
+	}
+
+	var us = new GWeb(gconfig);
+	
 </script>  
   
 </html>
