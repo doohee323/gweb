@@ -605,9 +605,10 @@ table td {
 				var str = historyObj.rows().data()[i];
 				if (str[0].indexOf(col1) > -1) {
 					var option = {
-						sessionCache : true
+						sessionCache : true,
+						owner : owner
 					};
-					us.config['deleteHistory'].input.row = i + 1;
+					us.config['deleteHistory'].input.row = i + 2;
 					us.execute('deleteHistory', option, function(rslt) {
 						$(row).remove();
 					})
@@ -654,7 +655,8 @@ table td {
 				var row = historyObj.rows().data().length - 1;
 				if (historyObj.rows().data()[row][0] == date) {
 					var option = {
-						sessionCache : true
+						sessionCache : true,
+						owner : owner
 					};
 					us.config['deleteHistory'].input.row = row + 2;
 					us.execute('deleteHistory', option, function(rslt) {

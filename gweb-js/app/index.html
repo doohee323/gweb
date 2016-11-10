@@ -104,6 +104,9 @@ table.fixed td {
 								<h4>Web app with google spread sheet from scratch sheets</h4>
 								<h4>
 									<a href="checklist.html" class='alink' target="_blank">http://localhost:8000/checklist.html</a>
+									<br> <a
+										href="https://docs.google.com/spreadsheets/d/1WIZtuhj1JMYNejlIXfqSnOP1Vt1gf7_eObTp-IoRU5I/edit?usp=sharing"
+										class='alink' target="_blank">( Excel file )</a>
 								</h4>
 							</label>
 						</div>
@@ -125,9 +128,8 @@ table.fixed td {
 									sheets</h4>
 								<h4>
 									<a href="public.html" class='alink' target="_blank">http://localhost:8000/estimate.html
-									</a> <br>
-									<a href="http://localhost:8880/app/estimate.html" class='alink'
-										target="_blank">http://localhost:8880/app/estimate.html</a>
+									</a> <br> <a href="http://localhost:8880/app/estimate.html"
+										class='alink' target="_blank">http://localhost:8880/app/estimate.html</a>
 								</h4>
 							</label>
 						</div>
@@ -268,29 +270,33 @@ table.fixed td {
 	</script>
 
 	<script>
-		$(document).ready(function() {
-			var domain = location.protocol + '//' + location.hostname;
-			if (location.port) {
-				domain += ':' + location.port;
-			}
-			$.each($('.alink'), function(i, obj) {
-				var domain_sb;
-				var link = $(obj).text();
-				if (link.indexOf('github.com') == -1) {
-					if (link.indexOf('8880') > -1) {
-						domain_sb = 'http://gweb-sb.topzone.biz/app';
+		$(document).ready(
+				function() {
+					var domain = location.protocol + '//' + location.hostname;
+					if (location.port) {
+						domain += ':' + location.port;
 					}
-					link = link.substring(link.lastIndexOf('/'), link.length);
-					if (domain_sb) {
-						link = domain_sb + link;
-					} else {
-						link = domain + link;
-					}
-					$(obj).attr('href', link);
-					$(obj).text(link);
-				}
-			});
-		})
+					$.each($('.alink'), function(i, obj) {
+						var domain_sb;
+						var link = $(obj).text();
+						var href = $(obj).attr('href');
+						if (href.indexOf('github.com') == -1
+								&& href.indexOf('https') == -1) {
+							if (link.indexOf('8880') > -1) {
+								domain_sb = 'http://gweb-sb.topzone.biz/app';
+							}
+							link = link.substring(link.lastIndexOf('/'),
+									link.length);
+							if (domain_sb) {
+								link = domain_sb + link;
+							} else {
+								link = domain + link;
+							}
+							$(obj).attr('href', link);
+							$(obj).text(link);
+						}
+					});
+				})
 	</script>
 
 </body>
