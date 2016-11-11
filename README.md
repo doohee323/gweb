@@ -26,7 +26,7 @@ http://gweb.topzone.biz/
 ```
 Can make a web app without application server or other server-side programming language, using Spreadsheet's function and UI javascripts.
 
-# Examples
+- Examples
 ```
 	Type 1. web app without any application server.
 		- run with a static web server (google authentication required)
