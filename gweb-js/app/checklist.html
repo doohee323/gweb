@@ -611,7 +611,9 @@ table td {
 					us.config['deleteHistory'].input.row = i + 2;
 					us.execute('deleteHistory', option, function(rslt) {
 						$(row).remove();
+						delete historyObj.rows().data()[i];
 					})
+					break;
 				}
 			}
 		});
