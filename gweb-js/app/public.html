@@ -15,7 +15,8 @@
 <!-- endbower -->
 <!-- endbuild -->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 table.fixed {
@@ -27,9 +28,9 @@ table.fixed td {
 }
 </style>
 <script>
-  window.___gcfg = {
-    parsetags : 'explicit'
-  };
+	window.___gcfg = {
+		parsetags : 'explicit'
+	};
 </script>
 
 </head>
@@ -40,27 +41,33 @@ table.fixed td {
 
 	<div class="container">
 		<div class="header">
-			<h3 class="text-muted">
-				English sermon service
-			</h3>
-			You can use any one among 2 ways of live service.
+			<h3 class="text-muted">English Sermon Service</h3>
+			You can use any one among 2 ways of live services.
 		</div>
 
 		<div class="side-body">
 
 			<legend style="margin-top: 30px">
-				<i class="fa fa-info-circle" aria-hidden="true"></i>
-				<i data-placement="right"></i> Live URL 1
+				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
+					data-placement="right"></i> Conference Call
 			</legend>
 
 			<div class="row">
 				<div class="col-md-12">
 					<form id="form1" class="form-horizontal">
 						<div class="form-group">
-							<label class="control-label col-sm-2" for="col_41">Link</label>
+							<label class="control-label col-sm-2" for="col_41">Dial:
+							</label>
 							<div class="col-sm-10">
 								<div class="form-inline">
-									<input type="text" id="col_41" name="col_41" value="http://mixlr.com/sjkbc"
+									<a href="401-283-5815" target="_blank" style='width: 90%'
+										class="form-control">401-283-5815</a>
+								</div>
+							</div>
+							<label class="control-label col-sm-2" for="col_41">PIN: </label>
+							<div class="col-sm-10">
+								<div class="form-inline">
+									<input type="text" id="col_41" name="col_41" value="50232"
 										style='width: 90%' class="form-control">
 								</div>
 							</div>
@@ -68,25 +75,10 @@ table.fixed td {
 					</form>
 				</div>
 			</div>
-			
-			<div class="row">
-				<div class="col-md-12">
-					<form id="form1" class="form-horizontal">
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="debug"></label>
-							<div class="col-sm-4">
-								<div class="form-inline">
-									<button type="button" class="btn btn-primary" id='open1'>Open</button>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>			
-			
+
 			<legend style="margin-top: 30px">
-				<i class="fa fa-info-circle" aria-hidden="true"></i>
-				<i data-placement="right"></i> Live URL 2
+				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
+					data-placement="right"></i> Live Youtub
 			</legend>
 
 			<div class="row">
@@ -111,8 +103,8 @@ table.fixed td {
 							<label class="control-label col-sm-2" for="debug"></label>
 							<div class="col-sm-4">
 								<div class="form-inline">
-									<button type="button" class="btn btn-primary" id='reload'>Reload</button>
-									<button type="button" class="btn btn-primary" id='open'>Open</button>
+									<button type="button" class="btn btn-primary"
+										onclick="getValue()">Open</button>
 									<div id="debug"></div>
 								</div>
 							</div>
@@ -122,9 +114,18 @@ table.fixed td {
 			</div>
 
 			<legend style="margin-top: 30px">
-				<i class="fa fa-bars" aria-hidden="true"></i>
-				<i data-placement="right"></i> Last Sermons
+				<i class="fa fa-bars" aria-hidden="true"></i> <i
+					data-placement="right"></i> Last Sermons
 			</legend>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-sm-10"></div>
+					<div class="col-sm-2" style='text-align: right'>
+						<button type="button" class="btn btn-primary"
+							onclick="execute('runningLogs')">View</button>
+					</div>
+				</div>
+			</div>
 
 			<div class="row">
 				<div class="col-md-12">
@@ -150,8 +151,7 @@ table.fixed td {
 				</div>
 			</div>
 
-			<div class="footer" style='margin-top: 50px;'>
-			</div>
+			<div class="footer" style='margin-top: 50px;'></div>
 		</div>
 
 		<script
@@ -163,123 +163,109 @@ table.fixed td {
 		<?!= include('myscript.js'); ?>
 
 		<script>
-      var runningObj;
-      var us;
-      $(document)
-          .ready(
-              function() {
-                runningObj = $('#runningLogs').DataTable({
-                  "paging" : true,
-                  "pageLength" : 5,
-                  "lengthChange" : false,
-                  "searching" : false,
-                  "ordering" : true,
-                  "info" : true,
-                  "autoWidth" : true
-                });
+			var runningObj;
+			var us;
+			$(document)
+					.ready(
+							function() {
+								runningObj = $('#runningLogs').DataTable({
+									"paging" : true,
+									"pageLength" : 5,
+									"lengthChange" : false,
+									"searching" : false,
+									"ordering" : true,
+									"info" : true,
+									"autoWidth" : true
+								});
 
-                function onSuccess(rslt) {
-                  if (!rslt) {
-                    rslt = test;
-                  }
+								function onSuccess(rslt) {
+									if (!rslt) {
+										rslt = test;
+									}
 
-                  var debug = $('#debug').val();
-                  //debug.innerHTML = rslt;        
+									var debug = $('#debug').val();
+									//debug.innerHTML = rslt;        
 
-                  rslt = JSON.parse(rslt);
-                  $('$col_4').val(rslt.col_4);
-                }
+									rslt = JSON.parse(rslt);
+									$('$col_4').val(rslt.col_4);
+								}
 
-                function getValue() {
-                  try {
-                    google.script.run.withSuccessHandler(onSuccess).getResult();
-                  } catch (e) {
-                    execute('getLink');
-                  }
-                }
+								var gconfig = {
+									'getLink' : {
+										'gauth' : {
+											'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+											'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+										},
+										'input' : {
+											'_sheet' : 'config',
+											'_event' : 'getValue',
+											'col_1' : 'A1',
+											'col_2' : 'A2',
+											'col_3' : 'B1',
+											'col_4' : 'B2'
+										}
+									},
+									'runningLogs' : {
+										'gauth' : {
+											'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+											'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+										},
+										'input' : {
+											"_sheet" : "running_logs",
+											"_event" : "getList",
+											'output' : "['A','B']"
+										}
+									}
+								}
 
-                $("#reload").click(function(e) {
-                  getValue();
-                });
-                $("#open").click(function(e) {
-                  window.open($("#col_4").val());
-                });
-                $("#open1").click(function(e) {
-                  window.open($("#col_41").val());
-                });
+								try {
+									us = new GWeb(gconfig);
+								} catch (e) {
+								}
+							});
 
-                var gconfig = {
-                  'getLink' : {
-                    'gauth' : {
-                      'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
-                      'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
-                    },
-                    'input' : {
-                      '_sheet' : 'config',
-                      '_event' : 'getValue',
-                      'col_1' : 'A1',
-                      'col_2' : 'A2',
-                      'col_3' : 'B1',
-                      'col_4' : 'B2'
-                    }
-                  },
-                  'runningLogs' : {
-                    'gauth' : {
-                      'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
-                      'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
-                    },
-                    'input' : {
-                      "_sheet" : "running_logs",
-                      "_event" : "getList",
-                      'output' : "['A','B']"
-                    }
-                  }
-                }
+			function execute(sheet) {
+				var option = {
+					version : $('#_version').val(),
+					cache : $('#_cache').val(),
+					sessionCache : true
+				}
 
-                try {
-                  us = new GWeb(gconfig);
-                } catch (e) {
-                }
+				us.execute(sheet, option, function(rslt) {
+					if (rslt.output) {
+						if (rslt.output.rows) {
+							if ($.fn.DataTable.isDataTable('#runningLogs')) {
+								$('#runningLogs').DataTable().destroy();
+							}
+							$('#runningLogs tbody').empty();
 
-                function execute(sheet) {
-                  var option = {
-                    version : $('#_version').val(),
-                    cache : $('#_cache').val(),
-                    sessionCache: true
-                  }
+							for (var i = 1; i < rslt.output.rows.length; i++) {
+								var tmp = $('#runningLog_template').find('tr')
+										.html();
+								var date = rslt.output.rows[i]['A' + (i + 1)];
+								date = moment(date).format('LLL');
+								tmp = tmp.replace('{date}', date);
+								tmp = tmp.replace(/{link}/g,
+										rslt.output.rows[i]['B' + (i + 1)]);
+								$("#runningLogs").find('tbody').append(
+										'<tr>' + tmp + '</tr>');
+							}
+						} else {
+							us.getResults(rslt);
+							window.open($("#col_4").val());
+						}
+					}
+				})
+			}
 
-                  us.execute(sheet, option,
-                      function(rslt) {
-                        if (rslt.output) {
-                          if (rslt.output.rows) {
-                            if ($.fn.DataTable.isDataTable('#runningLogs')) {
-                              $('#runningLogs').DataTable().destroy();
-                            }
-                            $('#runningLogs tbody').empty();
-
-                            for (var i = 1; i < rslt.output.rows.length; i++) {
-                              var tmp = $('#runningLog_template').find('tr')
-                                  .html();
-                              var date = rslt.output.rows[i]['A' + (i + 1)];
-                              date = moment(date).format('LLL');
-                              tmp = tmp.replace('{date}', date);
-                              tmp = tmp.replace(/{link}/g,
-                                  rslt.output.rows[i]['B' + (i + 1)]);
-                              $("#runningLogs").find('tbody').append(
-                                  '<tr>' + tmp + '</tr>');
-                            }
-                          } else {
-                            us.getResults(rslt);
-                          }
-                        }
-                      })
-                }
-
-                getValue();
-                execute('runningLogs');
-
-              });
-    </script>
+			function getValue() {
+				try {
+					google.script.run.withSuccessHandler(onSuccess).getResult();
+				} catch (e) {
+					execute('getLink');
+				}
+			}
+		</script>
 
 		<script
 			src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
