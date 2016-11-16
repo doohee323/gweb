@@ -41,15 +41,18 @@ table.fixed td {
 
 	<div class="container">
 		<div class="header">
-			<h3 class="text-muted">English Sermon Service</h3>
-			You can use any one among 2 ways of live services.
+			<h3 class="text-muted">English Sermon Service:</h3>
+			We offer 3 different ways that you can listen KBCSJ worship in
+			English.
 		</div>
 
 		<div class="side-body">
 
 			<legend style="margin-top: 30px">
 				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
-					data-placement="right"></i> Conference Call
+					data-placement="right"></i> Conference Call:
+				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;Conference call has no delay to
+					listen live worship by dialing in.</p>
 			</legend>
 
 			<div class="row">
@@ -79,6 +82,10 @@ table.fixed td {
 			<legend style="margin-top: 30px">
 				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
 					data-placement="right"></i> Live Youtub
+				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;YouTube Live, has about 20-30seconds
+					delay due to record & play in the network server. please move the
+					bottom play status bar to far right, to hear live worship because
+					it plays from start of recording by default.</p>
 			</legend>
 
 			<div class="row">
@@ -106,6 +113,46 @@ table.fixed td {
 									<button type="button" class="btn btn-primary"
 										onclick="getValue()">Open</button>
 									<div id="debug"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<legend style="margin-top: 30px">
+				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
+					data-placement="right"></i> Mixlr
+				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;Mixlr is free application available
+					in App store for Android/iPhone. please search KBCSJ for live
+					worship in English. this way also has 20-30 seconds of delay.</p>
+			</legend>
+
+			<div class="row">
+				<div class="col-md-12">
+					<form id="form1" class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="col_42">Link</label>
+							<div class="col-sm-10">
+								<div class="form-inline">
+									<input type="text" id="col_42" name="col_42"
+										value="http://mixlr.com/sjkbc" style='width: 90%'
+										class="form-control">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<form id="form1" class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="debug"></label>
+							<div class="col-sm-4">
+								<div class="form-inline">
+									<button type="button" class="btn btn-primary" id='open1'>Open</button>
 								</div>
 							</div>
 						</div>
@@ -189,6 +236,10 @@ table.fixed td {
 									rslt = JSON.parse(rslt);
 									$('$col_4').val(rslt.col_4);
 								}
+
+								$("#open1").click(function(e) {
+									window.open($("#col_42").val());
+								});
 
 								var gconfig = {
 									'getLink' : {
