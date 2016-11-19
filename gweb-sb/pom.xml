@@ -37,12 +37,6 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.vafer</groupId>
-      <artifactId>jdeb</artifactId>
-      <version>1.4</version>
-    </dependency>
-
-    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
     </dependency>
@@ -212,84 +206,6 @@
         </executions>
       </plugin>
       
-      <!-- This will build .deb file -->
-      <plugin>
-        <artifactId>jdeb</artifactId>
-        <groupId>org.vafer</groupId>
-        <version>1.4</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>jdeb</goal>
-            </goals>
-            <configuration>
-              <classifier>all</classifier>
-              <verbose>true</verbose>
-              <snapshotExpand>true</snapshotExpand>
-            <!-- expand "SNAPSHOT" to what is in the "USER" env variable -->
-              <snapshotEnv>USER</snapshotEnv>
-              <verbose>true</verbose>
-
-            <!-- Configure files here -->
-              <dataSet>
-
-                <data>
-                  <src>${project.build.directory}/${project.build.finalName}-jar-with-dependencies.jar</src>
-                  <type>file</type>
-                  <mapper>
-                    <type>perm</type>
-                    <prefix>/opt/${project.artifactId}/bin</prefix>
-                  </mapper>
-                </data>
-
-                <data>
-                  <type>link</type>
-                  <symlink>true</symlink>
-                  <linkName>/opt/${project.artifactId}/bin/${project.artifactId}.jar</linkName>
-                  <linkTarget>/opt/${project.artifactId}/bin/${project.build.finalName}-jar-with-dependencies.jar</linkTarget>
-                </data>
-
-                <data>
-                  <src>${basedir}/src/deb/conffiles</src>
-                  <type>directory</type>
-                  <includes />
-                  <conffile>true</conffile>
-                  <mapper>
-                    <type>perm</type>
-                    <prefix>/etc/${project.artifactId}</prefix>
-                  </mapper>
-                </data>
-
-                <data>
-                  <src>${basedir}/src/deb/init.d</src>
-                  <type>directory</type>
-                  <mapper>
-                    <type>perm</type>
-                    <prefix>/etc/init.d</prefix>
-                    <user>loader</user>
-                    <group>loader</group>
-                  </mapper>
-                </data>
-
-                <data>
-                  <type>template</type>
-                  <paths>
-                    <path>/etc/${project.artifactId}</path>
-                    <path>/var/lib/${project.artifactId}</path>
-                    <path>/var/log/${project.artifactId}</path>
-                    <path>/var/run/${project.artifactId}</path>
-                  </paths>
-                  <mapper>
-                    <type>perm</type>
-                  </mapper>
-                </data>
-
-              </dataSet>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
 
