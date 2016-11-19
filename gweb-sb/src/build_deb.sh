@@ -10,5 +10,7 @@ cp -rf src/main/resources/*.xml src/pkg-build/usr/local/etc/gweb-sb
 
 chmod 775 src/pkg-build/DEBIAN/postinst
 
+cd src
+
 dpkg -b pkg-build
 mv pkg-build.deb gweb-sb.deb
