@@ -1,4 +1,4 @@
-Package: pkg-build-essential
+Package: gweb-sb
 Version: 1.0.0
 Section: misc
 Priority: optional
