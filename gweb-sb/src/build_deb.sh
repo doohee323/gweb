@@ -1,3 +1,3 @@
-chmod 775 pkg-build-essential/DEBIAN/postinst
+chmod 775 gweb-sb/DEBIAN/postinst
 
-dpkg -b pkg-build-essential
+dpkg -b gweb-sb
