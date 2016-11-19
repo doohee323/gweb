@@ -1,3 +1,6 @@
+cd ..
+mvn clean compile package
+
 mkdir -p gweb-sb/usr/local/etc/gweb-sb
 
 cp -rf target/gweb-sb-1.0.0-jar-with-dependencies.jar src/gweb-sb/usr/local/etc/gweb-sb
