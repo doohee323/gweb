@@ -28,9 +28,9 @@ table.fixed td {
 }
 </style>
 <script>
-	window.___gcfg = {
-		parsetags : 'explicit'
-	};
+  window.___gcfg = {
+    parsetags : 'explicit'
+  };
 </script>
 
 </head>
@@ -51,8 +51,8 @@ table.fixed td {
 			<legend style="margin-top: 30px">
 				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
 					data-placement="right"></i> Conference Call:
-				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;Conference call has no delay to
-					listen live worship by dialing in.</p>
+				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;Conference call
+					has no delay to listen live worship by dialing in.</p>
 			</legend>
 
 			<div class="row">
@@ -63,15 +63,15 @@ table.fixed td {
 							</label>
 							<div class="col-sm-10">
 								<div class="form-inline">
-									<a href="401-283-5815" target="_blank" style='width: 90%'
-										class="form-control">401-283-5815</a>
+									<a href="401-283-5815" target="_blank" style='width: 71%'
+										class="form-control" disabled>401-283-5815</a>
 								</div>
 							</div>
 							<label class="control-label col-sm-2" for="col_41">PIN: </label>
 							<div class="col-sm-10">
 								<div class="form-inline">
 									<input type="text" id="col_41" name="col_41" value="50232"
-										style='width: 90%' class="form-control">
+										style='width: 71%' class="form-control" disabled>
 								</div>
 							</div>
 						</div>
@@ -82,21 +82,22 @@ table.fixed td {
 			<legend style="margin-top: 30px">
 				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
 					data-placement="right"></i> Live Youtub
-				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;YouTube Live, has about 20-30seconds
-					delay due to record & play in the network server. please move the
-					bottom play status bar to far right, to hear live worship because
-					it plays from start of recording by default.</p>
+				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;YouTube Live,
+					has about 20-30seconds delay due to record & play in the network
+					server. please move the bottom play status bar to far right, to
+					hear live worship because it plays from start of recording by
+					default.</p>
 			</legend>
 
 			<div class="row">
 				<div class="col-md-12">
 					<form id="form1" class="form-horizontal">
 						<div class="form-group">
-							<label class="control-label col-sm-2" for="col_4">Link</label>
+							<label class="control-label col-sm-2" for="col_2">Link</label>
 							<div class="col-sm-8">
 								<div class="form-inline">
-									<input type="text" id="col_4" name="col_4" value=""
-										style='width: 90%' class="form-control">
+									<input type="text" id="col_2" name="col_2" value=""
+										style='width: 90%' class="form-control" disabled>
 								</div>
 							</div>
 							<div class="col-sm-2">
@@ -111,197 +112,225 @@ table.fixed td {
 				</div>
 			</div>
 
-			<legend style="margin-top: 30px">
-				<i class="fa fa-info-circle" aria-hidden="true"></i> <i
-					data-placement="right"></i> Mixlr
-				<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;Mixlr is free application available
-					in App store for Android/iPhone. please search KBCSJ for live
-					worship in English. this way also has 20-30 seconds of delay.</p>
-			</legend>
-
 			<div class="row">
 				<div class="col-md-12">
 					<form id="form1" class="form-horizontal">
 						<div class="form-group">
-							<label class="control-label col-sm-2" for="col_42">Link</label>
+							<label class="control-label col-sm-2" for="col_3">Script</label>
 							<div class="col-sm-8">
 								<div class="form-inline">
-									<input type="text" id="col_42" name="col_42"
-										value="http://mixlr.com/kbcsj" style='width: 90%'
-										class="form-control">
+									<input type="text" id="col_3" name="col_3" value=""
+										style='width: 90%' class="form-control" disabled>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="form-inline">
-									<button type="button" class="btn btn-primary" id='open1'>Open</button>
+									<button type="button" class="btn btn-primary"
+										onclick="getValue('script')">Script</button>
 								</div>
 							</div>
 						</div>
-					</form>
 				</div>
+				</form>
 			</div>
-
-			<legend style="margin-top: 30px">
-				<i class="fa fa-bars" aria-hidden="true"></i> <i
-					data-placement="right"></i> Last Sermons
-			</legend>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="col-sm-10"></div>
-					<div class="col-sm-2" style='text-align: right'>
-						<button type="button" class="btn btn-primary"
-							onclick="execute('runningLogs')">View</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div id="table_wrapper">
-						<table id="runningLogs"
-							class="table table-bordered table-hover fixed">
-							<thead>
-								<tr>
-									<th class='text-center'>Date</th>
-									<th class='text-center'>Link</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-						<table id='runningLog_template' style='display: none'>
-							<tr>
-								<td class='text-center'>{date}</td>
-								<td class='text-center'><a href='{link}' target='_blank'>{link}</a></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer" style='margin-top: 50px;'></div>
 		</div>
 
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+		<legend style="margin-top: 30px">
+			<i class="fa fa-info-circle" aria-hidden="true"></i> <i
+				data-placement="right"></i> Mixlr
+			<p style='font-size: 11pt;'>&nbsp; &nbsp; &nbsp;Mixlr is free
+				application available in App store for Android/iPhone. please search
+				KBCSJ for live worship in English. this way also has 20-30 seconds
+				of delay.</p>
+		</legend>
 
-		<script src="scripts/gweb_c.js"></script>
-		<?!= include('myscript.js'); ?>
+		<div class="row">
+			<div class="col-md-12">
+				<form id="form1" class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="col_42">Link</label>
+						<div class="col-sm-8">
+							<div class="form-inline">
+								<input type="text" id="col_42" name="col_42"
+									value="http://mixlr.com/kbcsj" style='width: 90%'
+									class="form-control" disabled>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div class="form-inline">
+								<button type="button" class="btn btn-primary" id='open1'>Open</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 
-		<script>
-			var runningObj;
-			var us;
-			$(document)
-					.ready(
-							function() {
-								runningObj = $('#runningLogs').DataTable({
-									"paging" : true,
-									"pageLength" : 5,
-									"lengthChange" : false,
-									"searching" : false,
-									"ordering" : true,
-									"info" : true,
-									"autoWidth" : true
-								});
+		<legend style="margin-top: 30px">
+			<i class="fa fa-bars" aria-hidden="true"></i> <i
+				data-placement="right"></i> Last Sermons
+		</legend>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-sm-10"></div>
+				<div class="col-sm-2" style='text-align: right'>
+					<button type="button" class="btn btn-primary"
+						onclick="execute('runningLogs')">View</button>
+				</div>
+			</div>
+		</div>
 
-								function onSuccess(rslt) {
-									if (!rslt) {
-										rslt = test;
-									}
+		<div class="row">
+			<div class="col-md-12">
+				<div id="table_wrapper">
+					<table id="runningLogs"
+						class="table table-bordered table-hover fixed">
+						<thead>
+							<tr>
+								<th class='text-center'>Date</th>
+								<th class='text-center'>Link</th>
+								<th class='text-center'>Script</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+					<table id='runningLog_template' style='display: none'>
+						<tr>
+							<td class='text-center'>{date}</td>
+							<td class='text-center'><a href='{link}' target='_blank'>{link}</a></td>
+							<td class='text-center'><a href='{script}' target='_blank'>{script}</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
 
-									var debug = $('#debug').val();
-									//debug.innerHTML = rslt;        
+		<div class="footer" style='margin-top: 50px;'></div>
+	</div>
 
-									rslt = JSON.parse(rslt);
-									$('$col_4').val(rslt.col_4);
-								}
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
 
-								$("#open1").click(function(e) {
-									window.open($("#col_42").val());
-								});
+	<script src="scripts/gweb_c.js"></script>
+	<?!= include('myscript.js'); ?>
 
-								var gconfig = {
-									'getLink' : {
-										'gauth' : {
-											'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
-											'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
-										},
-										'input' : {
-											'_sheet' : 'config',
-											'_event' : 'getValue',
-											'col_1' : 'A1',
-											'col_2' : 'A2',
-											'col_3' : 'B1',
-											'col_4' : 'B2'
-										}
-									},
-									'runningLogs' : {
-										'gauth' : {
-											'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
-											'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
-										},
-										'input' : {
-											"_sheet" : "running_logs",
-											"_event" : "getList",
-											'output' : "['A','B']"
-										}
-									}
-								}
+	<script>
+    var runningObj;
+    var us;
+    $(document)
+        .ready(
+            function() {
+              runningObj = $('#runningLogs').DataTable({
+                "paging" : true,
+                "pageLength" : 5,
+                "lengthChange" : false,
+                "searching" : false,
+                "ordering" : true,
+                "info" : true,
+                "autoWidth" : true
+              });
 
-								try {
-									us = new GWeb(gconfig);
-								} catch (e) {
-								}
-							});
+              function onSuccess(rslt) {
+                if (!rslt) {
+                  rslt = test;
+                }
 
-			function execute(sheet) {
-				var option = {
-					version : $('#_version').val(),
-					cache : $('#_cache').val(),
-					sessionCache : true
-				}
+                var debug = $('#debug').val();
+                //debug.innerHTML = rslt;        
 
-				us.execute(sheet, option, function(rslt) {
-					if (rslt.output) {
-						if (rslt.output.rows) {
-							if ($.fn.DataTable.isDataTable('#runningLogs')) {
-								$('#runningLogs').DataTable().destroy();
-							}
-							$('#runningLogs tbody').empty();
+                rslt = JSON.parse(rslt);
+                $('$col_2').val(rslt.col_2);
+              }
 
-							for (var i = 1; i < rslt.output.rows.length; i++) {
-								var tmp = $('#runningLog_template').find('tr')
-										.html();
-								var date = rslt.output.rows[i]['A' + (i + 1)];
-								date = moment(date).format('LLL');
-								tmp = tmp.replace('{date}', date);
-								tmp = tmp.replace(/{link}/g,
-										rslt.output.rows[i]['B' + (i + 1)]);
-								$("#runningLogs").find('tbody').append(
-										'<tr>' + tmp + '</tr>');
-							}
-						} else {
-							us.getResults(rslt);
-							window.open($("#col_4").val());
-						}
-					}
-				})
-			}
+              $("#open1").click(function(e) {
+                window.open($("#col_42").val());
+              });
 
-			function getValue() {
-				try {
-					google.script.run.withSuccessHandler(onSuccess).getResult();
-				} catch (e) {
-					execute('getLink');
-				}
-			}
-		</script>
+              var gconfig = {
+                'getLink' : {
+                  'gauth' : {
+                    'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+                    'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+                  },
+                  'input' : {
+                    '_sheet' : 'config',
+                    '_event' : 'getValue',
+                    'col_1' : 'A2',
+                    'col_2' : 'B2',
+                    'col_3' : 'C2'
+                  }
+                },
+                'runningLogs' : {
+                  'gauth' : {
+                    'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+                    'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+                  },
+                  'input' : {
+                    "_sheet" : "running_logs",
+                    "_event" : "getList",
+                    'output' : "['A','B','C']"
+                  }
+                }
+              }
 
-		<script
-			src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-		<script
-			src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
+              try {
+                us = new GWeb(gconfig);
+              } catch (e) {
+              }
+            });
+
+    function execute(sheet, type) {
+      var option = {
+        version : $('#_version').val(),
+        cache : $('#_cache').val(),
+        sessionCache : true,
+      }
+      us.type = type;
+      us.execute(sheet, option, function(rslt) {
+        if (rslt.output) {
+          if (rslt.output.rows) {
+            if ($.fn.DataTable.isDataTable('#runningLogs')) {
+              $('#runningLogs').DataTable().destroy();
+            }
+            $('#runningLogs tbody').empty();
+
+            for (var i = 1; i < rslt.output.rows.length; i++) {
+              var tmp = $('#runningLog_template').find('tr').html();
+              var date = rslt.output.rows[i]['A' + (i + 1)];
+              date = moment(date).format('LLL');
+              tmp = tmp.replace('{date}', date);
+              tmp = tmp.replace(/{link}/g, rslt.output.rows[i]['B' + (i + 1)]);
+              tmp = tmp
+                  .replace(/{script}/g, rslt.output.rows[i]['C' + (i + 1)]);
+              $("#runningLogs").find('tbody').append('<tr>' + tmp + '</tr>');
+            }
+          } else {
+            us.getResults(rslt);
+            if (us.type == 'script') {
+              window.open($("#col_3").val());
+            } else {
+              window.open($("#col_2").val());
+            }
+          }
+        }
+      })
+    }
+
+    function getValue(type) {
+      try {
+        google.script.run.withSuccessHandler(onSuccess).getResult();
+      } catch (e) {
+        execute('getLink', type);
+      }
+    }
+  </script>
+
+	<script
+		src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script
+		src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
 </body>
 </html>
