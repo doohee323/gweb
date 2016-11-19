@@ -1,10 +1,1 @@
 # runit
-mkdir -p /etc/service/gweb-sb
-rm -Rf /etc/service/gweb-sb/run
-touch /etc/service/gweb-sb/run
-chmod 777 /etc/service/gweb-sb/run
-echo '#!/bin/sh' >> /etc/service/gweb-sb/run
-echo 'mvn spring-boot:run' >> /etc/service/gweb-sb/run
-sleep 2
-chown -Rf ubuntu:ubuntu /etc/service/gweb-sb
-sv start /etc/service/gweb-sb
