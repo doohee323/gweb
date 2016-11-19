@@ -10,12 +10,12 @@
 # Description:       Controls the gweb-sb
 ### END INIT INFO
 
-APP_HOME=/opt/gweb-sb/bin
+APP_HOME=/usr/local/etc/gweb-sb
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 NAME=gweb-sb
 DESC="gweb-sb Starter" 
 APP_USER=ubuntu
-ARGS=" "
+ARGS="/usr/local/bin/gweb_run.sh"
 
 #test -e $APP_HOME/$NAME.jar || exit 0
 
@@ -27,7 +27,7 @@ case "$1" in
   start)
 	echo -n "Starting $DESC: "
 	start-stop-daemon --start --chuid "$APP_USER" --chdir "$APP_HOME" --pidfile /var/run/$NAME.pid \
-		--background --make-pidfile --exec /usr/bin/mvn -- $ARGS || true
+		--background --make-pidfile --exec bash -- $ARGS || true
 	echo "$NAME."
 	;;
   stop)
@@ -42,7 +42,7 @@ case "$1" in
         rm -f /var/run/$NAME.pid
 	sleep 1
         start-stop-daemon --start --chuid "$APP_USER" --chdir "$APP_HOME" --pidfile /var/run/$NAME.pid \
-                --background --make-pidfile --exec /usr/bin/mvn -- $ARGS || true
+                --background --make-pidfile --exec bash -- $ARGS || true
         echo "$NAME."
 	;;
   status)
