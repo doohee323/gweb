@@ -1,10 +1,12 @@
-Package: [[name]]
-Version: [[version]]
+Package: pkg-build-essential
+Version: 1.0.0
 Section: misc
 Priority: optional
 Architecture: all
-Depends:
+Depends: 
+Recommends: 
 Maintainer: "Topzone" <doohee323@gmail.com>
 Homepage: http://doohee323.github.io
-Description: [[description]]
- This is an extended description.
+Description: Server Development base library install package
+ 1.0.0 : init..#1
+ 
