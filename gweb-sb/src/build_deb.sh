@@ -3,7 +3,7 @@ mvn clean compile package
 
 mkdir -p src/pkg-build/usr/local/etc/gweb-sb
 
-cp -rf target/gweb-sb-1.0.0-jar-with-dependencies.jar src/pkg-build/usr/local/etc/gweb-sb
+cp -rf target/gweb-sb-1.0.0.jar src/pkg-build/usr/local/etc/gweb-sb
 cp -rf src/main/resources/*.properties src/pkg-build/usr/local/etc/gweb-sb
 cp -rf src/main/resources/*.conf src/pkg-build/usr/local/etc/gweb-sb
 cp -rf src/main/resources/*.xml src/pkg-build/usr/local/etc/gweb-sb
