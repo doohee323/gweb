@@ -10,4 +10,6 @@ sleep 2
 sudo chown -Rf ubuntu:ubuntu /etc/service/gweb-sb
 sv start /etc/service/gweb-sb
 
-sudo ln -s /usr/local/etc/gweb-sb/gweb-sb-1.0.0-jar-with-dependencies.jar /etc/init.d/gweb-sb
+sudo rm -rf /etc/init.d/gweb-sb
+sudo ln -s /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar /etc/init.d/gweb-sb
+
