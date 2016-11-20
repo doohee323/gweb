@@ -39,6 +39,8 @@ mvn spring-boot:run
 or
 java -jar target/gweb-sb-1.0-SNAPSHOT.jar --spring.profiles.active=local
 
+java -jar /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar
+
 cf. --spring.config.location=classpath:file:/vagrant/gweb-sb/src/main/resources/application-local.properties
 
 http://localhost:8880/app/estimate.html
