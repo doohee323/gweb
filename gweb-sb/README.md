@@ -37,9 +37,7 @@ mvn clean compile package
 
 mvn spring-boot:run
 or
-java -jar target/gweb-sb-1.0-SNAPSHOT.jar --spring.profiles.active=local
-
-java -jar /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar
+java -jar /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar --spring.profiles.active=qa
 
 cf. --spring.config.location=classpath:file:/vagrant/gweb-sb/src/main/resources/application-local.properties
 
