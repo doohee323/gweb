@@ -5,6 +5,9 @@ sudo touch /etc/service/gweb-sb/run
 sudo chmod 777 /etc/service/gweb-sb/run
 sudo echo '#!/bin/sh' >> /etc/service/gweb-sb/run
 sudo echo 'bash /usr/local/bin/gweb_run.sh' >> /etc/service/gweb-sb/run
+
 sleep 2
 sudo chown -Rf ubuntu:ubuntu /etc/service/gweb-sb
 sv start /etc/service/gweb-sb
+
+sudo ln -s /usr/local/etc/gweb-sb/gweb-sb-1.0.0-jar-with-dependencies.jar /etc/init.d/gweb-sb
