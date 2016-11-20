@@ -20,7 +20,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<!-- <tomcat.version>7.0.52</tomcat.version> -->
-		<!-- <start-class>example.Application</start-class> -->
+		<start-class>example.Application</start-class>
 	</properties>
 
 	<repositories>
@@ -116,7 +116,7 @@
 			<version>1.0.0</version>
 			<scope>system</scope>
 			<systemPath>/vagrant/gweb/gweb-java/target/gweb-java-1.0.0.jar</systemPath>
-<!-- 			<systemPath>/Users/dhong/Documents/workspace/etc/gweb/gweb-java/target/gweb-java-1.0.0.jar</systemPath> -->
+			<!-- <systemPath>/Users/dhong/Documents/workspace/etc/gweb/gweb-java/target/gweb-java-1.0.0.jar</systemPath> -->
 		</dependency>
 
 		<dependency>
@@ -166,7 +166,6 @@
 		</dependency>
 
 	</dependencies>
-
 
 	<build>
 		<plugins>
