@@ -28,9 +28,9 @@ table.fixed td {
 }
 </style>
 <script>
-  window.___gcfg = {
-    parsetags : 'explicit'
-  };
+	window.___gcfg = {
+		parsetags : 'explicit'
+	};
 </script>
 
 </head>
@@ -218,115 +218,118 @@ table.fixed td {
 	<?!= include('myscript.js'); ?>
 
 	<script>
-    var runningObj;
-    var us;
-    $(document)
-        .ready(
-            function() {
-              runningObj = $('#runningLogs').DataTable({
-                "paging" : true,
-                "pageLength" : 5,
-                "lengthChange" : false,
-                "searching" : false,
-                "ordering" : true,
-                "info" : true,
-                "autoWidth" : true
-              });
+		var runningObj;
+		var us;
+		$(document)
+				.ready(
+						function() {
+							runningObj = $('#runningLogs').DataTable({
+								"paging" : true,
+								"pageLength" : 5,
+								"lengthChange" : false,
+								"searching" : false,
+								"ordering" : true,
+								"info" : true,
+								"autoWidth" : true
+							});
 
-              function onSuccess(rslt) {
-                if (!rslt) {
-                  rslt = test;
-                }
+							function onSuccess(rslt) {
+								if (!rslt) {
+									rslt = test;
+								}
 
-                var debug = $('#debug').val();
-                //debug.innerHTML = rslt;        
+								var debug = $('#debug').val();
+								//debug.innerHTML = rslt;        
 
-                rslt = JSON.parse(rslt);
-                $('$col_2').val(rslt.col_2);
-              }
+								rslt = JSON.parse(rslt);
+								$('$col_2').val(rslt.col_2);
+							}
 
-              $("#open1").click(function(e) {
-                window.open($("#col_42").val());
-              });
+							$("#open1").click(function(e) {
+								window.open($("#col_42").val());
+							});
 
-              var gconfig = {
-                'getLink' : {
-                  'gauth' : {
-                    'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
-                    'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
-                  },
-                  'input' : {
-                    '_sheet' : 'config',
-                    '_event' : 'getValue',
-                    'col_1' : 'A2',
-                    'col_2' : 'B2',
-                    'col_3' : 'C2'
-                  }
-                },
-                'runningLogs' : {
-                  'gauth' : {
-                    'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
-                    'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
-                  },
-                  'input' : {
-                    "_sheet" : "running_logs",
-                    "_event" : "getList",
-                    'output' : "['A','B','C']"
-                  }
-                }
-              }
+							var gconfig = {
+								'getLink' : {
+									'gauth' : {
+										'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+										'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+									},
+									'input' : {
+										'_sheet' : 'config',
+										'_event' : 'getValue',
+										'col_1' : 'A2',
+										'col_2' : 'B2',
+										'col_3' : 'C2'
+									}
+								},
+								'runningLogs' : {
+									'gauth' : {
+										'url' : 'https://script.google.com/macros/s/AKfycbz-09xmCUhDXdYS62TzZYhEH7j-Vo0hFjy7a2FrCztl05GJ-aA/exec',
+										'client_id' : '104253425235-kfab48mmaa2njrk0eqkr5450tpf99hms.apps.googleusercontent.com'
+									},
+									'input' : {
+										"_sheet" : "running_logs",
+										"_event" : "getList",
+										'output' : "['A','B','C']"
+									}
+								}
+							}
 
-              try {
-                us = new GWeb(gconfig);
-              } catch (e) {
-              }
-            });
+							try {
+								us = new GWeb(gconfig);
+							} catch (e) {
+							}
+						});
 
-    function execute(sheet, type) {
-      var option = {
-        version : $('#_version').val(),
-        cache : $('#_cache').val(),
-        sessionCache : true,
-      }
-      us.type = type;
-      us.execute(sheet, option, function(rslt) {
-        if (rslt.output) {
-          if (rslt.output.rows) {
-            if ($.fn.DataTable.isDataTable('#runningLogs')) {
-              $('#runningLogs').DataTable().destroy();
-            }
-            $('#runningLogs tbody').empty();
+		function execute(sheet, type) {
+			var option = {
+				version : $('#_version').val(),
+				cache : $('#_cache').val(),
+				sessionCache : true,
+			}
+			us.type = type;
+			us.execute(sheet, option, function(rslt) {
+				if (rslt.output) {
+					if (rslt.output.rows) {
+						if ($.fn.DataTable.isDataTable('#runningLogs')) {
+							$('#runningLogs').DataTable().destroy();
+						}
+						$('#runningLogs tbody').empty();
 
-            for (var i = 1; i < rslt.output.rows.length; i++) {
-              var tmp = $('#runningLog_template').find('tr').html();
-              var date = rslt.output.rows[i]['A' + (i + 1)];
-              date = moment(date).format('LLL');
-              tmp = tmp.replace('{date}', date);
-              tmp = tmp.replace(/{link}/g, rslt.output.rows[i]['B' + (i + 1)]);
-              tmp = tmp
-                  .replace(/{script}/g, rslt.output.rows[i]['C' + (i + 1)]);
-              $("#runningLogs").find('tbody').append('<tr>' + tmp + '</tr>');
-            }
-          } else {
-            us.getResults(rslt);
-            if (us.type == 'script') {
-              window.open($("#col_3").val());
-            } else {
-              window.open($("#col_2").val());
-            }
-          }
-        }
-      })
-    }
+						for (var i = 1; i < rslt.output.rows.length; i++) {
+							var tmp = $('#runningLog_template').find('tr')
+									.html();
+							var date = rslt.output.rows[i]['A' + (i + 1)];
+							date = moment(date).format('LLL');
+							tmp = tmp.replace('{date}', date);
+							tmp = tmp.replace(/{link}/g,
+									rslt.output.rows[i]['B' + (i + 1)]);
+							tmp = tmp.replace(/{script}/g,
+									rslt.output.rows[i]['C' + (i + 1)]);
+							$("#runningLogs").find('tbody').append(
+									'<tr>' + tmp + '</tr>');
+						}
+					} else {
+						us.getResults(rslt);
+						if (us.type == 'script') {
+							window.open($("#col_3").val());
+						} else {
+							window.open($("#col_2").val());
+						}
+					}
+				}
+			})
+		}
 
-    function getValue(type) {
-      try {
-        google.script.run.withSuccessHandler(onSuccess).getResult();
-      } catch (e) {
-        execute('getLink', type);
-      }
-    }
-  </script>
+		function getValue(type) {
+			try {
+				google.script.run.withSuccessHandler(onSuccess).getResult();
+			} catch (e) {
+				execute('getLink', type);
+			}
+		}
+	</script>
 
 	<script
 		src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>

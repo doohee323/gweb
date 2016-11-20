@@ -29,10 +29,9 @@ public class LiveController {
 			getValue.addProperty("_sheet", "config");
 			getValue.addProperty("_event", "getValue");
 			getValue.addProperty("_cache", "false");
-			getValue.addProperty("col_1", "A1");
-			getValue.addProperty("col_2", "A2");
-			getValue.addProperty("col_3", "B1");
-			getValue.addProperty("col_4", "B2");
+			getValue.addProperty("col_1", "A2");
+			getValue.addProperty("col_2", "B2");
+			getValue.addProperty("col_3", "C2");
 			params2.add(getValue);
 
 			GWeb gweb = GWeb.getInstance();
@@ -61,7 +60,7 @@ public class LiveController {
 			getList.addProperty("_sheet", "running_logs");
 			getList.addProperty("_event", "getList");
 			getList.addProperty("_cache", "false");
-			getList.addProperty("output", "['A','B']");
+			getList.addProperty("output", "['A','B','C']");
 			params2.add(getList);
 
 			GWeb gweb = GWeb.getInstance();
