@@ -37,7 +37,16 @@ mvn clean compile package
 
 mvn spring-boot:run
 or
-java -jar /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar --spring.profiles.active=qa
+java -jar /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar --spring.profiles.active=local
+
+sudo dpkg -i gweb-sb.deb
+sudo dpkg -r gweb-sb.deb
+sudo dpkg -P gweb-sb.deb
+
+sv start gweb-sb
+sv stop gweb-sb
+sv force-stop gweb-sb
+sv status gweb-sb
 
 cf. --spring.config.location=classpath:file:/vagrant/gweb-sb/src/main/resources/application-local.properties
 
