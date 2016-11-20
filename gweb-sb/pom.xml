@@ -174,7 +174,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<profiles>
-						<profile>qa</profile>
+						<profile>local</profile>
 					</profiles>
 					<!-- <jvmArguments> -->
 					<!-- -Xdebug -->
