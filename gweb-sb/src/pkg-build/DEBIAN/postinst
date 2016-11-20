@@ -6,6 +6,12 @@ sudo chmod 777 /etc/service/gweb-sb/run
 sudo echo '#!/bin/sh' >> /etc/service/gweb-sb/run
 sudo echo 'bash /usr/local/bin/gweb_run.sh' >> /etc/service/gweb-sb/run
 
+sudo mkdir -p /var/log/gweb-sb
+sudo chown -Rf ubuntu:ubuntu /var/log/gweb-sb
+
+sudo chown -Rf ubuntu:ubuntu /usr/local/etc/gweb-sb
+sudo chown -Rf ubuntu:ubuntu /usr/local/bin/gweb_run.sh
+
 sleep 2
 sudo chown -Rf ubuntu:ubuntu /etc/service/gweb-sb
 sv start /etc/service/gweb-sb
