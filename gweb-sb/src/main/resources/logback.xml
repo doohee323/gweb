@@ -5,7 +5,7 @@
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <prudent>true</prudent>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <fileNamePattern>./logs/%d{yyyy-MM-dd}.log
+      <fileNamePattern>/var/log/gweb-sb/logs/%d{yyyy-MM-dd}.log
       </fileNamePattern>
       <maxHistory>72</maxHistory>
     </rollingPolicy>
@@ -23,7 +23,7 @@
   <appender name="Stats" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <prudent>true</prudent>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <fileNamePattern>./logs/stats-%d{yyyy-MM-dd}.log
+      <fileNamePattern>/var/log/gweb-sb/logs/stats-%d{yyyy-MM-dd}.log
       </fileNamePattern>
     </rollingPolicy>
     <encoder>
