@@ -4,20 +4,17 @@ sudo rm -Rf /etc/service/gweb-sb/run
 sudo touch /etc/service/gweb-sb/run
 sudo chmod 777 /etc/service/gweb-sb/run
 sudo echo '#!/bin/sh' >> /etc/service/gweb-sb/run
-sudo echo 'cd /usr/local/etc/gweb-sb' >> /etc/service/gweb-sb/run
-sudo echo 'sudo exec java -jar /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar --spring.profiles.active=local 2>&1' >> /etc/service/gweb-sb/run
+sudo echo 'cd /vagrant/gweb/gweb-sb' >> /etc/service/gweb-sb/run
+sudo echo 'sudo mvn spring-boot:run' >> /etc/service/gweb-sb/run
 
 sudo mkdir -p /var/log/gweb-sb
 sudo chown -Rf ubuntu:ubuntu /var/log/gweb-sb
-
-sudo chown -Rf ubuntu:ubuntu /usr/local/etc/gweb-sb
-sudo chown -Rf ubuntu:ubuntu /usr/local/bin/gweb_run.sh
 
 sleep 2
 sudo chown -Rf ubuntu:ubuntu /etc/service/gweb-sb
 sv start /etc/service/gweb-sb
 
 # init.d service start gweb-sb
-sudo rm -rf /etc/init.d/gweb-sb
-sudo ln -s /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar /etc/init.d/gweb-sb
+#sudo rm -rf /etc/init.d/gweb-sb
+#sudo ln -s /usr/local/etc/gweb-sb/gweb-sb-1.0.0.jar /etc/init.d/gweb-sb
 
