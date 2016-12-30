@@ -1,16 +1,44 @@
 {
 	"checkList": [
 		{
-			"_sheet": "brandon$print",
+			"_sheet": "{{owner}}$print",
 			"_event": "getList",
 			"input": "[2,2,'_end',11]"
 		}
 	],
 	"historyList": [
 		{
-			"_sheet": "brandon$history",
+			"_sheet": "{{owner}}$history",
 			"_event": "getList",
 			"input": "[2,1,'_end',5]"
+		}
+	],
+	"getScore": [
+		{
+			"_sheet": "{{owner}}$work",
+			"_event": "getValue",
+			"col_1": "K14",
+			"col_2": "K13"
+		}
+	],
+	"appendHistory": [
+		{
+			"_sheet": "{{owner}}$history",
+			"_event": "appendRow"
+		}
+	],
+	"deleteHistory": [
+		{
+			"_sheet": "{{owner}}$history",
+			"_event": "deleteRow",
+			"row": 1,
+			"count": 1
+		}
+	],
+	"update": [
+		{
+			"_sheet": "{{owner}}$work",
+			"_event": "update"
 		}
 	]
 }
