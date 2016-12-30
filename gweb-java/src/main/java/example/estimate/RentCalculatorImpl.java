@@ -15,7 +15,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.tz.GWeb;
 
-import example.estimate.CarEstimate;
+import example.estimate.domain.CarEstimate;
 
 public class RentCalculatorImpl implements RentCalculator {
 

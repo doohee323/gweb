@@ -1,6 +1,6 @@
 package example.estimate;
 
-import example.estimate.CarEstimate;
+import example.estimate.domain.CarEstimate;
 
 public interface RentCalculator {
 

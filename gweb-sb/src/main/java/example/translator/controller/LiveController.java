@@ -1,4 +1,4 @@
-package example.estimate.controller;
+package example.translator.controller;
 
 import java.util.ArrayList;
 

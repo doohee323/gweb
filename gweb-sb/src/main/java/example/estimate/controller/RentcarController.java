@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import example.domain.CarEstimate;
+import example.estimate.domain.CarEstimate;
 import example.estimate.RentCalculatorImpl;
 import example.estimate.domain.Rentcar;
 import example.estimate.repository.CarEstimateRepository;

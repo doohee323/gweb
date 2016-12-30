@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.Repository;
 
-import example.domain.CarEstimate;
+import example.estimate.domain.CarEstimate;
 
 public interface CarEstimateRepository extends Repository<CarEstimate, Integer> {
 
