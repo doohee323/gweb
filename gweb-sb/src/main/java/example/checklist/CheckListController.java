@@ -23,32 +23,32 @@ public class CheckListController {
 		checklist = new CheckList();
 	}
 
-	// http://localhost:8880/rest/checklist/{"version":"1","owner":"brandon"}
-	@RequestMapping(method = RequestMethod.GET, value = "/checklist/{params}")
-	public String getCheckList(HttpServletRequest request, HttpServletResponse response, @PathVariable String params) {
-		JsonObject output3 = null;
+	// http://localhost:8880/rest/checkList/{"version":"1","owner":"brandon"}
+	@RequestMapping(method = RequestMethod.GET, value = "/checkList/{params}")
+	public String checkList(HttpServletRequest request, HttpServletResponse response, @PathVariable String params) {
+		JsonObject output = null;
 		try {
 			JsonObject obj = (JsonObject) new JsonParser().parse(params);
-			output3 = checklist.checkList(obj.get("version").getAsString(), obj.get("owner").getAsString());
+			output = checklist.checkList(obj.get("version").getAsString(), obj.get("owner").getAsString());
 		} catch (Exception e) {
 			e.printStackTrace();
-			output3.addProperty("msg", e.getMessage());
+			output.addProperty("msg", e.getMessage());
 		}
-		return output3.toString();
+		return output.toString();
 	}
 
 	// http://localhost:8880/rest/historyList/{"version":"1","owner":"brandon"}
 	@RequestMapping(method = RequestMethod.GET, value = "/historyList/{params}")
 	public String historyList(HttpServletRequest request, HttpServletResponse response, @PathVariable String params) {
-		JsonObject output3 = null;
+		JsonObject output = null;
 		try {
 			JsonObject obj = (JsonObject) new JsonParser().parse(params);
-			output3 = checklist.historyList(obj.get("version").getAsString(), obj.get("owner").getAsString());
+			output = checklist.historyList(obj.get("version").getAsString(), obj.get("owner").getAsString());
 		} catch (Exception e) {
 			e.printStackTrace();
-			output3.addProperty("msg", e.getMessage());
+			output.addProperty("msg", e.getMessage());
 		}
-		return output3.toString();
+		return output.toString();
 	}
 
 	// http://localhost:8880/rest/getScore/{"version":"1","owner":"brandon"}
@@ -65,15 +65,14 @@ public class CheckListController {
 		return output.toString();
 	}
 
-	// http://localhost:8880/rest/getScore/{"version":"1","owner":"brandon"}
-	@RequestMapping(method = RequestMethod.PUT, value = "/getScore/{params}")
+	// http://localhost:8880/rest/appendHistory/{"version":"1","owner":"brandon"}
+	@RequestMapping(method = RequestMethod.POST, value = "/appendHistory/{params}")
 	public String appendHistory(HttpServletRequest request, HttpServletResponse response, @PathVariable String params) {
 		JsonObject output = null;
 		try {
 			JsonObject obj = (JsonObject) new JsonParser().parse(params);
-			output = checklist.getScore(obj.get("version").getAsString(), obj.get("owner").getAsString());
 			output = checklist.appendHistory(obj.get("version").getAsString(), obj.get("owner").getAsString(),
-					output.get("col_1").getAsDouble(), output.get("col_2").getAsDouble());
+					obj.get("col_1").getAsDouble(), obj.get("col_2").getAsDouble());
 		} catch (Exception e) {
 			e.printStackTrace();
 			output.addProperty("msg", e.getMessage());
@@ -89,6 +88,23 @@ public class CheckListController {
 			JsonObject obj = (JsonObject) new JsonParser().parse(params);
 			output = checklist.deleteHistory(obj.get("version").getAsString(), obj.get("owner").getAsString(),
 					obj.get("row").getAsInt());
+		} catch (Exception e) {
+			e.printStackTrace();
+			output.addProperty("msg", e.getMessage());
+		}
+		return output.toString();
+	}
+
+	// http://localhost:8880/rest/update/{"version":"1","owner":"brandon"}
+	@RequestMapping(method = RequestMethod.PUT, value = "/update/{params}")
+	public String update(HttpServletRequest request, HttpServletResponse response, @PathVariable String params) {
+		JsonObject output = null;
+		try {
+			JsonObject object = (JsonObject) new JsonParser().parse(params);
+			object.remove("version");
+			object.remove("owner");
+			JsonObject obj = (JsonObject) new JsonParser().parse(params);
+			output = checklist.update(obj.get("version").getAsString(), obj.get("owner").getAsString(), object);
 		} catch (Exception e) {
 			e.printStackTrace();
 			output.addProperty("msg", e.getMessage());

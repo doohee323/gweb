@@ -203,7 +203,30 @@ var GWeb = function(config) {
 			alert(JSON.stringify(msg));
 		})
 	}
-
+	
+	_super.execute_sb = function(url, method, params, cb) {
+		console.time("ajax response time");
+		var data;
+//		if(method === 'GET') {
+			url = '/rest/' + url + '/' + JSON.stringify(params);
+//		} else {
+//			url = '/rest/' + url;
+//			data = params;
+//		}
+		$.ajax({
+			method : method,
+			url : url
+		}).done(function(data) {
+			console.timeEnd("ajax response time");
+			data = JSON.parse(data);
+			data.url = this.url;
+			cb.call(null, data);
+		}).fail(function(msg) {
+			console.log(JSON.stringify(msg));
+			alert(JSON.stringify(msg));
+		})
+	}	
+	
 	// if (W7 == 0) { W7 = 1.1 } else { W7 = 1.17150 }
 
 	function test1() {

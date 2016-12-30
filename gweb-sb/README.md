@@ -40,6 +40,7 @@ You can run like this,
 		cf. --spring.config.location=classpath:file:/vagrant/gweb-sb/src/main/resources/application-local.properties
 		
 		http://localhost:8880/app/estimate.html
+		http://localhost:8880/app/checklist.html
 		http://localhost:8880/app/public.html
 ```
    
