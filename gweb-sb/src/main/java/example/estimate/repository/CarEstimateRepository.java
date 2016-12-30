@@ -1,4 +1,4 @@
-package example.repository;
+package example.estimate.repository;
 
 import java.util.List;
 

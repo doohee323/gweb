@@ -1,4 +1,4 @@
-package example.service;
+package example.estimate.service;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import example.domain.CarEstimate;
-import example.repository.CarEstimateRepository;
+import example.estimate.repository.CarEstimateRepository;
 
 @Service
 public class CarEstimateService {

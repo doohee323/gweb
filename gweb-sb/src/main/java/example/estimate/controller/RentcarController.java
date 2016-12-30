@@ -1,4 +1,4 @@
-package example.controller;
+package example.estimate.controller;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -17,9 +17,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import example.domain.CarEstimate;
-import example.domain.Rentcar;
 import example.estimate.RentCalculatorImpl;
-import example.repository.CarEstimateRepository;
+import example.estimate.domain.Rentcar;
+import example.estimate.repository.CarEstimateRepository;
 
 @RestController
 @RequestMapping(value = "/rest")

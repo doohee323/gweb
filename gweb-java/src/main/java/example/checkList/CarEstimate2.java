@@ -1,4 +1,4 @@
-package example.domain;
+package example.checkList;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import javax.persistence.Table;
    
 @Entity
 @Table(name = "carEstimate")
-public class CarEstimate implements Serializable {
+public class CarEstimate2 implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

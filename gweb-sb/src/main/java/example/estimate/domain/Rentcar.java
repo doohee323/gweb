@@ -1,4 +1,4 @@
-package example.domain;
+package example.estimate.domain;
 
 import java.io.Serializable;
 
