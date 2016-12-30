@@ -21,7 +21,7 @@ public class RentCalculatorImpl implements RentCalculator {
 
 	static final Logger log = LoggerFactory.getLogger(RentCalculatorImpl.class);
 
-	private String APP_NAME = "gweb";
+	private String APP_NAME = "estimate";
 
 	public CarEstimate getResult(String version, String model, boolean returnCar, int duration, boolean age,
 			double deposit, double commission, boolean includeRepair, int ownerType) {
@@ -174,7 +174,7 @@ public class RentCalculatorImpl implements RentCalculator {
 			param.put("age", age);
 			param.put("includeRepair", includeRepair);
 
-			String str = GWeb.parseParam("gconfig/gweb1.json", "sheet_3", param);
+			String str = GWeb.parseParam("gconfig/estimate1.json", "sheet_3", param);
 
 			GWeb gweb = GWeb.getInstance();
 			ArrayList<Object> arry = new ArrayList<Object>();
@@ -224,7 +224,7 @@ public class RentCalculatorImpl implements RentCalculator {
 		System.out.println("!![Sync Run]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		long startTime = System.currentTimeMillis();
 
-		// with Json file (/gweb-java/src/main/resources/gconfig/gweb1.json)
+		// with Json file (/gweb-java/src/main/resources/gconfig/estimate1.json)
 		caret = impl.getResultWithJson("1", "Coupe 428i M Sport OE", false, 4, true, 0, 0.01, false, 1);
 		jsonInString = gson.toJson(caret);
 		log.debug(jsonInString);
