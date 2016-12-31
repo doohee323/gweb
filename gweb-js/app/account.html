@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title>accountBook-js</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- build:css(.) styles/vendor.css -->
+<!-- bower:css -->
+<link rel="stylesheet"
+	href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- endbower -->
+<!-- endbuild -->
+
+<link rel="canonical" href="http://sheet.topzone.biz">
+<style>
+table.fixed {
+	table-layout: fixed;
+}
+
+table.fixed td {
+	overflow: hidden;
+}
+
+table td {
+	text-align: center;
+}
+
+.header_a {
+	background-color: #1A5276;
+	color: white;
+	cursor: pointer;
+}
+</style>
+<script>
+	window.___gcfg = {
+		parsetags : 'explicit'
+	};
+</script>
+
+</head>
+<body>
+	<!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<div class="container">
+		<div class="header">
+			<h3 class="text-muted">Account Book</h3>
+		</div>
+
+		<div class="side-body">
+
+			<legend style="margin-top: 30px">
+				<i class="fa fa-bars" aria-hidden="true"></i> <i
+					data-placement="right"></i> Summary
+			</legend>
+
+			<div class="row">
+				<div class="col-md-12" id='printable'>
+					<div>
+						<h3 style='text-align: center;' id='ownerNm'></h3>
+					</div>
+					<div id="table_wrapper">
+						<table id="summary" class="table table-bordered table-hover fixed">
+							<thead>
+								<tr>
+									<th class='text-center' style='width: 10%'>Data</th>
+									<th class='text-center' style='width: 15%'>Desc.</th>
+									<th class='text-center header_a'>수입</th>
+									<th class='text-center header_a'>지출</th>
+									<th class='text-center header_a'>수입</th>
+									<th class='text-center header_a'>지출</th>
+									<th class='text-center header_a'>합계(수입 - 지출)</th>
+									<th class='text-center header_a'>예산계획 대비 잔액</th>
+									<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<legend style="margin-top: 30px">
+				<i class="fa fa-bars" aria-hidden="true"></i> <i
+					data-placement="right"></i> Transaction methods
+			</legend>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="table_wrapper">
+						<table id="transaction"
+							class="table table-bordered table-hover fixed">
+							<thead>
+								<tr>
+									<th class='text-center'>Data</th>
+									<th class='text-center'>Desc.</th>
+									<th class='text-center header_a'>Income</th>
+									<th class='text-center header_a'>Expenditure</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="footer" style='margin-top: 50px;'></div>
+	</div>
+
+	<!-- build:js(.) scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/moment/moment.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js(.) scripts/plugins.js -->
+	<script src="/bower_components/bootstrap/js/affix.js"></script>
+	<script src="/bower_components/bootstrap/js/alert.js"></script>
+	<script src="/bower_components/bootstrap/js/dropdown.js"></script>
+	<script src="/bower_components/bootstrap/js/tooltip.js"></script>
+	<script src="/bower_components/bootstrap/js/modal.js"></script>
+	<script src="/bower_components/bootstrap/js/transition.js"></script>
+	<script src="/bower_components/bootstrap/js/button.js"></script>
+	<script src="/bower_components/bootstrap/js/popover.js"></script>
+	<script src="/bower_components/bootstrap/js/carousel.js"></script>
+	<script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+	<script src="/bower_components/bootstrap/js/collapse.js"></script>
+	<script src="/bower_components/bootstrap/js/tab.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js scripts/sheet -->
+	<script src="scripts/gweb_c.js"></script>
+	<!-- endbuild -->
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function(b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l;
+			b[l] || (b[l] = function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+			b[l].l = +new Date;
+			e = o.createElement(i);
+			r = o.getElementsByTagName(i)[0];
+			e.src = 'https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
+
+	<script>
+		var summaryObj;
+		var transactionObj;
+		var columns = [];
+		var colInx = -1;
+		var record_item;
+		$(document).ready(function() {
+
+			summaryObj = $('#summary').DataTable({
+				"paging" : true,
+				"pageLength" : 100,
+				"lengthChange" : false,
+				"searching" : false,
+				"ordering" : true,
+				"info" : true,
+				"autoWidth" : true
+			});
+
+			transactionObj = $('#transaction').DataTable({
+				"paging" : true,
+				"pageLength" : 100,
+				"lengthChange" : false,
+				"searching" : false,
+				"ordering" : true,
+				"info" : true,
+				"autoWidth" : true
+			});
+
+			retrieveAll();
+		});
+
+		function retrieveAll() {
+			us.execute('initDoc', {}, function(rslt) {
+				us._docId = rslt.output.shared.docId;
+				
+				us.execute('summary', {}, function(rslt) {
+					if ($.fn.DataTable.isDataTable('#summary')) {
+						$('#summary').DataTable().destroy();
+					}
+					$('#summary tbody').empty();
+					summaryObj.clear();
+
+					for (var i = 1; i < rslt.output.rows.length; i++) {
+						var row = rslt.output.rows[i];
+						if (row[0]) {
+							summaryObj.row.add(
+									[ row[0], row[1], row[2], row[3], row[4],
+											row[5], row[6], row[7], row[8],
+											row[9], row[10] ]).draw(false);
+						}
+					}
+				});
+				
+				us.execute('transaction', {}, function(rslt) {
+					if ($.fn.DataTable.isDataTable('#transaction')) {
+						$('#transaction').DataTable().destroy();
+					}
+					$('#transaction tbody').empty();
+					transactionObj.clear();
+
+					for (var i = 1; i < rslt.output.rows.length; i++) {
+						var row = rslt.output.rows[i];
+						if (row[0]) {
+							transactionObj.row.add(
+									[ row[0], row[1], row[2], row[3] ]).draw(
+									false);
+						}
+					}
+				});
+			})
+		}
+
+		var gconfig = {
+			'gauth' : {
+				'url' : 'https://script.google.com/macros/s/AKfycbzFe_XXpMdAUnoJDjgsz46LGuZFDT1qBuXfWI5Ljiu2uF4mlFk/exec',
+				'client_id' : '1049868489243-16ehvu7nkrfec2kltkikj6q0r79knurj.apps.googleusercontent.com'
+			},
+			'initDoc' : {
+				'input' : {
+					"_folderPath" : "account",
+					"_doc" : "accountBook",
+					"_event" : "initDoc"
+				}
+			},
+			'summary' : {
+				'input' : {
+					"_sheet" : "summary",
+					"_event" : "getList",
+					'input' : "[2,2,'_end',24]"
+				}
+			},
+			'transaction' : {
+				'input' : {
+					"_sheet" : "summary",
+					"_event" : "getList",
+					'input' : "[26,2,'_end',33]"
+				}
+			}
+		}
+
+		var us = new GWeb(gconfig);
+
+	</script>
+
+	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
+
+</body>
+</html>

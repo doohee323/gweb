@@ -20,7 +20,10 @@ var GWeb = function() {
 		}
 		try {
 			var fileName = input._doc;
-			var docCount = parseInt(input._docCount);
+			var docCount = 0;
+			if (input._docCount) {
+				docCount = parseInt(input._docCount);
+			}
 			var folderPath = input._folderPath;
 			var oriId;
 			var folders = DriveApp.getFoldersByName(folderPath);
@@ -36,39 +39,56 @@ var GWeb = function() {
 				}
 				if (oriId) {
 					var oriFile = DriveApp.getFileById(oriId);
-					for (var i = 1; i <= docCount; i++) {
-						var newFileName = fileName + i;
-						var newFiles = folder.getFilesByName(newFileName);
-						var docId = null;
-						while (newFiles.hasNext()) {
-							var newFile = newFiles.next();
-							docId = newFile.getId();
-						}
-						var newFile = {
-							name : newFileName
-						};
-						if (!docId) {
-							var copied = oriFile.makeCopy(newFileName);
-							docId = copied.getId();
-							newFile.docId = docId;
-							for (var j = fileList.length - 1; j >= 0; j--) {
-								if (fileList[j].name === newFileName) {
-									fileList.splice(j, 1);
+					if (docCount > 0) {
+						for (var i = 1; i <= docCount; i++) {
+							var newFileName = fileName + i;
+							var newFiles = folder.getFilesByName(newFileName);
+							var docId = null;
+							while (newFiles.hasNext()) {
+								var newFile = newFiles.next();
+								docId = newFile.getId();
+							}
+							var newFile = {
+								name : newFileName
+							};
+							if (!docId) {
+								var copied = oriFile.makeCopy(newFileName);
+								docId = copied.getId();
+								newFile.docId = docId;
+								for (var j = fileList.length - 1; j >= 0; j--) {
+									if (fileList[j].name === newFileName) {
+										fileList.splice(j, 1);
+									}
 								}
+								fileList.push(newFile);
+							} else {
+								var exist = false;
+								for (var j = 0; j < fileList.length; j++) {
+									if (fileList[j].name === newFileName) {
+										exist = true;
+										break;
+									}
+								}
+								if (!exist) {
+									newFile.docId = docId;
+									fileList.push(newFile);
+								}
+							}
+						}
+					} else {
+						var exist = false;
+						for (var j = 0; j < fileList.length; j++) {
+							if (fileList[j].name === fileName) {
+								exist = true;
+								break;
+							}
+						}
+						if (!exist) {
+							var newFile = {
+								name : fileName,
+								docId : oriId
 							}
 							fileList.push(newFile);
-						} else {
-							var exist = false;
-							for (var j = 0; j < fileList.length; j++) {
-								if (fileList[j].name === newFileName) {
-									exist = true;
-									break;
-								}
-							}
-							if (!exist) {
-								newFile.docId = docId;
-								fileList.push(newFile);
-							}
 						}
 					}
 				} else {
@@ -148,6 +168,9 @@ var GWeb = function() {
 		var docId;
 		try {
 			// docId = getDoc(input);
+			if (input._docId) {
+				docId = input._docId;
+			}
 			if (!docId) {
 				docId = SCRIPT_PROP.getProperty("docId");
 			}
@@ -297,6 +320,12 @@ var GWeb = function() {
 		var sheet_name = params._sheet;
 		var sheet = sheetPool[sheet_name];
 		if (!sheet) {
+			if (!doc && params._docId) {
+				var docId = params._docId;
+				if (docId) {
+					doc = SpreadsheetApp.openById(docId);
+				}
+			}
 			sheet = doc.getSheetByName(sheet_name);
 			sheetPool[sheet_name] = sheet;
 		}
@@ -718,6 +747,7 @@ var GWeb = function() {
 
 	var getCache = function(cacheKey) {
 		var cache = CacheService.getScriptCache();
+		// clear = 'true';
 		if (clear == 'true') {
 			cache.put(cacheKey, '{}', expire_s);
 			return {};
@@ -796,10 +826,10 @@ GWeb.prototype.setup = function(e) {
 
 function test() {
 	var initDoc_p = {
-		'_folderPath' : 'estimate',
-		'_doc' : 's_gweb',
-		'_event' : 'initDoc',
-		'_docCount' : 2
+		'_folderPath' : 'account',
+		'_doc' : 'accountBook',
+		'_event' : 'initDoc'
+	// '_docCount' : 0
 	}
 
 	var appendRow_p = {
@@ -939,8 +969,14 @@ function test() {
 		'_script' : s
 	}
 
+	var getList_p = {
+		'_sheet' : 'summary',
+		'_event' : 'getList',
+		'input' : "[2,2,'_end',24]"
+	}
+
 	// attachedScript, scrap value rate, duty-free rate
-	var multi_p = [ deleteRow_p ];
+	var multi_p = [ getList_p ];
 	// var multi_p = [ getLineFromRowNum_p, updateFromShared_p, script_p ]; //
 	// var multi_p = [ getRowNum_p, getALine_p, updateFromShared_p,
 	// update_p, getValue_p ];
