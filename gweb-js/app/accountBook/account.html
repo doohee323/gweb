@@ -77,6 +77,8 @@ table td {
 	<div class="container">
 		<div class="header">
 			<h3 class="text-muted">Account Book</h3>
+			<a href='/accountBook/account.html'>Account</a> | 
+			<a href='/accountBook/stats.html'>Stats</a>
 		</div>
 
 		<div class="side-body">
@@ -95,8 +97,13 @@ table td {
 						<table id="summary" class="table table-bordered table-hover fixed">
 							<thead>
 								<tr>
-									<th class='text-center' style='width: 10%'>Data</th>
-									<th class='text-center' style='width: 15%'>Desc.</th>
+									<th class='text-center' rowspan="2" style='width: 10%'>Data</th>
+									<th class='text-center' rowspan="2" style='width: 15%'>Desc.</th>
+									<th class='text-center' colspan="2">예산계획 (월)</th>
+									<th class='text-center' colspan="2">예산계획 (년)</th>
+									<th class='text-center' colspan="3">전체 지출 현황 (년)</th>
+								</tr>
+								<tr>
 									<th class='text-center header_a'>수입</th>
 									<th class='text-center header_a'>지출</th>
 									<th class='text-center header_a'>수입</th>
@@ -105,7 +112,7 @@ table td {
 									<th class='text-center header_a'>예산계획 대비 잔액</th>
 									<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
 								</tr>
-							</thead>
+							</thead>						
 							<tbody>
 							</tbody>
 						</table>
@@ -188,6 +195,36 @@ table td {
 	</script>
 
 	<script>
+		var gconfig = {
+			'gauth' : {
+				'url' : 'https://script.google.com/macros/s/AKfycbzFe_XXpMdAUnoJDjgsz46LGuZFDT1qBuXfWI5Ljiu2uF4mlFk/exec',
+				'client_id' : '1049868489243-16ehvu7nkrfec2kltkikj6q0r79knurj.apps.googleusercontent.com'
+			},
+			'initDoc' : {
+				'input' : {
+					"_folderPath" : "account",
+					"_doc" : "accountBook",
+					"_event" : "initDoc"
+				}
+			},
+			'summary' : {
+				'input' : {
+					"_sheet" : "summary",
+					"_event" : "getList",
+					'input' : "[2,2,23,'_end']"
+				}
+			},
+			'transaction' : {
+				'input' : {
+					"_sheet" : "summary",
+					"_event" : "getList",
+					'input' : "[26,2,'_end','_end']"
+				}
+			}
+		}
+		
+		var us = new GWeb(gconfig);
+
 		var summaryObj;
 		var transactionObj;
 		var columns = [];
@@ -208,11 +245,12 @@ table td {
 			} ];
 
 			summaryObj = $('#summary').DataTable({
-				"columnDefs" : cdf,
-				"paging" : false,
-				"lengthChange" : false,
-				"searching" : false,
-				"autoWidth" : true
+				columnDefs : cdf,
+				paging : false,
+				lengthChange : false,
+				searching : false,
+				bInfo : false,
+				autoWidth : true
 			});
 
 			var cdf2 = [ {
@@ -221,11 +259,12 @@ table td {
 			} ];
 
 			transactionObj = $('#transaction').DataTable({
-				"columnDefs" : cdf2,
-				"paging" : false,
-				"lengthChange" : false,
-				"searching" : false,
-				"autoWidth" : true
+				columnDefs : cdf2,
+				paging : false,
+				lengthChange : false,
+				searching : false,
+				bInfo : false,
+				autoWidth : true
 			});
 
 			viewSummary();

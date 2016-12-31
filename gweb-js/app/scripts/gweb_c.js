@@ -14,8 +14,8 @@ var GWeb = function(config) {
 				access_token = null;
 			} else {
 				if (location.href.indexOf('#access_token') == -1) {
-					alert('Need to sign in!');
-					return;
+//					alert('Need to sign in!');
+//					return;
 				}
 			}
 		}
