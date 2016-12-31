@@ -30,12 +30,35 @@ table.fixed td {
 }
 
 table td {
+	text-align: right;
+}
+
+.col_center {
 	text-align: center;
 }
 
+.col_month {
+	background-color: #CCFFCC;
+}
+
+.col_blue {
+	color: blue;
+}
+
+.col_red {
+	color: red;
+}
+
+.col_year {
+	background-color: #FFFFCC;
+}
+
+.col_total_year {
+	background-color: #FFFF99;
+}
+
 .header_a {
-	background-color: #1A5276;
-	color: white;
+	background-color: #CCCCCC;
 	cursor: pointer;
 }
 </style>
@@ -143,7 +166,8 @@ table td {
 	<!-- endbuild -->
 
 	<!-- build:js scripts/sheet -->
-	<script src="scripts/gweb_c.js"></script>
+	<script src="/scripts/gweb_c.js"></script>
+	<script src="/accountBook/account.js"></script>
 	<!-- endbuild -->
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -167,104 +191,45 @@ table td {
 		var summaryObj;
 		var transactionObj;
 		var columns = [];
-		var colInx = -1;
-		var record_item;
 		$(document).ready(function() {
 
+			var cdf = [ {
+				targets : [ 0, 1 ],
+				className : 'col_center'
+			}, {
+				targets : [ 2, 3 ],
+				className : 'col_month'
+			}, {
+				targets : [ 4, 5 ],
+				className : 'col_year'
+			}, {
+				targets : [ 6, 7, 8 ],
+				className : 'col_total_year'
+			} ];
+
 			summaryObj = $('#summary').DataTable({
-				"paging" : true,
-				"pageLength" : 100,
+				"columnDefs" : cdf,
+				"paging" : false,
 				"lengthChange" : false,
 				"searching" : false,
-				"ordering" : true,
-				"info" : true,
 				"autoWidth" : true
 			});
+
+			var cdf2 = [ {
+				targets : [ 0, 1 ],
+				className : 'col_center'
+			} ];
 
 			transactionObj = $('#transaction').DataTable({
-				"paging" : true,
-				"pageLength" : 100,
+				"columnDefs" : cdf2,
+				"paging" : false,
 				"lengthChange" : false,
 				"searching" : false,
-				"ordering" : true,
-				"info" : true,
 				"autoWidth" : true
 			});
 
-			retrieveAll();
+			viewSummary();
 		});
-
-		function retrieveAll() {
-			us.execute('initDoc', {}, function(rslt) {
-				us._docId = rslt.output.shared.docId;
-				
-				us.execute('summary', {}, function(rslt) {
-					if ($.fn.DataTable.isDataTable('#summary')) {
-						$('#summary').DataTable().destroy();
-					}
-					$('#summary tbody').empty();
-					summaryObj.clear();
-
-					for (var i = 1; i < rslt.output.rows.length; i++) {
-						var row = rslt.output.rows[i];
-						if (row[0]) {
-							summaryObj.row.add(
-									[ row[0], row[1], row[2], row[3], row[4],
-											row[5], row[6], row[7], row[8],
-											row[9], row[10] ]).draw(false);
-						}
-					}
-				});
-				
-				us.execute('transaction', {}, function(rslt) {
-					if ($.fn.DataTable.isDataTable('#transaction')) {
-						$('#transaction').DataTable().destroy();
-					}
-					$('#transaction tbody').empty();
-					transactionObj.clear();
-
-					for (var i = 1; i < rslt.output.rows.length; i++) {
-						var row = rslt.output.rows[i];
-						if (row[0]) {
-							transactionObj.row.add(
-									[ row[0], row[1], row[2], row[3] ]).draw(
-									false);
-						}
-					}
-				});
-			})
-		}
-
-		var gconfig = {
-			'gauth' : {
-				'url' : 'https://script.google.com/macros/s/AKfycbzFe_XXpMdAUnoJDjgsz46LGuZFDT1qBuXfWI5Ljiu2uF4mlFk/exec',
-				'client_id' : '1049868489243-16ehvu7nkrfec2kltkikj6q0r79knurj.apps.googleusercontent.com'
-			},
-			'initDoc' : {
-				'input' : {
-					"_folderPath" : "account",
-					"_doc" : "accountBook",
-					"_event" : "initDoc"
-				}
-			},
-			'summary' : {
-				'input' : {
-					"_sheet" : "summary",
-					"_event" : "getList",
-					'input' : "[2,2,'_end',24]"
-				}
-			},
-			'transaction' : {
-				'input' : {
-					"_sheet" : "summary",
-					"_event" : "getList",
-					'input' : "[26,2,'_end',33]"
-				}
-			}
-		}
-
-		var us = new GWeb(gconfig);
-
 	</script>
 
 	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
