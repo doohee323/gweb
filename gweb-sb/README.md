@@ -46,8 +46,7 @@ You can run like this,
    
 # build / install debian
 ```
-	cd 
-	/vagrant/gweb/gweb-sb/src
+	cd /vagrant/gweb/gweb-sb/src
 	bash build_deb.sh
 ```
 
