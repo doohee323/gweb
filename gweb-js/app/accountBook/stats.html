@@ -30,7 +30,6 @@
 <link rel="stylesheet" href="/accountBook/account.css">
 
 <style>
-
 </style>
 <script>
 	window.___gcfg = {
@@ -47,9 +46,9 @@
 	<div class="container">
 		<div class="header">
 			<h3 class="text-muted">Account Book</h3>
-			<a href='/accountBook/account.html'>Account</a> | 
-			<a href='/accountBook/stats.html'>Stats</a> | 
-			<a href='/accountBook/month.html'>Monthly</a>
+			<a href='/accountBook/account.html'>Account</a> | <a
+				href='/accountBook/stats.html'>Stats</a> | <a
+				href='/accountBook/month.html'>Monthly</a>
 		</div>
 
 		<div class="side-body">
@@ -250,27 +249,16 @@
 
 	<script>
 		var gconfig = {
-			'gauth' : {
-				'url' : 'https://script.google.com/macros/s/AKfycbzFe_XXpMdAUnoJDjgsz46LGuZFDT1qBuXfWI5Ljiu2uF4mlFk/exec',
-				'client_id' : '1049868489243-16ehvu7nkrfec2kltkikj6q0r79knurj.apps.googleusercontent.com'
-			},
-			'initDoc' : {
-				'input' : {
-					"_folderPath" : "account",
-					"_doc" : "accountBook",
-					"_event" : "initDoc"
-				}
-			},
 			'summary' : {
 				'input' : {
-					"_sheet" : "stats",
+					"_sheet" : "통계",
 					"_event" : "getList",
 					'input' : "[2,2,23,'_end']"
 				}
 			},
 			'transaction' : {
 				'input' : {
-					"_sheet" : "stats",
+					"_sheet" : "통계",
 					"_event" : "getList",
 					'input' : "[26,2,'_end','_end']"
 				}
@@ -291,10 +279,10 @@
 								className : 'col_center'
 							},
 							{
-								targets : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
-										13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-										23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
-										33, 34, 35, 36, 37, 38 ],
+								targets : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+										12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+										22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+										32, 33, 34, 35, 36, 37, 38 ],
 								className : 'col_total_year'
 							} ];
 
@@ -309,17 +297,16 @@
 					});
 
 					var cdf2 = [
-								{
-									targets : [ 0 ],
-									className : 'col_center'
-								},
-								{
-									targets : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
-											13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-											23, 24, 25, 26 ],
-									className : 'col_total_year'
-								} ];
-
+							{
+								targets : [ 0 ],
+								className : 'col_center'
+							},
+							{
+								targets : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+										12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+										22, 23, 24, 25, 26 ],
+								className : 'col_total_year'
+							} ];
 
 					transactionObj = $('#transaction').DataTable({
 						columnDefs : cdf2,
@@ -331,12 +318,14 @@
 						scrollCollapse : true
 					});
 
-					viewStats(function() {
-						new $.fn.dataTable.FixedColumns(summaryObj, {
-							leftColumns : 3
-						});
-						new $.fn.dataTable.FixedColumns(transactionObj, {
-							leftColumns : 3
+					executeQuery(function() {
+						viewStats(function() {
+							new $.fn.dataTable.FixedColumns(summaryObj, {
+								leftColumns : 3
+							});
+							new $.fn.dataTable.FixedColumns(transactionObj, {
+								leftColumns : 3
+							});
 						});
 					});
 				});

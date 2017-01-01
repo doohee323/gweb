@@ -161,27 +161,16 @@
 
 	<script>
 		var gconfig = {
-			'gauth' : {
-				'url' : 'https://script.google.com/macros/s/AKfycbzFe_XXpMdAUnoJDjgsz46LGuZFDT1qBuXfWI5Ljiu2uF4mlFk/exec',
-				'client_id' : '1049868489243-16ehvu7nkrfec2kltkikj6q0r79knurj.apps.googleusercontent.com'
-			},
-			'initDoc' : {
-				'input' : {
-					"_folderPath" : "account",
-					"_doc" : "accountBook",
-					"_event" : "initDoc"
-				}
-			},
 			'summary' : {
 				'input' : {
-					"_sheet" : "summary",
+					"_sheet" : "개요",
 					"_event" : "getList",
 					'input' : "[2,2,23,'_end']"
 				}
 			},
 			'transaction' : {
 				'input' : {
-					"_sheet" : "summary",
+					"_sheet" : "개요",
 					"_event" : "getList",
 					'input' : "[26,2,'_end','_end']"
 				}
@@ -232,7 +221,10 @@
 				autoWidth : true
 			});
 
-			viewSummary();
+			executeQuery(function() {
+				viewSummary(function() {
+				});
+			});
 		});
 	</script>
 

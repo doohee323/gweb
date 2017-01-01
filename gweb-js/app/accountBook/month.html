@@ -55,7 +55,21 @@
 
 			<legend style="margin-top: 30px">
 				<i class="fa fa-bars" aria-hidden="true"></i> <i
-					data-placement="right"></i> Monthly
+					data-placement="right"></i> Monthly &nbsp; &nbsp; &nbsp; <select
+					id='month'>
+					<option value="1월">1월</option>
+					<option value="2월">2월</option>
+					<option value="3월">3월</option>
+					<option value="4월">4월</option>
+					<option value="5월">5월</option>
+					<option value="6월">6월</option>
+					<option value="7월">7월</option>
+					<option value="8월">8월</option>
+					<option value="9월">9월</option>
+					<option value="10월">10월</option>
+					<option value="11월">11월</option>
+					<option value="12월">12월</option>
+				</select>
 			</legend>
 
 			<div class="row">
@@ -148,22 +162,11 @@
 
 	<script>
 		var gconfig = {
-			'gauth' : {
-				'url' : 'https://script.google.com/macros/s/AKfycbzFe_XXpMdAUnoJDjgsz46LGuZFDT1qBuXfWI5Ljiu2uF4mlFk/exec',
-				'client_id' : '1049868489243-16ehvu7nkrfec2kltkikj6q0r79knurj.apps.googleusercontent.com'
-			},
-			'initDoc' : {
-				'input' : {
-					"_folderPath" : "account",
-					"_doc" : "accountBook",
-					"_event" : "initDoc"
-				}
-			},
 			'transaction' : {
 				'input' : {
-					"_sheet" : "1",
+					"_sheet" : "1월",
 					"_event" : "getList",
-					'input' : "[2,1,23,'_end']"
+					'input' : "[2,1,'_end','_end']"
 				}
 			}
 		}
@@ -172,13 +175,14 @@
 
 		var transactionObj;
 		var columns = [];
+		var month;
 		$(document).ready(function() {
 
 			var cdf = [ {
 				targets : [ 0 ],
 				className : 'col_center'
 			}, {
-				targets : [ 5, 6, 7 ],
+				targets : [ 6, 7, 8 ],
 				className : 'col_total_year'
 			} ];
 
@@ -191,8 +195,19 @@
 				scrollCollapse : true
 			});
 
-			viewMonth(function() {
+			executeQuery(function() {
+				viewMonth(function() {
+				});
 			});
+			
+			$("#month").change(function() {
+				month = $('#month').val();
+				gconfig.transaction.input._sheet = $("#month").val();
+				us = new GWeb(gconfig);
+				viewMonth(function() {
+				});
+			});
+
 		});
 	</script>
 
