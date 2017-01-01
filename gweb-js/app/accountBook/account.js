@@ -129,6 +129,41 @@ function viewStats(cb) {
 	})
 }
 
+function viewMonth(cb) {
+	us.execute('initDoc', {}, function(rslt) {
+		us._docId = rslt.output.shared.docId;
+
+		us.execute('transaction', {}, function(rslt) {
+			// if ($.fn.DataTable.isDataTable('#transaction')) {
+			// $('#transaction').DataTable().destroy();
+			// }
+			// $('#transaction tbody').empty();
+			// transactionObj.clear();
+
+			for (var i = 1; i < rslt.output.rows.length; i++) {
+				var row = rslt.output.rows[i];
+				if (row[0]) {
+					var date = moment(row[0]).format('YYYY-MM-DD');
+					var rowArry = [ date ];
+					for (var j = 1; j <= 10; j++) {
+						rowArry.push(row[j]);
+					}
+					var rowObj = transactionObj.row.add(rowArry).draw(false);
+					if (i > 5) {
+						$(rowObj.nodes()).addClass('col_total_year');
+					}
+				}
+			}
+
+			$('thead > tr > th').css('vertical-align', 'middle');
+			$('tbody > tr > td').css('vertical-align', 'middle');
+			if (cb) {
+				cb.call(null);
+			}
+		});
+	})
+}
+
 function formatCurrency(input) {
 	try {
 		if (input === '') {

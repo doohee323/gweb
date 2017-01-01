@@ -1,0 +1,53 @@
+/* table.fixed { */
+/* 	table-layout: fixed; */
+/* } */
+
+/* table.fixed td { */
+/* 	overflow: hidden; */
+/* } */
+table td {
+	text-align: right;
+}
+
+.col_center {
+	text-align: center;
+}
+
+.col_month {
+	background-color: #CCFFCC;
+}
+
+.col_blue {
+	color: blue;
+}
+
+.col_red {
+	color: red;
+}
+
+.col_year {
+	background-color: #FFFFCC;
+}
+
+.col_total_year {
+	background-color: #FFFF99;
+}
+
+.header_a {
+	background-color: #CCCCCC;
+	cursor: pointer;
+}
+
+th, td {
+	white-space: nowrap;
+}
+
+/* Ensure that the demo table scrolls */
+th, td {
+	white-space: nowrap;
+}
+
+div.dataTables_wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}

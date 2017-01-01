@@ -11,6 +11,12 @@
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
 <link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/fixedcolumns/3.2.2/css/fixedColumns.dataTables.min.css" />
+
+<link rel="stylesheet"
 	href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 
 <link rel="stylesheet"
@@ -24,7 +30,6 @@
 <link rel="stylesheet" href="/accountBook/account.css">
 
 <style>
-
 </style>
 <script>
 	window.___gcfg = {
@@ -41,16 +46,16 @@
 	<div class="container">
 		<div class="header">
 			<h3 class="text-muted">Account Book</h3>
-			<a href='/accountBook/account.html'>Account</a> | 
-			<a href='/accountBook/stats.html'>Stats</a> | 
-			<a href='/accountBook/month.html'>Monthly</a>
+			<a href='/accountBook/account.html'>Account</a> | <a
+				href='/accountBook/stats.html'>Stats</a> | <a
+				href='/accountBook/month.html'>Monthly</a>
 		</div>
 
 		<div class="side-body">
 
 			<legend style="margin-top: 30px">
 				<i class="fa fa-bars" aria-hidden="true"></i> <i
-					data-placement="right"></i> Summary
+					data-placement="right"></i> Monthly
 			</legend>
 
 			<div class="row">
@@ -58,66 +63,44 @@
 					<div>
 						<h3 style='text-align: center;' id='ownerNm'></h3>
 					</div>
-					<div id="table_wrapper">
-						<table id="summary" class="table table-bordered table-hover fixed">
-							<thead>
-								<tr>
-									<th class='text-center' rowspan="2" style='width: 10%'>Data</th>
-									<th class='text-center' rowspan="2" style='width: 15%'>Desc.</th>
-									<th class='text-center' colspan="2">예산계획 (월)</th>
-									<th class='text-center' colspan="2">예산계획 (년)</th>
-									<th class='text-center' colspan="3">전체 지출 현황 (년)</th>
-								</tr>
-								<tr>
-									<th class='text-center header_a'>수입</th>
-									<th class='text-center header_a'>지출</th>
-									<th class='text-center header_a'>수입</th>
-									<th class='text-center header_a'>지출</th>
-									<th class='text-center header_a'>합계(수입 - 지출)</th>
-									<th class='text-center header_a'>예산계획 대비 잔액</th>
-									<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
-								</tr>
-							</thead>						
-							<tbody>
-							</tbody>
-						</table>
-					</div>
+					<table id="transaction" class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<th class='text-center' rowspan="2">날짜</th>
+								<th class='text-center' rowspan="2">내용</th>
+								<th class='text-center' rowspan="2">항목</th>
+								<th class='text-center' rowspan="2">형태</th>
+								<th class='text-center'>수입</th>
+								<th class='text-center'>지출</th>
+								<th class='text-center' rowspan="2">예산계획 대비 잔액</th>
+								<th class='text-center'>누계</th>
+								<th class='text-center'>이월 누계</th>
+								<th class='text-center' rowspan="2">추가 설명</th>
+							</tr>
+							<tr>
+								<th class='text-center header_a'>수입1</th>
+								<th class='text-center header_a'>지출1</th>
+								<th class='text-center header_a'>누계1</th>
+								<th class='text-center header_a'>이월누계1</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
 				</div>
 			</div>
-
-			<legend style="margin-top: 30px">
-				<i class="fa fa-bars" aria-hidden="true"></i> <i
-					data-placement="right"></i> Transaction methods
-			</legend>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div id="table_wrapper">
-						<table id="transaction"
-							class="table table-bordered table-hover fixed">
-							<thead>
-								<tr>
-									<th class='text-center'>Data</th>
-									<th class='text-center'>Desc.</th>
-									<th class='text-center header_a'>Income</th>
-									<th class='text-center header_a'>Expenditure</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
 		</div>
 
-		<div class="footer" style='margin-top: 50px;'></div>
 	</div>
+
+	<div class="footer" style='margin-top: 50px;'></div>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 
 	<!-- build:js(.) scripts/vendor.js -->
 	<!-- bower:js -->
-	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<!-- 	<script src="/bower_components/jquery/dist/jquery.js"></script> -->
 	<script src="/bower_components/moment/moment.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
@@ -141,6 +124,10 @@
 	<script src="/scripts/gweb_c.js"></script>
 	<script src="/accountBook/account.js"></script>
 	<!-- endbuild -->
+
+	<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script
+		src="//cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.js"></script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
@@ -172,72 +159,42 @@
 					"_event" : "initDoc"
 				}
 			},
-			'summary' : {
-				'input' : {
-					"_sheet" : "summary",
-					"_event" : "getList",
-					'input' : "[2,2,23,'_end']"
-				}
-			},
 			'transaction' : {
 				'input' : {
-					"_sheet" : "summary",
+					"_sheet" : "1",
 					"_event" : "getList",
-					'input' : "[26,2,'_end','_end']"
+					'input' : "[2,1,23,'_end']"
 				}
 			}
 		}
-		
+
 		var us = new GWeb(gconfig);
 
-		var summaryObj;
 		var transactionObj;
 		var columns = [];
 		$(document).ready(function() {
 
 			var cdf = [ {
-				targets : [ 0, 1 ],
+				targets : [ 0 ],
 				className : 'col_center'
 			}, {
-				targets : [ 2, 3 ],
-				className : 'col_month'
-			}, {
-				targets : [ 4, 5 ],
-				className : 'col_year'
-			}, {
-				targets : [ 6, 7, 8 ],
+				targets : [ 5, 6, 7 ],
 				className : 'col_total_year'
 			} ];
 
-			summaryObj = $('#summary').DataTable({
-				columnDefs : cdf,
-				paging : false,
-				lengthChange : false,
-				searching : false,
-				bInfo : false,
-				autoWidth : true
-			});
-
-			var cdf2 = [ {
-				targets : [ 0, 1 ],
-				className : 'col_center'
-			} ];
-
 			transactionObj = $('#transaction').DataTable({
-				columnDefs : cdf2,
-				paging : false,
-				lengthChange : false,
+				columnDefs : cdf,
 				searching : false,
+				paging : false,
+				sort : false,
 				bInfo : false,
-				autoWidth : true
+				scrollCollapse : true
 			});
 
-			viewSummary();
+			viewMonth(function() {
+			});
 		});
 	</script>
-
-	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
 
 </body>
 </html>
