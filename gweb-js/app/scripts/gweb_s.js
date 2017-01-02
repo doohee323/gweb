@@ -14,13 +14,13 @@ var GWeb = function() {
 
 	var initDoc = function(input) {
 		var msg = '';
+		var docCount = 0;
 		var fileList = getCache(input._doc);
 		if (Object.keys(fileList).length === 0) {
 			fileList = [];
 		}
 		try {
 			var fileName = input._doc;
-			var docCount = 0;
 			if (input._docCount) {
 				docCount = parseInt(input._docCount);
 			}
@@ -105,10 +105,22 @@ var GWeb = function() {
 		lock.releaseLock();
 
 		docId = getDoc(input);
-		if (docId) {
-			doc = SpreadsheetApp.openById(docId);
+		if (docCount == 0) {
+			if (oriId) {
+				doc = SpreadsheetApp.openById(oriId);
+				docId = oriId;
+			} else {
+				msg = msg + ',' + docId;
+			}
 		} else {
-			msg = msg + ',' + docId;
+			if (docId) {
+				doc = SpreadsheetApp.openById(docId);
+			} else if (oriId) {
+				doc = SpreadsheetApp.openById(oriId);
+				docId = oriId;
+			} else {
+				msg = msg + ',' + docId;
+			}
 		}
 
 		var rslt = {
@@ -970,13 +982,14 @@ function test() {
 	}
 
 	var getList_p = {
+		'_docId' : '1UfvJiKLKVIFnwPJCdS3zKvuVgVsE-hUrwz9rfnTWvEQ',
 		'_sheet' : 'summary',
 		'_event' : 'getList',
 		'input' : "[2,2,'_end',24]"
 	}
 
 	// attachedScript, scrap value rate, duty-free rate
-	var multi_p = [ getList_p ];
+	var multi_p = [ initDoc_p ];
 	// var multi_p = [ getLineFromRowNum_p, updateFromShared_p, script_p ]; //
 	// var multi_p = [ getRowNum_p, getALine_p, updateFromShared_p,
 	// update_p, getValue_p ];
