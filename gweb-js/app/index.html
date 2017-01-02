@@ -10,7 +10,8 @@
 
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
-<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -27,11 +28,10 @@ table.fixed td {
 	window.___gcfg = {
 		parsetags : 'explicit'
 	};
-	
-	if(location.href.indexOf('kbcsjen.com') > -1) {
+
+	if (location.href.indexOf('kbcsjen.com') > -1) {
 		location.href = 'public.html';
 	}
-	
 </script>
 
 </head>
@@ -110,9 +110,9 @@ table.fixed td {
 									<a href="checklist.html" class='alink' target="_blank">http://localhost:8000/checklist.html</a>
 									<br> <a
 										href="https://docs.google.com/spreadsheets/d/1WIZtuhj1JMYNejlIXfqSnOP1Vt1gf7_eObTp-IoRU5I/edit?usp=sharing"
-										class='alink' target="_blank">( Excel file )</a>
-									</a> <br> <a href="http://localhost:8880/app/checklist.html"
-										class='alink' target="_blank">http://localhost:8880/app/checklist.html</a>
+										class='alink' target="_blank">( Excel file )</a> </a> <br> <a
+										href="http://localhost:8880/app/checklist.html" class='alink'
+										target="_blank">http://localhost:8880/app/checklist.html</a>
 								</h4>
 							</label>
 						</div>
@@ -120,7 +120,7 @@ table.fixed td {
 				</div>
 			</form>
 		</div>
-		
+
 		<div class="span4 card">
 			<form class="form-horizontal" role="form">
 				<div class="panel panel-default">
@@ -130,7 +130,8 @@ table.fixed td {
 						</div>
 						<div class="col-sm-7">
 							<label class="col-sm-12">
-								<h4>CRUD Web app with google spread sheet from scratch sheets</h4>
+								<h4>CRUD Web app with google spread sheet from scratch
+									sheets</h4>
 								<h4>
 									<a href="checklist.html" class='alink' target="_blank">http://localhost:8000/crud.html</a>
 									<br> <a
@@ -142,7 +143,31 @@ table.fixed td {
 					</div>
 				</div>
 			</form>
-		</div>		
+		</div>
+
+		<div class="span4 card">
+			<form class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-sm-5">
+							<h3>Account book</h3>
+						</div>
+						<div class="col-sm-7">
+							<label class="col-sm-12">
+								<h4>Account bookWeb app with existing google spread sheet</h4>
+								<h4>
+									<a href="accountBook/accountBook.html" class='alink'
+										target="_blank">http://localhost:8000/accountBook/account.html</a>
+									<br> <a
+										href="https://docs.google.com/spreadsheets/d/10kH7mjBx4GGajEZGcIafOSRrLYcuWKTtNm8e3ey4FKc/edit#gid=718173176"
+										class='alink' target="_blank">( Excel file )</a>
+								</h4>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
 
 		<div class="span4 card">
 			<form class="form-horizontal" role="form">
@@ -314,7 +339,8 @@ table.fixed td {
 							if (link.indexOf('8880') > -1) {
 								domain_sb = 'http://gweb-sb.topzone.biz/app';
 							}
-							link = link.substring(link.lastIndexOf('/'),
+							var str = link.split('/')[3];
+							link = link.substring(link.indexOf(str) - 1,
 									link.length);
 							if (domain_sb) {
 								link = domain_sb + link;
