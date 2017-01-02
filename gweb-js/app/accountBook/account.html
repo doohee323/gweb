@@ -11,6 +11,12 @@
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
 <link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/fixedcolumns/3.2.2/css/fixedColumns.dataTables.min.css" />
+
+<link rel="stylesheet"
 	href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 
 <link rel="stylesheet"
@@ -24,7 +30,6 @@
 <link rel="stylesheet" href="/accountBook/account.css">
 
 <style>
-
 </style>
 <script>
 	window.___gcfg = {
@@ -41,83 +46,320 @@
 	<div class="container">
 		<div class="header">
 			<h3 class="text-muted">Account Book</h3>
-			<a href='/accountBook/account.html'>Account</a> | 
-			<a href='/accountBook/stats.html'>Stats</a> | 
-			<a href='/accountBook/month.html'>Monthly</a>
 		</div>
 
 		<div class="side-body">
 
-			<legend style="margin-top: 30px">
-				<i class="fa fa-bars" aria-hidden="true"></i> <i
-					data-placement="right"></i> Summary
-			</legend>
-
-			<div class="row">
-				<div class="col-md-12" id='printable'>
-					<div>
-						<h3 style='text-align: center;' id='ownerNm'></h3>
-					</div>
-					<div id="table_wrapper">
-						<table id="summary" class="table table-bordered table-hover fixed">
-							<thead>
-								<tr>
-									<th class='text-center' rowspan="2" style='width: 10%'>Data</th>
-									<th class='text-center' rowspan="2" style='width: 15%'>Desc.</th>
-									<th class='text-center' colspan="2">예산계획 (월)</th>
-									<th class='text-center' colspan="2">예산계획 (년)</th>
-									<th class='text-center' colspan="3">전체 지출 현황 (년)</th>
-								</tr>
-								<tr>
-									<th class='text-center header_a'>수입</th>
-									<th class='text-center header_a'>지출</th>
-									<th class='text-center header_a'>수입</th>
-									<th class='text-center header_a'>지출</th>
-									<th class='text-center header_a'>합계(수입 - 지출)</th>
-									<th class='text-center header_a'>예산계획 대비 잔액</th>
-									<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
-								</tr>
-							</thead>						
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<legend style="margin-top: 30px">
-				<i class="fa fa-bars" aria-hidden="true"></i> <i
-					data-placement="right"></i> Transaction methods
-			</legend>
-
 			<div class="row">
 				<div class="col-md-12">
-					<div id="table_wrapper">
-						<table id="transaction"
-							class="table table-bordered table-hover fixed">
-							<thead>
-								<tr>
-									<th class='text-center'>Data</th>
-									<th class='text-center'>Desc.</th>
-									<th class='text-center header_a'>Income</th>
-									<th class='text-center header_a'>Expenditure</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
+					<form id="form1" class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="sheetName">Sheet
+								Name:</label>
+							<div class="col-sm-2">
+								<div class="form-inline">
+									<input type="text" id="sheetName" name="sheetName"
+										value="accountBook" class="form-control">
+								</div>
+							</div>
+							<div class="col-sm-7"></div>
+							<div class="col-sm-1">
+								<button type="button" class="btn btn-primary" id="view"
+									onclick="selectView('Account');">View</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 
+			<ul class="nav nav-tabs" id='viewTab'
+				style="margin-bottom: 10px; font-size: 11pt">
+				<li class='active' id='Account'><a
+					href="javascript: selectView('Account')">Account</a></li>
+				<li class='inactive' id='Stats'><a
+					href="javascript: selectView('Stats')">Stats</a></li>
+				<li class='inactive' id='Monthly'><a
+					href="javascript: selectView('Monthly')">Monthly</a></li>
+			</ul>
+			<div id=result>
+				<div class='Account_view'>
+
+					<legend style="margin-top: 30px">
+						<i class="fa fa-bars" aria-hidden="true"></i> <i
+							data-placement="right"></i> Summary
+					</legend>
+
+					<div class="row">
+						<div class="col-md-12" id='printable'>
+							<div>
+								<h3 style='text-align: center;'></h3>
+							</div>
+							<div id="table_wrapper">
+								<table id="summary"
+									class="table table-bordered table-hover fixed">
+									<thead>
+										<tr>
+											<th class='text-center' rowspan="2" style='width: 10%'>Data</th>
+											<th class='text-center' rowspan="2" style='width: 15%'>Desc.</th>
+											<th class='text-center' colspan="2">예산계획 (월)</th>
+											<th class='text-center' colspan="2">예산계획 (년)</th>
+											<th class='text-center' colspan="3">전체 지출 현황 (년)</th>
+										</tr>
+										<tr>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>합계(수입 - 지출)</th>
+											<th class='text-center header_a'>예산계획 대비 잔액</th>
+											<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<legend style="margin-top: 30px">
+						<i class="fa fa-bars" aria-hidden="true"></i> <i
+							data-placement="right"></i> Transaction methods
+					</legend>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div id="table_wrapper">
+								<table id="transaction"
+									class="table table-bordered table-hover fixed">
+									<thead>
+										<tr>
+											<th class='text-center'>Data</th>
+											<th class='text-center'>Desc.</th>
+											<th class='text-center header_a'>Income</th>
+											<th class='text-center header_a'>Expenditure</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- Account_view -->
+
+				<div class='Stats_view' style="display: none">
+					<legend style="margin-top: 30px">
+						<i class="fa fa-bars" aria-hidden="true"></i> <i
+							data-placement="right"></i> Stats
+					</legend>
+
+					<div class="row">
+						<div class="col-md-12" id='printable'>
+							<div>
+								<h3 style='text-align: center;'></h3>
+							</div>
+							<table id="sm" class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th class='text-center' rowspan="2" style='width: 10%'>Data</th>
+										<th class='text-center' colspan="2">예산계획 (월)</th>
+										<th class='text-center' colspan="3">1월</th>
+										<th class='text-center' colspan="3">2월</th>
+										<th class='text-center' colspan="3">3월</th>
+										<th class='text-center' colspan="3">4월</th>
+										<th class='text-center' colspan="3">5월</th>
+										<th class='text-center' colspan="3">6월</th>
+										<th class='text-center' colspan="3">7월</th>
+										<th class='text-center' colspan="3">8월</th>
+										<th class='text-center' colspan="3">9월</th>
+										<th class='text-center' colspan="3">10월</th>
+										<th class='text-center' colspan="3">11월</th>
+										<th class='text-center' colspan="3">12월</th>
+									</tr>
+									<tr>
+										<th class='text-center header_a'>수입</th>
+										<th class='text-center header_a'>지출</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+										<th class='text-center header_a'>합계(수입-지출)</th>
+										<th class='text-center header_a'>예산계획 대비 잔액</th>
+										<th class='text-center header_a'>예산계획 대비 잔액 비율 (%)</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<legend style="margin-top: 30px">
+						<i class="fa fa-bars" aria-hidden="true"></i> <i
+							data-placement="right"></i> Transaction methods
+					</legend>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div id="table_wrapper">
+								<table id="ts" class="table table-bordered table-hover fixed">
+									<thead>
+										<tr>
+											<th class='text-center' rowspan="2" style='width: 10%'>Data</th>
+											<th class='text-center' colspan="2">전체</th>
+											<th class='text-center' colspan="2">1월</th>
+											<th class='text-center' colspan="2">2월</th>
+											<th class='text-center' colspan="2">3월</th>
+											<th class='text-center' colspan="2">4월</th>
+											<th class='text-center' colspan="2">5월</th>
+											<th class='text-center' colspan="2">6월</th>
+											<th class='text-center' colspan="2">7월</th>
+											<th class='text-center' colspan="2">8월</th>
+											<th class='text-center' colspan="2">9월</th>
+											<th class='text-center' colspan="2">10월</th>
+											<th class='text-center' colspan="2">11월</th>
+											<th class='text-center' colspan="2">12월</th>
+										</tr>
+										<tr>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+											<th class='text-center header_a'>수입</th>
+											<th class='text-center header_a'>지출</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- Stats_view -->
+
+				<div class='Monthly_view' style="display: none">
+
+					<legend style="margin-top: 30px">
+						<i class="fa fa-bars" aria-hidden="true"></i> <i
+							data-placement="right"></i> Monthly &nbsp; &nbsp; &nbsp; <select
+							id='month'>
+							<option value="1월">1월</option>
+							<option value="2월">2월</option>
+							<option value="3월">3월</option>
+							<option value="4월">4월</option>
+							<option value="5월">5월</option>
+							<option value="6월">6월</option>
+							<option value="7월">7월</option>
+							<option value="8월">8월</option>
+							<option value="9월">9월</option>
+							<option value="10월">10월</option>
+							<option value="11월">11월</option>
+							<option value="12월">12월</option>
+						</select>
+					</legend>
+
+					<div class="row">
+						<div class="col-md-12" id='printable'>
+							<div>
+								<h3 style='text-align: center;' id='ownerNm'></h3>
+							</div>
+							<table id="monthly" class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th class='text-center' rowspan="2">날짜</th>
+										<th class='text-center' rowspan="2">내용</th>
+										<th class='text-center' rowspan="2">항목</th>
+										<th class='text-center' rowspan="2">형태</th>
+										<th class='text-center'>수입</th>
+										<th class='text-center'>지출</th>
+										<th class='text-center' rowspan="2">예산계획 대비 잔액</th>
+										<th class='text-center'>누계</th>
+										<th class='text-center'>이월 누계</th>
+										<th class='text-center' rowspan="2">추가 설명</th>
+									</tr>
+									<tr>
+										<th class='text-center header_a'>수입1</th>
+										<th class='text-center header_a'>지출1</th>
+										<th class='text-center header_a'>누계1</th>
+										<th class='text-center header_a'>이월누계1</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- Monthly_view -->
+
+			</div>
+			<!-- result -->
 		</div>
+		<!-- side-body -->
 
 		<div class="footer" style='margin-top: 50px;'></div>
 	</div>
+	<!-- container -->
+
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 
 	<!-- build:js(.) scripts/vendor.js -->
 	<!-- bower:js -->
-	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<!-- 	<script src="/bower_components/jquery/dist/jquery.js"></script> -->
 	<script src="/bower_components/moment/moment.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
@@ -142,6 +384,10 @@
 	<script src="/accountBook/account.js"></script>
 	<!-- endbuild -->
 
+	<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script
+		src="//cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.js"></script>
+
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
 		(function(b, o, i, l, e, r) {
@@ -160,76 +406,41 @@
 	</script>
 
 	<script>
-		var gconfig = {
-			'summary' : {
-				'input' : {
-					"_sheet" : "개요",
-					"_event" : "getList",
-					'input' : "[2,2,23,'_end']"
-				}
-			},
-			'transaction' : {
-				'input' : {
-					"_sheet" : "개요",
-					"_event" : "getList",
-					'input' : "[26,2,'_end','_end']"
-				}
-			}
-		}
-		
-		var us = new GWeb(gconfig);
-
-		var summaryObj;
-		var transactionObj;
-		var columns = [];
+		var us;
+		var selectView;
 		$(document).ready(function() {
 
-			var cdf = [ {
-				targets : [ 0, 1 ],
-				className : 'col_center'
-			}, {
-				targets : [ 2, 3 ],
-				className : 'col_month'
-			}, {
-				targets : [ 4, 5 ],
-				className : 'col_year'
-			}, {
-				targets : [ 6, 7, 8 ],
-				className : 'col_total_year'
-			} ];
+			selectView = function(type) {
+				var active = $('#viewTab').find("li.active");
+				var inactive = $('#viewTab').find("li.inactive#" + type);
+				active.removeClass("active");
+				active.addClass("inactive");
+				inactive.removeClass("inactive");
+				inactive.addClass("active");
+				if (type == 'Account') {
+					$('.Account_view').show();
+					$('.Stats_view').hide();
+					$('.Monthly_view').hide();
+					accountView();
+				}
+				if (type == 'Stats') {
+					$('.Account_view').hide();
+					$('.Stats_view').show();
+					$('.Monthly_view').hide();
+					statsView();
+				}
+				if (type == 'Monthly') {
+					$('.Account_view').hide();
+					$('.Stats_view').hide();
+					$('.Monthly_view').show();
+					monthlyView();
+				}
+			}
 
-			summaryObj = $('#summary').DataTable({
-				columnDefs : cdf,
-				paging : false,
-				lengthChange : false,
-				searching : false,
-				bInfo : false,
-				autoWidth : true
-			});
+			accountView();
 
-			var cdf2 = [ {
-				targets : [ 0, 1 ],
-				className : 'col_center'
-			} ];
-
-			transactionObj = $('#transaction').DataTable({
-				columnDefs : cdf2,
-				paging : false,
-				lengthChange : false,
-				searching : false,
-				bInfo : false,
-				autoWidth : true
-			});
-
-			executeQuery(function() {
-				viewSummary(function() {
-				});
-			});
 		});
 	</script>
-
-	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.js"></script>
 
 </body>
 </html>
